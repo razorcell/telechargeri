@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 28, 2012 at 03:40 PM
+-- Generation Time: Dec 28, 2012 at 05:36 PM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -23,6 +23,24 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `Application`
+--
+
+CREATE TABLE IF NOT EXISTS `Application` (
+  `id_application` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `label_application` varchar(20) NOT NULL,
+  `description` text NOT NULL,
+  `image_link` varchar(20) NOT NULL,
+  `id_category` int(10) unsigned NOT NULL,
+  `id_section` int(10) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id_application`),
+  KEY `fk_application_id_category` (`id_category`),
+  KEY `fk_application_id_section` (`id_section`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `Category`
 --
 
@@ -35,11 +53,19 @@ CREATE TABLE IF NOT EXISTS `Category` (
   KEY `fk_id_website_os` (`id_website_os`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
+-- --------------------------------------------------------
+
 --
--- RELATIONS FOR TABLE `Category`:
---   `id_website_os`
---       `Website_Os` -> `id_website_os`
+-- Table structure for table `Download_link`
 --
+
+CREATE TABLE IF NOT EXISTS `Download_link` (
+  `id_download_link` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `label_download_link` varchar(20) NOT NULL,
+  `id_application` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id_download_link`),
+  KEY `fk_download_link_id_application` (`id_application`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -52,6 +78,20 @@ CREATE TABLE IF NOT EXISTS `Os` (
   `label_os` varchar(10) NOT NULL,
   PRIMARY KEY (`id_os`),
   UNIQUE KEY `label_os` (`label_os`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Section`
+--
+
+CREATE TABLE IF NOT EXISTS `Section` (
+  `id_section` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `label_section` varchar(10) NOT NULL,
+  `id_category` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id_section`),
+  KEY `fk_id_category` (`id_category`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -84,22 +124,33 @@ CREATE TABLE IF NOT EXISTS `Website_Os` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
--- RELATIONS FOR TABLE `Website_Os`:
---   `id_website`
---       `Website` -> `id_website`
---   `id_os`
---       `Os` -> `id_os`
+-- Constraints for dumped tables
 --
 
 --
--- Constraints for dumped tables
+-- Constraints for table `Application`
 --
+ALTER TABLE `Application`
+  ADD CONSTRAINT `fk_application_id_section` FOREIGN KEY (`id_section`) REFERENCES `Section` (`id_section`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_application_id_category` FOREIGN KEY (`id_category`) REFERENCES `Category` (`id_category`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `Category`
 --
 ALTER TABLE `Category`
   ADD CONSTRAINT `fk_id_website_os` FOREIGN KEY (`id_website_os`) REFERENCES `Website_Os` (`id_website_os`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `Download_link`
+--
+ALTER TABLE `Download_link`
+  ADD CONSTRAINT `fk_download_link_id_application` FOREIGN KEY (`id_application`) REFERENCES `Application` (`id_application`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `Section`
+--
+ALTER TABLE `Section`
+  ADD CONSTRAINT `fk_id_category` FOREIGN KEY (`id_category`) REFERENCES `Category` (`id_category`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `Website_Os`
