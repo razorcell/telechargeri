@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 28, 2012 at 05:36 PM
+-- Generation Time: Dec 28, 2012 at 08:06 PM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -31,6 +31,7 @@ CREATE TABLE IF NOT EXISTS `Application` (
   `label_application` varchar(20) NOT NULL,
   `description` text NOT NULL,
   `image_link` varchar(20) NOT NULL,
+  `insert_date_time` varchar(10) NOT NULL,
   `id_category` int(10) unsigned NOT NULL,
   `id_section` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`id_application`),
@@ -131,8 +132,8 @@ CREATE TABLE IF NOT EXISTS `Website_Os` (
 -- Constraints for table `Application`
 --
 ALTER TABLE `Application`
-  ADD CONSTRAINT `fk_application_id_section` FOREIGN KEY (`id_section`) REFERENCES `Section` (`id_section`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `fk_application_id_category` FOREIGN KEY (`id_category`) REFERENCES `Category` (`id_category`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_application_id_category` FOREIGN KEY (`id_category`) REFERENCES `Category` (`id_category`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_application_id_section` FOREIGN KEY (`id_section`) REFERENCES `Section` (`id_section`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `Category`
