@@ -15,6 +15,7 @@ class WebsiteController extends Controller
 	{
 		return array(
 			'accessControl', // perform access control for CRUD operations
+			
 			'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
@@ -67,11 +68,11 @@ class WebsiteController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Website']))
+		if(isset($_POST['Website']))//si la wavelur website est rempli par utilisateur
 		{
 			$model->attributes=$_POST['Website'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id_website));
+				$this->redirect(array('view','id'=>$model->id_website));//afficher la page "view" avec comme valeur "id_website"
 		}
 
 		$this->render('create',array(
