@@ -87,10 +87,7 @@
 <script type="text/javascript" src="<?php //echo Yii::app()->request->baseUrl; ?>/js/jquery.debouncedresize.js"></script>
 -->
 <!-- DataTables Plugin -->
-<script type="text/javascript" src="plugins/datatables/jquery.dataTables.min.js"></script>
-
-<!-- Demo JavaScript Files  -->
-<script type="text/javascript" src="js/demo/demo.tables.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/plugins/datatables/jquery.dataTables.min.js"></script>
 
 <!-- Core JavaScript Files -->
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/core/dandelion.core.js"></script>

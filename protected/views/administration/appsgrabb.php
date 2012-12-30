@@ -21,13 +21,9 @@ $(document).ready(function(){
 		</p>
 		
 		<pre class="language-html">
-<?php echo var_dump($proxy_time);?>
-
+<?php echo $net01_apps_list["content"];?>
 
 -------------------------
-
-
-
 
 </pre>
 	</div>

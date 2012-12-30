@@ -4,6 +4,7 @@ class AdministrationController extends Controller
 {
 	public function actionIndex()
 	{
+		
 		$this->render('index');
 	}
 	public function actionWebsite_list(){
@@ -21,7 +22,8 @@ class AdministrationController extends Controller
 		 * Get a web file (HTML, XHTML, XML, image, etc.) from a URL.  Return an
 		 * array containing the HTTP server response header fields and content.
 		 */
-		function get_web_page( $url )
+		
+		function get_web_page( $url, $proxy="none")
 		{
 			$options = array(
 					CURLOPT_RETURNTRANSFER => true,     // return web page
@@ -33,26 +35,49 @@ class AdministrationController extends Controller
 					CURLOPT_CONNECTTIMEOUT => 120,      // timeout on connect
 					CURLOPT_TIMEOUT        => 120,      // timeout on response
 					CURLOPT_MAXREDIRS      => 10,       // stop after 10 redirects
+					CURLOPT_PROXY              => null,
 			);
-		
+			if($proxy != "none"){
+				$option[CURLOPT_PROXY] = $proxy;
+			}
 			$ch      = curl_init( $url );
 			curl_setopt_array( $ch, $options );
 			$content = curl_exec( $ch );
-// 			$err     = curl_errno( $ch );
-// 			$errmsg  = curl_error( $ch );
+ 			$err     = curl_errno( $ch );
+ 			$errmsg  = curl_error( $ch );
 			$header  = curl_getinfo( $ch );
 			curl_close( $ch );
 			
-// 			$header['errno']   = $err;
-// 			$header['errmsg']  = $errmsg;
+ 			$header['errno']   = $err;
+ 			$header['errmsg']  = $errmsg;
 			$header['content'] = $content;
 			return $header;
 		}
-		$proxys_page = get_web_page("http://www.activeproxies.org/random-proxies.php");
+		
+		function get_proxy(){//$content is $header['content'] 
+			$proxys_page = get_web_page("www.activeproxies.org/random-proxies.php");
+			preg_match_all("/(<td>)(.*?)(<\/td>)/", $proxys_page["content"], $proxy);//$proxys_table[0] is the one containing proxys
+			return $proxy[0][0];//return the first proxy
+			
+		}
+		$error = false;
+		//$x = 0;
+		//$out = "";
+		$net01_apps_list = "";
+		do {
+			$proxy = "www.".get_proxy();
+			$net01_apps_list = get_web_page("www.01net.com/telecharger/windows/Bureautique/agenda/index2.html",$proxy);
+			if($net01_apps_list["errno"] != 0){
+				Yii::log('',CLogger::LEVEL_ERROR,"Proxy : ".$proxy."Message : --------------------->".$net01["errmsg"]);//log error
+				$error = true;// there was an error
+			}
+		}while($error == true);
+		$this->render('appsgrabb',array('net01_apps_list'=>$net01_apps_list));
+		/*
+		$proxys_page = get_web_page("www.activeproxies.org/random-proxies.php");
 		//$proxys = strstr($proxys_page['content'],'<table>');
 		
 		preg_match_all("/(<td>)(.*?)(<\/td>)/", $proxys_page['content'], $proxys_table);//$proxys_table[0] is the one containing proxys
-		
 		
 		$proxy_time = array();
 		for($x=0;$x<25;$x++){
@@ -63,10 +88,12 @@ class AdministrationController extends Controller
 																)
 								);
 			}
-			
-		}
+		}*/
 		
-		$this->render('appsgrabb',array('proxy_time'=>$proxy_time));
+		
+		
+		
+		//$this->render('appsgrabb',array('proxy_time'=>$proxy_time));
 		//$this->render('appsgrabb',array('proxys'=>$proxys,'proxys_page_content'=>$proxys_page['content']));
 		
 	}
