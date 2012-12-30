@@ -50,6 +50,7 @@ return array(
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',*/
 					'administration'=>'administration/index',
 					'administration/websites'=>'administration/website_list',
+					'administration/applications'=>'administration/appsgrabb',
 					//'home'=>'/site/index',	
 			),
 				'showScriptName'=>false,

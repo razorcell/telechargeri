@@ -365,6 +365,15 @@
                                 	Websites
                                 </a>
                             </li>
+                            <li class="appsgrabb">
+                            	<a href="<?php echo $this->createUrl('administration/appsgrabb');?>">
+                                	<!-- Icon Container -->
+                                	<span class="da-nav-icon">
+                                    	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/icons/black/32/download.png" alt="Dashboard" />
+                                    </span>
+                                	Apps Grabber
+                                </a>
+                            </li>
                            
                         </ul>
                     </div>
