@@ -8,6 +8,6 @@ $this->breadcrumbs=array(
 );*/
 ?>
 <h1><?php echo $this->id . '/' . $this->action->id; ?></h1>
-link ::  <?php $this->createUrl('administration/index');?>
+
 
 

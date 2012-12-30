@@ -7,10 +7,11 @@ class AdministrationController extends Controller
 		$this->render('index');
 	}
 	public function actionWebsite_list(){
-		$dataProvider=new CActiveDataProvider('Website');
+		$websites=new CActiveDataProvider('Website');
 		$this->render('websites_list',array(
-				'dataProvider'=>$dataProvider,
+				'websites'=>$websites,
 		));
+		
 	}
 	public function actionWebsite_add(){
 		
