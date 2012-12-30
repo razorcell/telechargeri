@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
+	'name'=>'Telechargeri Admin Panel',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -41,13 +41,18 @@ return array(
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'rules'=>array(
-				'home'=>'/site/index',
-				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
+				
+			/*
+				'<controller:\w+>/<id:\d+>'=>'<controller>/view',// \w : word characters (letters, digits, and underscores)
+				// \d : a digit, [\d\s] matches a character that is a digit or whitespace
+				// + : ".+" matches "def" "ghi" in abc "def" "ghi" jkl
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
-				'showScriptName'=>false,
-					
+				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',*/
+					'administration'=>'administration/index',
+					'administration/websites'=>'administration/website_list',
+					//'home'=>'/site/index',	
 			),
+				'showScriptName'=>false,
 		),
 		/*
 		'db'=>array(
@@ -90,4 +95,5 @@ return array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
 	),
+		'layout'=>'dandelion',
 );

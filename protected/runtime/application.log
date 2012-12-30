@@ -23,3 +23,2350 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/telechargeri-com/index.php/home
 ---
+2012/12/29 21:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.placeholder.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.placeholder.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/jui/js/jquery.ui.timepicker.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/jui/js/jquery.ui.timepicker.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.fileinput.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.fileinput.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/jui/js/jquery.ui.touch-punch.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/jui/js/jquery.ui.touch-punch.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery-1.7.2.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery-1.7.2.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/jui/js/jquery-ui-1.8.20.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/jui/js/jquery-ui-1.8.20.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.mousewheel.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.mousewheel.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/plugins/validate/jquery.validate.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/plugins/validate/jquery.validate.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.tinyscrollbar.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.tinyscrollbar.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.metadata.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.metadata.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/core/plugins/dandelion.circularstat.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/core/plugins/dandelion.circularstat.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/plugins/tipsy/jquery.tipsy-min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/plugins/tipsy/jquery.tipsy-min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/core/plugins/dandelion.wizard.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/core/plugins/dandelion.wizard.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/plugins/fullcalendar/fullcalendar.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/plugins/fullcalendar/fullcalendar.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/plugins/fullcalendar/gcal.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/plugins/fullcalendar/gcal.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "https://www.google.com/jsapi".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('https://www.goo...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com/https://www.google.com/jsapi
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.debouncedresize.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.debouncedresize.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/core/dandelion.core.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/core/dandelion.core.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/demo/demo.dashboard.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/demo/demo.dashboard.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/images/logo.png".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/images/logo.png
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/core/dandelion.customizer.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/core/dandelion.customizer.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/jui/js/jquery-ui-1.8.20.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/jui/js/jquery-ui-1.8.20.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/jui/js/jquery.ui.timepicker.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/jui/js/jquery.ui.timepicker.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/jui/js/jquery.ui.touch-punch.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/jui/js/jquery.ui.touch-punch.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.fileinput.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.fileinput.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.placeholder.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.placeholder.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.mousewheel.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.mousewheel.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.tinyscrollbar.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.tinyscrollbar.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/plugins/tipsy/jquery.tipsy-min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/plugins/tipsy/jquery.tipsy-min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/plugins/validate/jquery.validate.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/plugins/validate/jquery.validate.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.metadata.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.metadata.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/core/plugins/dandelion.circularstat.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/core/plugins/dandelion.circularstat.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/core/plugins/dandelion.wizard.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/core/plugins/dandelion.wizard.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/plugins/fullcalendar/fullcalendar.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/plugins/fullcalendar/fullcalendar.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/plugins/fullcalendar/gcal.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/plugins/fullcalendar/gcal.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "https://www.google.com/jsapi".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('https://www.goo...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com/https://www.google.com/jsapi
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.debouncedresize.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.debouncedresize.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/demo/demo.dashboard.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/demo/demo.dashboard.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/core/dandelion.core.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/core/dandelion.core.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/core/dandelion.customizer.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/core/dandelion.customizer.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:54:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/images/logo.png".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/images/logo.png
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/jui/js/jquery.ui.timepicker.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/jui/js/jquery.ui.timepicker.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery-1.7.2.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery-1.7.2.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.fileinput.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.fileinput.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/jui/js/jquery-ui-1.8.20.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/jui/js/jquery-ui-1.8.20.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/jui/js/jquery.ui.touch-punch.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/jui/js/jquery.ui.touch-punch.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.placeholder.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.placeholder.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.mousewheel.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.mousewheel.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.tinyscrollbar.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.tinyscrollbar.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/plugins/validate/jquery.validate.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/plugins/validate/jquery.validate.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/core/plugins/dandelion.circularstat.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/core/plugins/dandelion.circularstat.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.metadata.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.metadata.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/plugins/tipsy/jquery.tipsy-min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/plugins/tipsy/jquery.tipsy-min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/core/plugins/dandelion.wizard.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/core/plugins/dandelion.wizard.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "https://www.google.com/jsapi".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('https://www.goo...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com/https://www.google.com/jsapi
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/plugins/fullcalendar/fullcalendar.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/plugins/fullcalendar/fullcalendar.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/core/dandelion.customizer.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/core/dandelion.customizer.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/core/dandelion.core.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/core/dandelion.core.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.debouncedresize.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.debouncedresize.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/demo/demo.dashboard.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/demo/demo.dashboard.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/plugins/fullcalendar/gcal.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/plugins/fullcalendar/gcal.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/jui/js/jquery.ui.timepicker.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/jui/js/jquery.ui.timepicker.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/images/logo.png".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/images/logo.png
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/jui/js/jquery.ui.touch-punch.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/jui/js/jquery.ui.touch-punch.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.fileinput.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.fileinput.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.placeholder.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.placeholder.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.mousewheel.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.mousewheel.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.tinyscrollbar.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.tinyscrollbar.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/plugins/tipsy/jquery.tipsy-min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/plugins/tipsy/jquery.tipsy-min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/plugins/validate/jquery.validate.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/plugins/validate/jquery.validate.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.metadata.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.metadata.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/core/plugins/dandelion.circularstat.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/core/plugins/dandelion.circularstat.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/core/plugins/dandelion.wizard.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/core/plugins/dandelion.wizard.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/plugins/fullcalendar/fullcalendar.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/plugins/fullcalendar/fullcalendar.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/plugins/fullcalendar/gcal.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/plugins/fullcalendar/gcal.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "https://www.google.com/jsapi".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('https://www.goo...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com/https://www.google.com/jsapi
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.debouncedresize.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.debouncedresize.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/demo/demo.dashboard.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/demo/demo.dashboard.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/core/dandelion.core.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/core/dandelion.core.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/core/dandelion.customizer.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/core/dandelion.customizer.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 21:59:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/images/logo.png".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/images/logo.png
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/jui/js/jquery.ui.touch-punch.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/jui/js/jquery.ui.touch-punch.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/jui/js/jquery.ui.timepicker.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/jui/js/jquery.ui.timepicker.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/jui/js/jquery-ui-1.8.20.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/jui/js/jquery-ui-1.8.20.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.fileinput.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.fileinput.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery-1.7.2.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery-1.7.2.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.mousewheel.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.mousewheel.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.placeholder.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.placeholder.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/plugins/tipsy/jquery.tipsy-min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/plugins/tipsy/jquery.tipsy-min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.tinyscrollbar.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.tinyscrollbar.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.metadata.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.metadata.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/core/plugins/dandelion.wizard.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/core/plugins/dandelion.wizard.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/plugins/validate/jquery.validate.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/plugins/validate/jquery.validate.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/core/plugins/dandelion.circularstat.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/core/plugins/dandelion.circularstat.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/plugins/fullcalendar/gcal.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/plugins/fullcalendar/gcal.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/plugins/fullcalendar/fullcalendar.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/plugins/fullcalendar/fullcalendar.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "https://www.google.com/jsapi".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('https://www.goo...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com/https://www.google.com/jsapi
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/demo/demo.dashboard.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/demo/demo.dashboard.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.debouncedresize.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.debouncedresize.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/core/dandelion.core.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/core/dandelion.core.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/core/dandelion.customizer.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/core/dandelion.customizer.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/jui/js/jquery-ui-1.8.20.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/jui/js/jquery-ui-1.8.20.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/jui/js/jquery.ui.timepicker.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/jui/js/jquery.ui.timepicker.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/jui/js/jquery.ui.touch-punch.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/jui/js/jquery.ui.touch-punch.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.fileinput.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.fileinput.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.placeholder.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.placeholder.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.mousewheel.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.mousewheel.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.tinyscrollbar.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.tinyscrollbar.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/plugins/tipsy/jquery.tipsy-min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/plugins/tipsy/jquery.tipsy-min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/plugins/validate/jquery.validate.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/plugins/validate/jquery.validate.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.metadata.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.metadata.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/core/plugins/dandelion.circularstat.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/core/plugins/dandelion.circularstat.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/core/plugins/dandelion.wizard.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/core/plugins/dandelion.wizard.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/plugins/fullcalendar/fullcalendar.min.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/plugins/fullcalendar/fullcalendar.min.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/plugins/fullcalendar/gcal.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/plugins/fullcalendar/gcal.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "https://www.google.com/jsapi".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('https://www.goo...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com/https://www.google.com/jsapi
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/jquery.debouncedresize.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/jquery.debouncedresize.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/demo/demo.dashboard.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/demo/demo.dashboard.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/core/dandelion.core.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/core/dandelion.core.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:04:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "telechargeri-com/js/core/dandelion.customizer.js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('telechargeri-co...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com//telechargeri-com/js/core/dandelion.customizer.js
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:08:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "https://www.google.com/jsapi".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('https://www.goo...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com/https://www.google.com/jsapi
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:08:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "https://www.google.com/jsapi".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('https://www.goo...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com/https://www.google.com/jsapi
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:09:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "https://www.google.com/jsapi".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('https://www.goo...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com/https://www.google.com/jsapi
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:09:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "https://www.google.com/jsapi".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('https://www.goo...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com/https://www.google.com/jsapi
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:09:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "https://www.google.com/jsapi".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('https://www.goo...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com/https://www.google.com/jsapi
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:09:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "https://www.google.com/jsapi".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('https://www.goo...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com/https://www.google.com/jsapi
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:10:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "https://www.google.com/jsapi".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('https://www.goo...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com/https://www.google.com/jsapi
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:10:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "https://www.google.com/jsapi".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('https://www.goo...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com/https://www.google.com/jsapi
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:33:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "https://www.google.com/jsapi".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('https://www.goo...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com/https://www.google.com/jsapi
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:33:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "https://www.google.com/jsapi".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('https://www.goo...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com/https://www.google.com/jsapi
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:33:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dashboard.html".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('dashboard.html')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com/dashboard.html
+HTTP_REFERER=http://localhost/telechargeri-com/home
+---
+2012/12/29 22:33:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "https://www.google.com/jsapi".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('https://www.goo...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com/https://www.google.com/jsapi
+HTTP_REFERER=http://localhost/telechargeri-com/dashboard.html
+---
+2012/12/29 22:33:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "https://www.google.com/jsapi".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('https://www.goo...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com/https://www.google.com/jsapi
+HTTP_REFERER=http://localhost/telechargeri-com/dashboard.html
+---
+2012/12/29 22:33:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "calendar.html".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('calendar.html')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com/calendar.html
+HTTP_REFERER=http://localhost/telechargeri-com/dashboard.html
+---
+2012/12/29 22:33:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "https://www.google.com/jsapi".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('https://www.goo...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com/https://www.google.com/jsapi
+HTTP_REFERER=http://localhost/telechargeri-com/calendar.html
+---
+2012/12/29 22:33:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "https://www.google.com/jsapi".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('https://www.goo...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com/https://www.google.com/jsapi
+HTTP_REFERER=http://localhost/telechargeri-com/calendar.html
+---
+2012/12/29 22:33:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file.html".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('file.html')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com/file.html
+HTTP_REFERER=http://localhost/telechargeri-com/calendar.html
+---
+2012/12/29 22:33:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "https://www.google.com/jsapi".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('https://www.goo...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com/https://www.google.com/jsapi
+HTTP_REFERER=http://localhost/telechargeri-com/file.html
+---
+2012/12/29 22:33:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "https://www.google.com/jsapi".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('https://www.goo...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com/https://www.google.com/jsapi
+HTTP_REFERER=http://localhost/telechargeri-com/file.html
+---
+2012/12/29 22:35:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "https://www.google.com/jsapi".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('https://www.goo...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com/https://www.google.com/jsapi
+HTTP_REFERER=http://localhost/telechargeri-com/
+---
+2012/12/29 22:35:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "https://www.google.com/jsapi".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('https://www.goo...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com/https://www.google.com/jsapi
+HTTP_REFERER=http://localhost/telechargeri-com/
+---
+2012/12/29 22:36:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "https://www.google.com/jsapi".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('https://www.goo...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com/https://www.google.com/jsapi
+HTTP_REFERER=http://localhost/telechargeri-com/
+---
+2012/12/29 22:36:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "https://www.google.com/jsapi".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('https://www.goo...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/telechargeri-com/https://www.google.com/jsapi
+HTTP_REFERER=http://localhost/telechargeri-com/
+---
+2012/12/29 22:47:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "https://www.google.com/jsapi".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('https://www.goo...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/https://www.google.com/jsapi
+HTTP_REFERER=http://telechargeri.localhost/
+---
+2012/12/29 22:47:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "https://www.google.com/jsapi".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('https://www.goo...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/https://www.google.com/jsapi
+HTTP_REFERER=http://telechargeri.localhost/
+---
+2012/12/29 23:11:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/12/29 23:11:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/12/30 00:37:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icons/black/32/powerpoint_documents_1".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('images/icons/bl...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/icons/black/32/powerpoint_documents_1
+HTTP_REFERER=http://telechargeri.localhost/administration
+---
+2012/12/30 00:37:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icons/black/32/powerpoint_documents_1".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('images/icons/bl...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/icons/black/32/powerpoint_documents_1
+HTTP_REFERER=http://telechargeri.localhost/administration
+---
+2012/12/30 00:37:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icons/black/32/powerpoint_documents_1".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('images/icons/bl...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/icons/black/32/powerpoint_documents_1
+HTTP_REFERER=http://telechargeri.localhost/administration
+---
+2012/12/30 00:37:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icons/black/32/powerpoint_documents_1".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('images/icons/bl...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/icons/black/32/powerpoint_documents_1
+HTTP_REFERER=http://telechargeri.localhost/administration
+---
+2012/12/30 00:58:36 [error] [php] require(): Filename cannot be empty (/opt/lampp/htdocs/telechargeri-com/framework/web/CBaseController.php:131)
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/zii/widgets/CListView.php(260): AdministrationController->renderFile()
+#1 /opt/lampp/htdocs/telechargeri-com/framework/zii/widgets/CBaseListView.php(161): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 /opt/lampp/htdocs/telechargeri-com/framework/zii/widgets/CBaseListView.php(144): preg_replace_callback()
+#4 /opt/lampp/htdocs/telechargeri-com/framework/zii/widgets/CBaseListView.php(129): CListView->renderContent()
+#5 /opt/lampp/htdocs/telechargeri-com/framework/web/CBaseController.php(174): CListView->run()
+#6 /opt/lampp/htdocs/telechargeri-com/protected/views/administration/websites_list.php(20): AdministrationController->widget()
+#7 /opt/lampp/htdocs/telechargeri-com/framework/web/CBaseController.php(127): require()
+#8 /opt/lampp/htdocs/telechargeri-com/framework/web/CBaseController.php(96): AdministrationController->renderInternal()
+#9 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(870): AdministrationController->renderFile()
+#10 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(783): AdministrationController->renderPartial()
+#11 /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php(13): AdministrationController->render()
+#12 /opt/lampp/htdocs/telechargeri-com/framework/web/actions/CInlineAction.php(50): AdministrationController->actionWebsites_list()
+#13 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(309): CInlineAction->runWithParams()
+#14 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(287): AdministrationController->runAction()
+#15 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(266): AdministrationController->runActionWithFilters()
+#16 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): AdministrationController->run()
+#17 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#18 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#19 /opt/lampp/htdocs/telechargeri-com/index.php(13): CWebApplication->run()
+REQUEST_URI=/administration/websites_list
+in /opt/lampp/htdocs/telechargeri-com/protected/views/administration/websites_list.php (20)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (13)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2012/12/30 01:02:06 [error] [php] require(): Filename cannot be empty (/opt/lampp/htdocs/telechargeri-com/framework/web/CBaseController.php:131)
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/zii/widgets/CListView.php(260): AdministrationController->renderFile()
+#1 /opt/lampp/htdocs/telechargeri-com/framework/zii/widgets/CBaseListView.php(161): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 /opt/lampp/htdocs/telechargeri-com/framework/zii/widgets/CBaseListView.php(144): preg_replace_callback()
+#4 /opt/lampp/htdocs/telechargeri-com/framework/zii/widgets/CBaseListView.php(129): CListView->renderContent()
+#5 /opt/lampp/htdocs/telechargeri-com/framework/web/CBaseController.php(174): CListView->run()
+#6 /opt/lampp/htdocs/telechargeri-com/protected/views/administration/websites_list.php(19): AdministrationController->widget()
+#7 /opt/lampp/htdocs/telechargeri-com/framework/web/CBaseController.php(127): require()
+#8 /opt/lampp/htdocs/telechargeri-com/framework/web/CBaseController.php(96): AdministrationController->renderInternal()
+#9 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(870): AdministrationController->renderFile()
+#10 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(783): AdministrationController->renderPartial()
+#11 /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php(13): AdministrationController->render()
+#12 /opt/lampp/htdocs/telechargeri-com/framework/web/actions/CInlineAction.php(50): AdministrationController->actionWebsites_list()
+#13 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(309): CInlineAction->runWithParams()
+#14 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(287): AdministrationController->runAction()
+#15 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(266): AdministrationController->runActionWithFilters()
+#16 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): AdministrationController->run()
+#17 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#18 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#19 /opt/lampp/htdocs/telechargeri-com/index.php(13): CWebApplication->run()
+REQUEST_URI=/administration/websites_list
+in /opt/lampp/htdocs/telechargeri-com/protected/views/administration/websites_list.php (19)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (13)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2012/12/30 01:03:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "websites".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('websites')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('websites')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/websites
+---
+2012/12/30 01:05:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "websites".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('websites')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('websites')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/websites
+---
+2012/12/30 01:14:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/12/30 01:15:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/12/30 02:09:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:09:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:09:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:09:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:16:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:16:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:16:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:16:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:16:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:16:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:16:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:16:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:20:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:20:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:20:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:20:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:21:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:21:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:21:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:21:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:26:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:26:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('js')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('js')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/js/demo/demo.tables.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:26:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:26:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:26:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('js')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('js')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/js/demo/demo.tables.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:26:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:27:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:27:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('js')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('js')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/js/demo/demo.tables.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:27:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:27:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:27:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('js')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('js')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/js/demo/demo.tables.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:27:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:28:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('js')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('js')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/js/demo/demo.tables.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:28:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:28:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:28:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:28:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:28:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('js')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('js')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/js/demo/demo.tables.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:28:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:30:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:30:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('js')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('js')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/js/demo/demo.tables.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:30:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:30:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:30:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:30:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('js')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('js')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/js/demo/demo.tables.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:30:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:33:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('js')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('js')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/js/demo/demo.tables.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:33:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:33:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:33:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:33:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('js')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('js')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/js/demo/demo.tables.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:33:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:33:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:33:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:33:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('js')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('js')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/js/demo/demo.tables.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:33:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:33:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('js')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('js')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/js/demo/demo.tables.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:33:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:34:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:34:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:34:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('js')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('js')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/js/demo/demo.tables.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:34:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:34:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('js')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('js')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/js/demo/demo.tables.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:34:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:35:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:35:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('js')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('js')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/js/demo/demo.tables.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:35:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:35:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:35:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('js')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('js')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/js/demo/demo.tables.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:35:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:38:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:38:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('js')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('js')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/js/demo/demo.tables.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:38:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:38:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:38:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('js')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('js')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/js/demo/demo.tables.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:38:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:40:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:40:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('js')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('js')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/js/demo/demo.tables.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:40:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:40:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('plugins')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('plugins')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/plugins/datatables/jquery.dataTables.min.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:40:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('js')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('js')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/js/demo/demo.tables.js
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
+2012/12/30 02:40:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/list.png
+HTTP_REFERER=http://telechargeri.localhost/administration/websites
+---
