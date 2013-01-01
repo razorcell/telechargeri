@@ -8,24 +8,22 @@ $(document).ready(function(){
 });
 </script>
 <h1>Apps</h1>
+
 <div class="grid_4">
-	<div class="da-panel-widget">
-		<h2>Code with Syntax Highlighting</h2>
-		<p>
-			The following is a code block, highlighted using <a
-				href="http://code.google.com/p/google-code-prettify/"
-				target="_blank">Google Prettify</a> by using SyntaxHighlighter
-			plugin (<a
-				href="https://github.com/balupton/jquery-syntaxhighlighter"
-				target="_blank">https://github.com/balupton/jquery-syntaxhighlighter</a>)
-		</p>
-		
-		<pre class="language-html">
-<?php echo $net01_apps_list["content"];?>
+	<div class="da-panel scrollable">
+		<div class="da-panel-header">
+			<span class="da-panel-title"> <img
+				src="images/icons/black/16/computer_imac.png" alt="Panel" />
+				Scrollable Panel (Works on Touch Devices)
+			</span>
 
--------------------------
-
-</pre>
+		</div>
+		<div class="da-panel-content">
+			<div class="with-padding">
+				<?php echo $global_apps_list;?>
+			</div>
+		</div>
 	</div>
 </div>
+
 
