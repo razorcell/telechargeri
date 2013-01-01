@@ -1,9 +1,411 @@
-2013/01/01 20:06:05 [warning] [application] get page not found
-in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (69)
+2013/01/01 21:00:29 [warning] [application] actionAppsGrabb()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (118)
 in /opt/lampp/htdocs/telechargeri-com/index.php (13)
-2013/01/01 20:06:07 [warning] [application] SUCCESS
-in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (77)
+2013/01/01 21:00:29 [warning] [EXTRACT PROCESS STARTED] 
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (191)
 in /opt/lampp/htdocs/telechargeri-com/index.php (13)
-2013/01/01 20:06:07 [warning] [application] --------------->Using proxy : 173.213.113.211:8080
-in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (78)
+2013/01/01 21:00:29 [warning] [application] -----------get_page()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (168)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
 in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:00:32 [error] [application] Page : www.01net.com/telecharger/windows/Bureautique/agenda/index2.html   Proxy : 188.128.99.94:3128Message : Empty reply from server   -   HTTP CODE : 0
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (175)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:00:37 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index2.html
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (178)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:00:37 [warning] [application] --------------->Using proxy : 198.154.114.100:3128
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (179)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:00:37 [warning] [application] -----------get_page()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (168)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:00:45 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index3.html
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (178)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:00:45 [warning] [application] --------------->Using proxy : 188.128.99.94:3128
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (179)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:00:45 [warning] [application] -----------get_page()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (168)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:00:50 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index4.html
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (178)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:00:50 [warning] [application] --------------->Using proxy : 91.228.53.28:3128
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (179)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:00:50 [warning] [application] -----------get_page()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (168)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:00:56 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index5.html
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (178)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:00:56 [warning] [application] --------------->Using proxy : 5.9.187.106:8080
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (179)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:00:56 [warning] [application] -----------get_page()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (168)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:01:01 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index6.html
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (178)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:01:01 [warning] [application] --------------->Using proxy : 173.213.113.211:3128
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (179)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:01:01 [warning] [application] -----------get_page()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (168)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:01:33 [error] [application] Page : www.01net.com/telecharger/windows/Bureautique/agenda/index7.html   Proxy : 85.214.214.87:3128Message : connect() timed out!   -   HTTP CODE : 0
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (175)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:01:38 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index7.html
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (178)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:01:38 [warning] [application] --------------->Using proxy : 173.213.108.113:8080
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (179)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:01:38 [warning] [application] -----------get_page()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (168)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:02:10 [error] [application] Page : www.01net.com/telecharger/windows/Bureautique/agenda/index8.html   Proxy : 85.214.214.87:3128Message : connect() timed out!   -   HTTP CODE : 0
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (175)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:02:15 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index8.html
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (178)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:02:15 [warning] [application] --------------->Using proxy : 213.186.122.123:3128
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (179)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:02:15 [warning] [application] -----------get_page()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (168)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:02:20 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index9.html
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (178)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:02:20 [warning] [application] --------------->Using proxy : 173.213.113.211:3128
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (179)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:02:20 [warning] [application] -----------get_page()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (168)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:02:24 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index10.html
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (178)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:02:24 [warning] [application] --------------->Using proxy : 190.26.210.29:3128
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (179)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:02:24 [warning] [application] -----------get_page()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (168)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:02:32 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index11.html
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (178)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:02:32 [warning] [application] --------------->Using proxy : 69.252.122.46:80
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (179)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:02:32 [warning] [application] -----------get_page()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (168)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:02:41 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index12.html
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (178)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:02:41 [warning] [application] --------------->Using proxy : 199.119.76.111:8080
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (179)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:02:41 [warning] [application] -----------get_page()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (168)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:02:45 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index13.html
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (178)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:02:45 [warning] [application] --------------->Using proxy : 198.154.114.100:3128
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (179)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:02:45 [warning] [application] -----------get_page()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (168)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:02:50 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index14.html
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (178)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:02:50 [warning] [application] --------------->Using proxy : 173.213.113.211:8080
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (179)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:02:50 [warning] [application] -----------get_page()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (168)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:02:55 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index15.html
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (178)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:02:55 [warning] [application] --------------->Using proxy : 198.154.114.100:8080
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (179)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:02:55 [warning] [application] -----------get_page()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (168)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:02:58 [error] [application] Page : www.01net.com/telecharger/windows/Bureautique/agenda/index16.html   Proxy : 98.109.199.166:8080Message :    -   HTTP CODE : 407
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (175)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:03 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index16.html
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (178)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:03 [warning] [application] --------------->Using proxy : 198.154.114.100:3128
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (179)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:03 [warning] [application] -----------get_page()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (168)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:06 [error] [application] Page : www.01net.com/telecharger/windows/Bureautique/agenda/index17.html   Proxy : 98.109.199.166:3128Message :    -   HTTP CODE : 407
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (175)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:09 [error] [application] Page : www.01net.com/telecharger/windows/Bureautique/agenda/index17.html   Proxy : 98.109.199.166:3128Message :    -   HTTP CODE : 407
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (175)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:15 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index17.html
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (178)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:15 [warning] [application] --------------->Using proxy : 173.213.108.112:3128
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (179)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:15 [warning] [application] -----------get_page()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (168)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:20 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index18.html
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (178)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:20 [warning] [application] --------------->Using proxy : 173.213.113.211:8080
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (179)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:20 [warning] [application] -----------get_page()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (168)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:25 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index19.html
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (178)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:25 [warning] [application] --------------->Using proxy : 173.213.108.113:3128
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (179)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:25 [warning] [application] -----------get_page()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (168)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:31 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index20.html
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (178)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:31 [warning] [application] --------------->Using proxy : 173.213.113.211:3128
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (179)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:31 [warning] [application] -----------get_page()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (168)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:36 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index21.html
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (178)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:36 [warning] [application] --------------->Using proxy : 74.112.203.107:3128
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (179)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:36 [warning] [application] -----------get_page()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (168)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:41 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index22.html
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (178)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:41 [warning] [application] --------------->Using proxy : 198.154.114.100:3128
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (179)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:41 [warning] [application] -----------get_page()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (168)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:46 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index23.html
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (178)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:46 [warning] [application] --------------->Using proxy : 173.213.108.113:3128
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (179)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:46 [warning] [application] -----------get_page()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (168)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:51 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index24.html
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (178)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:51 [warning] [application] --------------->Using proxy : 173.213.108.112:3128
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (179)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:51 [warning] [application] -----------get_page()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (168)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:55 [error] [application] Page : www.01net.com/telecharger/windows/Bureautique/agenda/index25.html   Proxy : 98.109.199.166:3128Message :    -   HTTP CODE : 407
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (175)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:59 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index25.html
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (178)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:59 [warning] [application] --------------->Using proxy : 213.186.122.123:3128
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (179)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:03:59 [warning] [application] -----------get_page()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (168)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:04:02 [error] [application] Page : www.01net.com/telecharger/windows/Bureautique/agenda/index26.html   Proxy : 98.109.199.166:8080Message :    -   HTTP CODE : 407
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (175)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:04:06 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index26.html
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (178)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:04:06 [warning] [application] --------------->Using proxy : 5.9.187.106:3128
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (179)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:04:06 [warning] [application] -----------get_page()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (168)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:04:12 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index27.html
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (178)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:04:12 [warning] [application] --------------->Using proxy : 5.9.187.106:3128
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (179)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:04:12 [warning] [application] -----------get_page()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (168)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:04:16 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index28.html
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (178)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:04:16 [warning] [application] --------------->Using proxy : 74.112.203.107:8080
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (179)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:04:16 [warning] [application] -----------get_page()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (168)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:04:20 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index29.html
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (178)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:04:20 [warning] [application] --------------->Using proxy : 199.119.76.111:8080
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (179)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:04:20 [warning] [application] -----------get_page()
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (168)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:04:25 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index30.html
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (178)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:04:25 [warning] [application] --------------->Using proxy : 173.213.113.211:3128
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (179)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (194)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:04:25 [warning] [application] ------------------------------> PAGE NOT FOUND
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (205)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)
+2013/01/01 21:04:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/computer_imac.png
+HTTP_REFERER=http://telechargeri.localhost/administration/applications
+---
+2013/01/01 21:04:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
+#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/images/icons/black/16/computer_imac.png
+HTTP_REFERER=http://telechargeri.localhost/administration/applications
+---

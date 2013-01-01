@@ -130,8 +130,8 @@ class AdministrationController extends Controller
 					CURLOPT_ENCODING       => "",       // handle all encodings
 					CURLOPT_USERAGENT      => "user", // who am i
 					CURLOPT_AUTOREFERER    => true,     // set referer on redirect
-					CURLOPT_CONNECTTIMEOUT => 120,      // timeout on connect
-					CURLOPT_TIMEOUT        => 120,      // timeout on response
+					CURLOPT_CONNECTTIMEOUT => 30,      // timeout on connect
+					CURLOPT_TIMEOUT        => 30,      // timeout on response
 					CURLOPT_MAXREDIRS      => 10,       // stop after 10 redirects
 					CURLOPT_PROXY              => $proxy,
 			);
@@ -164,58 +164,73 @@ class AdministrationController extends Controller
 				$random_proxy = $proxys[0][$random_index];
 				return $random_proxy;//array  [0] array IP:PORT
 		}
-		$force_close = 2;
-		$global_apps_list = "";
-		$index = 100;// using to alter index (x).html for apps lists, it starts from 2 because we have some issues on index1.html, the apps there are not all from the equivalent section
-		$pagenotfound = false;// if true than PAGE NOT FOUND REACHED
-		Yii::log('',CLogger::LEVEL_WARNING,"before do while(notfound == false)");
-		do{//LET's get some apps lists !!!!, do while we did not reach NOT FOUND PAGE
-			Yii::log("LET's get some apps lists !!!!",CLogger::LEVEL_WARNING);
-			$current_apps_list = NULL;
-			$got_current_apps_list = true;// to test if we got the apps list page or not
-			$net01_apps_list = NULL;
-			do {//get the current apps list
-				$got_current_apps_list = true;//if false last time, we need to initialize it again to true
-				Yii::log('get the apps list page using random proxy',CLogger::LEVEL_WARNING);
-				//Yii::log('',CLogger::LEVEL_WARNING,"Proxy : ".$proxy."         - Index : ".$index);
-				$current_proxy = get_proxy();
-				$current_apps_list = get_web_page("www.01net.com/telecharger/windows/Bureautique/agenda/index".$index.".html",$current_proxy);
-				if($current_apps_list["errno"] != 0 || $current_apps_list["http_code"] != 200) {//ERROR OCCURED
-					Yii::log("Index : ".$index."   Proxy : ".$current_proxy."Message : ".$current_apps_list["errmsg"]."   -   HTTP CODE : ".$current_apps_list["http_code"],CLogger::LEVEL_ERROR);
-					$got_current_apps_list = false;
+		function get_page($url){
+			Yii::log('-----------get_page()',CLogger::LEVEL_WARNING);
+			$page = NULL;
+			do {//while we did not get the page
+				$got_page = true;//if false last time, we need to initialize it again to true
+				$proxy = get_proxy();
+				$page = get_web_page($url,$proxy);
+				if($page["errno"] != 0 || $page["http_code"] != 200) {//ERROR OCCURED
+					Yii::log("Page : ".$url."   Proxy : ".$proxy."Message : ".$page["errmsg"]."   -   HTTP CODE : ".$page["http_code"],CLogger::LEVEL_ERROR);
+					$got_page = false;
 				}else{
-					Yii::log("SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index".$index.".html",CLogger::LEVEL_WARNING);
-					Yii::log("--------------->Using proxy : ".$current_proxy,CLogger::LEVEL_WARNING);
+					Yii::log("SUCCESS : ".$url,CLogger::LEVEL_WARNING);
+					Yii::log("--------------->Using proxy : ".$proxy,CLogger::LEVEL_WARNING);
 				}
-			}while($got_current_apps_list == false);
-			//COOOL !!! you have the apps list page what are you going to do with it now
-			//check if that page is NOT FOUND
-			//$current_apps_list_withoutspaces = preg_replace('/\s+/', '', $current_apps_list["content"]);
-			//if(strpos($current_apps_list_withoutspaces, "Pagenontrouve") === FALSE){
-			if($force_close < 101){
+			}while($got_page == false);
+			return $page;
+		}
+		
+		
+		
+		
+		$global_apps_list = "";
+		$index = 2;// using to alter index (x).html for apps lists, it starts from 2 because we have some issues on index1.html, the apps there are not all from the equivalent section
+		$pagenotfound = false;// if true than PAGE NOT FOUND REACHED
+		Yii::log('',CLogger::LEVEL_WARNING,"EXTRACT PROCESS STARTED");
+		do{//do while we did not reach NOT FOUND PAGE
+			$current_apps_list = "www.01net.com/telecharger/windows/Bureautique/agenda/index".$index.".html";
+			$current_apps_list = get_page($current_apps_list);
+			if(strpos($current_apps_list["content"], "Page non trouv") === FALSE){
 				//GREAT !! , get the lines we need
 				preg_match_all("/(\/telecharger\/windows\/Bureautique\/agenda\/fiches\/)((\w|\-){1,19})(\.html\" class=\"resrechlog_nomlogi\">)(.{100})/", $current_apps_list["content"], $apps_links_names);//extract link and name part 1
-				//preg_match_all("/(<a class=\"resrechlog_nomlogi\" href=\")(.*?)(<\/a>)/", $proxys_page["content"], $proxy);
-				foreach($apps_links_names[0] as $app){
-					//Yii::log('',CLogger::LEVEL_WARNING,htmlspecialchars($app,ENT_IGNORE));
-					$global_apps_list .= "<p style=\"white-space:nowrap\">".htmlspecialchars($app,ENT_IGNORE)."</p>";//ADD the new apps_names list to the global list
-					
-					//echo htmlspecialchars($app,ENT_IGNORE);
-				}
+						foreach($apps_links_names[0] as $app){//$apps_links_names[0] contains occurences of our search
+							$global_apps_list .= "<p style=\"white-space:nowrap\">".htmlspecialchars($app,ENT_IGNORE)."</p>";//ADD the new apps_names list to the global list
+						}
+				$index++;//go to next page
 			}else{
-				//404 PAGE NOT FOUND
-				//Yii::log('',CLogger::LEVEL_WARNING,"PAGE NOT FOUND");
+				//404 PAGE NOT FOUND REACHED
+				$pagenotfound = true;
+				Yii::log("------------------------------> PAGE NOT FOUND",CLogger::LEVEL_WARNING);
+				//Yii::log("strpos() returned :  ".gettype(strpos($current_apps_list["content"], "Page non trouv")),CLogger::LEVEL_WARNING);
 				$pagenotfound = true;//GET OUT and SHOW APPS LIST
 				$this->render('appsgrabb',array('global_apps_list'=>$global_apps_list));
-				break;
 			} 
-			$force_close++;
-			$index++;//go to next page
 		}while($pagenotfound != true);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		//$this->render('appsgrabb',array('apps_links_names'=>$apps_links_names));
 		//$this->render('appsgrabb',array('global_apps_list'=>$global_apps_list));-------------------------
 		
-		
+		//$current_apps_list_withoutspaces = preg_replace('/\s+/', '', $current_apps_list["content"]);
 		/*
 		$proxys_page = get_web_page("www.activeproxies.org/random-proxies.php");
 		//$proxys = strstr($proxys_page['content'],'<table>');
@@ -232,13 +247,6 @@ class AdministrationController extends Controller
 								);
 			}
 		}*/
-		
-		
-		
-		
-		//$this->render('appsgrabb',array('proxy_time'=>$proxy_time));
-		//$this->render('appsgrabb',array('proxys'=>$proxys,'proxys_page_content'=>$proxys_page['content']));
-		
 	}
 
 	// Uncomment the following methods and override them if needed
