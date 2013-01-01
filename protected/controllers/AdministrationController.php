@@ -195,8 +195,14 @@ class AdministrationController extends Controller
 			if(strpos($current_apps_list["content"], "Page non trouv") === FALSE){
 				//GREAT !! , get the lines we need
 				preg_match_all("/(\/telecharger\/windows\/Bureautique\/agenda\/fiches\/)((\w|\-){1,19})(\.html\" class=\"resrechlog_nomlogi\">)(.{100})/", $current_apps_list["content"], $apps_links_names);//extract link and name part 1
+				
+						
 						foreach($apps_links_names[0] as $app){//$apps_links_names[0] contains occurences of our search
-							$global_apps_list .= "<p style=\"white-space:nowrap\">".htmlspecialchars($app,ENT_IGNORE)."</p>";//ADD the new apps_names list to the global list
+							preg_match_all("#(\/telecharger\/windows\/Bureautique\/agenda\/fiches\/)((\w|\-){1,19}\.html)|(\"\>.*\<\/a\>)#",$app,$link_name);
+							foreach($link_name[0] as $element){
+								$global_apps_list .= "<p style=\"white-space:nowrap\">".htmlspecialchars($element,ENT_IGNORE)."</p>";//ADD the new apps_names list to the global list
+							}
+							
 						}
 				$index++;//go to next page
 			}else{
