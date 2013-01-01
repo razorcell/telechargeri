@@ -1,88 +1,9 @@
-2013/01/01 19:29:00 [warning] [application] actionAppsGrabb()
-in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (96)
+2013/01/01 20:06:05 [warning] [application] get page not found
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (69)
 in /opt/lampp/htdocs/telechargeri-com/index.php (13)
-2013/01/01 19:29:00 [warning] [before do while(notfound == false)] 
-in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (149)
+2013/01/01 20:06:07 [warning] [application] SUCCESS
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (77)
 in /opt/lampp/htdocs/telechargeri-com/index.php (13)
-2013/01/01 19:29:00 [warning] [application] LET's get some apps lists !!!!
-in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (151)
+2013/01/01 20:06:07 [warning] [application] --------------->Using proxy : 173.213.113.211:8080
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (78)
 in /opt/lampp/htdocs/telechargeri-com/index.php (13)
-2013/01/01 19:29:00 [warning] [application] get the apps list page using random proxy
-in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (157)
-in /opt/lampp/htdocs/telechargeri-com/index.php (13)
-2013/01/01 19:29:02 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index2.html
-in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (165)
-in /opt/lampp/htdocs/telechargeri-com/index.php (13)
-2013/01/01 19:29:02 [warning] [application] --------------->Using proxy : 199.119.76.111:8080
-in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (166)
-in /opt/lampp/htdocs/telechargeri-com/index.php (13)
-2013/01/01 19:29:02 [warning] [application] LET's get some apps lists !!!!
-in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (151)
-in /opt/lampp/htdocs/telechargeri-com/index.php (13)
-2013/01/01 19:29:02 [warning] [application] get the apps list page using random proxy
-in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (157)
-in /opt/lampp/htdocs/telechargeri-com/index.php (13)
-2013/01/01 19:29:04 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index3.html
-in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (165)
-in /opt/lampp/htdocs/telechargeri-com/index.php (13)
-2013/01/01 19:29:04 [warning] [application] --------------->Using proxy : 5.9.187.106:8080
-in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (166)
-in /opt/lampp/htdocs/telechargeri-com/index.php (13)
-2013/01/01 19:29:04 [warning] [application] LET's get some apps lists !!!!
-in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (151)
-in /opt/lampp/htdocs/telechargeri-com/index.php (13)
-2013/01/01 19:29:04 [warning] [application] get the apps list page using random proxy
-in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (157)
-in /opt/lampp/htdocs/telechargeri-com/index.php (13)
-2013/01/01 19:29:08 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index4.html
-in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (165)
-in /opt/lampp/htdocs/telechargeri-com/index.php (13)
-2013/01/01 19:29:08 [warning] [application] --------------->Using proxy : 74.221.211.117:3128
-in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (166)
-in /opt/lampp/htdocs/telechargeri-com/index.php (13)
-2013/01/01 19:29:08 [warning] [application] LET's get some apps lists !!!!
-in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (151)
-in /opt/lampp/htdocs/telechargeri-com/index.php (13)
-2013/01/01 19:29:08 [warning] [application] get the apps list page using random proxy
-in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (157)
-in /opt/lampp/htdocs/telechargeri-com/index.php (13)
-2013/01/01 19:29:10 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index5.html
-in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (165)
-in /opt/lampp/htdocs/telechargeri-com/index.php (13)
-2013/01/01 19:29:10 [warning] [application] --------------->Using proxy : 173.213.108.112:3128
-in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (166)
-in /opt/lampp/htdocs/telechargeri-com/index.php (13)
-2013/01/01 19:29:10 [warning] [application] LET's get some apps lists !!!!
-in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (151)
-in /opt/lampp/htdocs/telechargeri-com/index.php (13)
-2013/01/01 19:29:10 [warning] [application] get the apps list page using random proxy
-in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (157)
-in /opt/lampp/htdocs/telechargeri-com/index.php (13)
-2013/01/01 19:29:12 [warning] [application] SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index6.html
-in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (165)
-in /opt/lampp/htdocs/telechargeri-com/index.php (13)
-2013/01/01 19:29:12 [warning] [application] --------------->Using proxy : 199.119.76.111:3128
-in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (166)
-in /opt/lampp/htdocs/telechargeri-com/index.php (13)
-2013/01/01 19:29:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
-Stack trace:
-#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
-#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
-#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
-#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
-#5 {main}
-REQUEST_URI=/administration/images/icons/black/16/computer_imac.png
-HTTP_REFERER=http://telechargeri.localhost/administration/applications
----
-2013/01/01 19:29:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php:484
-Stack trace:
-#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(271): CController->missingAction('images')
-#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('images')
-#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
-#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#4 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
-#5 {main}
-REQUEST_URI=/administration/images/icons/black/16/computer_imac.png
-HTTP_REFERER=http://telechargeri.localhost/administration/applications
----

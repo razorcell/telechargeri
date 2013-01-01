@@ -47,22 +47,44 @@ class AdministrationController extends Controller
 				
 		}
 		Yii::log("message", CLogger::LEVEL_WARNING, "category");*/
-		function get_proxys(){
-			$data = get_web_page("http://www.aliveproxy.com/high-anonymity-proxy-list/");
-			$data = preg_replace('/\s+/', '', $data["content"]);
-			$data = htmlentities($data,ENT_IGNORE);
-			preg_match_all("#[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\:[0-9]{2,4}#", $data, $proxys);
-			return $proxys[0];//array  [0] array IP:PORT
-			
+		function get_proxy(){
+			do{
+				$data = get_web_page("http://www.aliveproxy.com/fastest-proxies/");
+				if($data["errno"] != 0 || $data["http_code"] != 200){
+					Yii::log("can't get proxies list page - Curl error : ".$data["errno"]."    -  HTTP CODE : ".$data["http_code"],CLogger::LEVEL_ERROR);
+				}
+				}while($data["errno"] != 0 || $data["http_code"] != 200);
+				//we got proxies list
+				$data = preg_replace('/\s+/', '', $data["content"]);
+				$data = htmlentities($data,ENT_IGNORE);
+				preg_match_all("#[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\:[0-9]{2,4}#", $data, $proxys);
+
+				$random_index = array_rand($proxys[0],1);
+				$random_proxy = $proxys[0][$random_index];
+				return $random_proxy;//array  [0] array IP:PORT
 		}
-		function get_proxys2(){
-			$data = get_web_page("http://www.hidemyass.com/proxy-list/search-273614");
-			//$data = preg_replace('/\s+/', '', $data["content"]);
-			$data = htmlentities($data['content'],ENT_IGNORE);
-			preg_match_all("#[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\:[0-9]{2,4}#", $data, $proxys);
-			return $data;//array  [0] array IP:PORT
-				
-		}
+		$got_current_apps_list = true;
+		do {//get the current page
+			$got_current_apps_list = true;//if false last time, we need to initialize it again to true
+			Yii::log('get page not found',CLogger::LEVEL_WARNING);
+			//Yii::log('',CLogger::LEVEL_WARNING,"Proxy : ".$proxy."         - Index : ".$index);
+			$current_proxy = get_proxy();
+			$current_apps_list = get_web_page("www.01net.com/telecharger/windows/Bureautique/agenda/index101.html",$current_proxy);
+			if($current_apps_list["errno"] != 0 || $current_apps_list["http_code"] != 200) {//ERROR OCCURED
+				Yii::log("   Proxy : ".$current_proxy."Message : ".$current_apps_list["errmsg"]."   -   HTTP CODE : ".$current_apps_list["http_code"],CLogger::LEVEL_ERROR);
+				$got_current_apps_list = false;
+			}else{
+				Yii::log("SUCCESS",CLogger::LEVEL_WARNING);
+				Yii::log("--------------->Using proxy : ".$current_proxy,CLogger::LEVEL_WARNING);
+				//$current_apps_list_withoutspaces = preg_replace('/\s+/', '', $current_apps_list["content"]);
+				//if(strpos($current_apps_list_withoutspaces, "Pagenontrouve") != FALSE){
+					
+					$this->render('index',array('res'=>strpos($current_apps_list["content"], "Page non trouv"),
+							'content'=>$current_apps_list["content"]
+							));
+			//	}
+			}
+		}while($got_current_apps_list == false);
 		
 		/*
 		function get_proxy2(){
@@ -79,7 +101,7 @@ class AdministrationController extends Controller
 			preg_match_all("#[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}#", $data, $proxys);
 			return $data;
 		}*/
-		$this->render('index',array('proxys'=>get_proxys2()));
+		
 		
 	}
 	public function actionWebsite_list(){
@@ -144,7 +166,7 @@ class AdministrationController extends Controller
 		}
 		$force_close = 2;
 		$global_apps_list = "";
-		$index = 2;// using to alter index (x).html for apps lists, it starts from 2 because we have some issues on index1.html, the apps there are not all from the equivalent section
+		$index = 100;// using to alter index (x).html for apps lists, it starts from 2 because we have some issues on index1.html, the apps there are not all from the equivalent section
 		$pagenotfound = false;// if true than PAGE NOT FOUND REACHED
 		Yii::log('',CLogger::LEVEL_WARNING,"before do while(notfound == false)");
 		do{//LET's get some apps lists !!!!, do while we did not reach NOT FOUND PAGE
@@ -170,7 +192,7 @@ class AdministrationController extends Controller
 			//check if that page is NOT FOUND
 			//$current_apps_list_withoutspaces = preg_replace('/\s+/', '', $current_apps_list["content"]);
 			//if(strpos($current_apps_list_withoutspaces, "Pagenontrouve") === FALSE){
-			if($force_close < 6){
+			if($force_close < 101){
 				//GREAT !! , get the lines we need
 				preg_match_all("/(\/telecharger\/windows\/Bureautique\/agenda\/fiches\/)((\w|\-){1,19})(\.html\" class=\"resrechlog_nomlogi\">)(.{100})/", $current_apps_list["content"], $apps_links_names);//extract link and name part 1
 				//preg_match_all("/(<a class=\"resrechlog_nomlogi\" href=\")(.*?)(<\/a>)/", $proxys_page["content"], $proxy);

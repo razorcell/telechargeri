@@ -22,7 +22,8 @@
 		</div>
 		<div class="da-panel-content">
 			<div class="with-padding">
-				<?php echo var_dump($proxys);?>
+				<?php echo var_dump($res);?>
+				<p style="white-space:nowrap"><?php echo htmlentities($content);?></p>
 			</div>
 		</div>
 	</div>
