@@ -93,8 +93,7 @@ class AdministrationController extends Controller
 		
 	}
 	public function actionAppsGrabb(){
-		Yii::log("message", CLogger::LEVEL_WARNING, "category");
-		Yii::log('',CLogger::LEVEL_WARNING,"actionAppsGrabb()");
+		Yii::log("actionAppsGrabb()",CLogger::LEVEL_WARNING);
 		/**
 		 * Get a web file (HTML, XHTML, XML, image, etc.) from a URL.  Return an
 		 * array containing the HTTP server response header fields and content.
@@ -130,10 +129,10 @@ class AdministrationController extends Controller
 		function get_proxy(){
 			do{
 				$data = get_web_page("http://www.aliveproxy.com/fastest-proxies/");
-				if($data["errno"] != 0){
-					Yii::log("can't get proxies list page : ".$data["errno"],CLogger::LEVEL_ERROR);
+				if($data["errno"] != 0 || $data["http_code"] != 200){
+					Yii::log("can't get proxies list page - Curl error : ".$data["errno"]."    -  HTTP CODE : ".$data["http_code"],CLogger::LEVEL_ERROR);
 				}
-				}while($data["errno"] != 0);
+				}while($data["errno"] != 0 || $data["http_code"] != 200);
 				//we got proxies list
 				$data = preg_replace('/\s+/', '', $data["content"]);
 				$data = htmlentities($data,ENT_IGNORE);
@@ -143,13 +142,13 @@ class AdministrationController extends Controller
 				$random_proxy = $proxys[0][$random_index];
 				return $random_proxy;//array  [0] array IP:PORT
 		}
-		$force_close = 0;
+		$force_close = 2;
 		$global_apps_list = "";
 		$index = 2;// using to alter index (x).html for apps lists, it starts from 2 because we have some issues on index1.html, the apps there are not all from the equivalent section
 		$pagenotfound = false;// if true than PAGE NOT FOUND REACHED
 		Yii::log('',CLogger::LEVEL_WARNING,"before do while(notfound == false)");
 		do{//LET's get some apps lists !!!!, do while we did not reach NOT FOUND PAGE
-			Yii::log("LET's get some apps lists !!!!, do while we did not reach NOT FOUND PAGE",CLogger::LEVEL_WARNING);
+			Yii::log("LET's get some apps lists !!!!",CLogger::LEVEL_WARNING);
 			$current_apps_list = NULL;
 			$got_current_apps_list = true;// to test if we got the apps list page or not
 			$net01_apps_list = NULL;
@@ -159,22 +158,25 @@ class AdministrationController extends Controller
 				//Yii::log('',CLogger::LEVEL_WARNING,"Proxy : ".$proxy."         - Index : ".$index);
 				$current_proxy = get_proxy();
 				$current_apps_list = get_web_page("www.01net.com/telecharger/windows/Bureautique/agenda/index".$index.".html",$current_proxy);
-				if($current_apps_list["errno"] != 0){//ERROR OCCURED
-					Yii::log("Proxy : ".$current_proxy."Message : ".$current_apps_list["errmsg"],CLogger::LEVEL_ERROR);
+				if($current_apps_list["errno"] != 0 || $current_apps_list["http_code"] != 200) {//ERROR OCCURED
+					Yii::log("Index : ".$index."   Proxy : ".$current_proxy."Message : ".$current_apps_list["errmsg"]."   -   HTTP CODE : ".$current_apps_list["http_code"],CLogger::LEVEL_ERROR);
 					$got_current_apps_list = false;
+				}else{
+					Yii::log("SUCCESS : www.01net.com/telecharger/windows/Bureautique/agenda/index".$index.".html",CLogger::LEVEL_WARNING);
+					Yii::log("--------------->Using proxy : ".$current_proxy,CLogger::LEVEL_WARNING);
 				}
 			}while($got_current_apps_list == false);
 			//COOOL !!! you have the apps list page what are you going to do with it now
 			//check if that page is NOT FOUND
-			$current_apps_list_withoutspaces = preg_replace('/\s+/', '', $current_apps_list["content"]);
+			//$current_apps_list_withoutspaces = preg_replace('/\s+/', '', $current_apps_list["content"]);
 			//if(strpos($current_apps_list_withoutspaces, "Pagenontrouve") === FALSE){
-			if($force_close < 5){
+			if($force_close < 6){
 				//GREAT !! , get the lines we need
-				preg_match_all("/(\/telecharger\/windows\/Bureautique\/agenda\/fiches\/)((\w|\-){1,19})(\.html\"class=\"resrechlog_nomlogi\">)(.{200})/", $current_apps_list_withoutspaces, $apps_links_names);//extract link and name part 1
+				preg_match_all("/(\/telecharger\/windows\/Bureautique\/agenda\/fiches\/)((\w|\-){1,19})(\.html\" class=\"resrechlog_nomlogi\">)(.{100})/", $current_apps_list["content"], $apps_links_names);//extract link and name part 1
 				//preg_match_all("/(<a class=\"resrechlog_nomlogi\" href=\")(.*?)(<\/a>)/", $proxys_page["content"], $proxy);
 				foreach($apps_links_names[0] as $app){
 					//Yii::log('',CLogger::LEVEL_WARNING,htmlspecialchars($app,ENT_IGNORE));
-					$global_apps_list .= htmlspecialchars($app,ENT_IGNORE)."\n";//ADD the new apps_names list to the global list
+					$global_apps_list .= "<p style=\"white-space:nowrap\">".htmlspecialchars($app,ENT_IGNORE)."</p>";//ADD the new apps_names list to the global list
 					
 					//echo htmlspecialchars($app,ENT_IGNORE);
 				}
