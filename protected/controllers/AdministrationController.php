@@ -105,15 +105,28 @@ class AdministrationController extends Controller
 		
 	}
 	public function actionWebsite_list(){
-		$websites=new CActiveDataProvider('Website');
+		$website_list = Website::model()->findAll();
 		$this->render('websites_list',array(
-				'websites'=>$websites,
+				'website_list'=>$website_list,
 		));
 		
 	}
 	public function actionWebsite_add(){
 		
 	}
+	public function actionOs_list(){
+		$website_list = Website::model()->findAll();
+		$os_list = Os::model()->findAll();
+		$this->render('os_list',array(
+				'os_list'=>$os_list,
+				'website_list'=>$website_list
+		));
+	
+	}
+	
+	
+	
+	
 	public function actionAppsGrabb(){
 		Yii::log("actionAppsGrabb()",CLogger::LEVEL_WARNING);
 		/**
@@ -181,6 +194,14 @@ class AdministrationController extends Controller
 			}while($got_page == false);
 			return $page;
 		}
+		function clean_name($string){
+			$string = str_replace("\">", "", $string);
+			$string = str_replace("</a>", "", $string);
+			return $string;
+		}
+		function logit($string){
+			Yii::log($string,CLogger::LEVEL_WARNING);
+		}
 		
 		
 		
@@ -188,7 +209,7 @@ class AdministrationController extends Controller
 		$global_apps_list = "";
 		$index = 2;// using to alter index (x).html for apps lists, it starts from 2 because we have some issues on index1.html, the apps there are not all from the equivalent section
 		$pagenotfound = false;// if true than PAGE NOT FOUND REACHED
-		Yii::log('',CLogger::LEVEL_WARNING,"EXTRACT PROCESS STARTED");
+		logit("EXTRACT PROCESS STARTED");
 		do{//do while we did not reach NOT FOUND PAGE
 			$current_apps_list = "www.01net.com/telecharger/windows/Bureautique/agenda/index".$index.".html";
 			$current_apps_list = get_page($current_apps_list);
@@ -200,6 +221,7 @@ class AdministrationController extends Controller
 						foreach($apps_links_names[0] as $app){//$apps_links_names[0] contains occurences of our search
 							preg_match_all("#(\/telecharger\/windows\/Bureautique\/agenda\/fiches\/)((\w|\-){1,19}\.html)|(\"\>.*\<\/a\>)#",$app,$link_name);
 							foreach($link_name[0] as $element){
+								$element = clean_name($element);
 								$global_apps_list .= "<p style=\"white-space:nowrap\">".htmlspecialchars($element,ENT_IGNORE)."</p>";//ADD the new apps_names list to the global list
 							}
 							
@@ -208,8 +230,7 @@ class AdministrationController extends Controller
 			}else{
 				//404 PAGE NOT FOUND REACHED
 				$pagenotfound = true;
-				Yii::log("------------------------------> PAGE NOT FOUND",CLogger::LEVEL_WARNING);
-				//Yii::log("strpos() returned :  ".gettype(strpos($current_apps_list["content"], "Page non trouv")),CLogger::LEVEL_WARNING);
+				logit("------------------------------> PAGE NOT FOUND");
 				$pagenotfound = true;//GET OUT and SHOW APPS LIST
 				$this->render('appsgrabb',array('global_apps_list'=>$global_apps_list));
 			} 
@@ -231,28 +252,7 @@ class AdministrationController extends Controller
 		
 		
 		
-		
-		
-		//$this->render('appsgrabb',array('apps_links_names'=>$apps_links_names));
-		//$this->render('appsgrabb',array('global_apps_list'=>$global_apps_list));-------------------------
-		
 		//$current_apps_list_withoutspaces = preg_replace('/\s+/', '', $current_apps_list["content"]);
-		/*
-		$proxys_page = get_web_page("www.activeproxies.org/random-proxies.php");
-		//$proxys = strstr($proxys_page['content'],'<table>');
-		
-		preg_match_all("/(<td>)(.*?)(<\/td>)/", $proxys_page['content'], $proxys_table);//$proxys_table[0] is the one containing proxys
-		
-		$proxy_time = array();
-		for($x=0;$x<25;$x++){
-			if($x % 5 == 0){
-				array_push($proxy_time,array("proxy"=>$proxys_table[0][$x],
-						"loading_speed"=>str_replace(' Seconds','',$proxys_table[0][$x+1]),
-						"uptime"=>str_replace('%','',$proxys_table[0][$x+2])
-																)
-								);
-			}
-		}*/
 	}
 
 	// Uncomment the following methods and override them if needed

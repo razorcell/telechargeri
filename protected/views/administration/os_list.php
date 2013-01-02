@@ -5,20 +5,8 @@
 <!-- Setup the ligbulb after menu title-->
 $(document).ready(function(){
 	$(".home").removeClass("active");
-	$(".websites").addClass("active");
-	$(".add_website").click(function(){
-			var pattern2 = new RegExp(".*");
-			var pattern = new RegExp("([\da-z\-])*\.([a-z]{2,3})");
-			if(pattern.test($(".label_website").val())){
-				$(".label_website").val("OK");
-
-				}else{
-					$.jGrowl("Website label is rong : "+$(".label_website").val(), {header: "input error : ", position: "bottom-right"});
-
-					}
-				
-
-		})
+	$(".websites").removeClass("active");
+	$(".os").addClass("active");
 
 });
 
@@ -44,7 +32,7 @@ $this->menu=array(
 		<div class="da-panel-header">
 			<span class="da-panel-title"> <img
 				src="<?php echo Yii::app()->request->baseUrl; ?>/images/icons/black/16/plus_small.png"
-				alt="" /> Add a website
+				alt="" /> Add Os
 			</span>
 		</div>
 		<div class="da-panel-content">
@@ -55,20 +43,23 @@ $this->menu=array(
 					<div class="da-form-row">
 						<label>Label</label>
 						<div class="da-form-item">
-							<input type="text" name="req1" class="label_website" />
+							<input type="text" name="req1" />
 						</div>
 					</div>
 					<div class="da-form-row">
-						<label>Language</label>
+						<label>Website</label>
 						<div class="da-form-item">
 							<select>
-								<option value="fr">French</option>
-								<option value="eng">English</option>
-							</select> 
+								<?php 
+								foreach($website_list as $website){
+									echo "<option value=\"".$website->id_website."\">".$website->label_website."</option>\n";
+								}
+								?>
+							</select>
 						</div>
 					</div>
 					<div class="da-button-row">
-						<span class="da-button green add_website"> <img
+						<span class="da-button green"> <img
 							src="<?php echo Yii::app()->request->baseUrl; ?>/images/icons/color/add.png">&nbsp;&nbsp;Send
 						</span>
 					</div>
@@ -84,7 +75,7 @@ $this->menu=array(
 		<div class="da-panel-header">
 			<span class="da-panel-title"> <img
 				src="<?php echo Yii::app()->request->baseUrl; ?>/images/icons/black/16/list.png"
-				alt="" /> Websites
+				alt="" />Os list
 			</span>
 
 		</div>
@@ -94,15 +85,14 @@ $this->menu=array(
 					<tr>
 						<th>Id</th>
 						<th>Label</th>
-
 					</tr>
 				</thead>
 				<tbody>
 					<?php 
-					foreach($website_list as $website){
+					foreach($os_list as $os){
 						echo '<tr>';
-						echo '<td>'.$website->id_website.'</td>';
-						echo '<td>'.$website->label_website.'</td>';
+						echo '<td>'.$os->id_os.'</td>';
+						echo '<td>'.$os->label_os.'</td>';
 						echo '</tr>';
 					}
 					?>

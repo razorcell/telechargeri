@@ -95,6 +95,10 @@
 <!-- Customizer JavaScript File (remove if not needed) -->
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/core/dandelion.customizer.js"></script>
 
+<!-- jGrowl Plugin -->
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/plugins/jgrowl/jquery.jgrowl.min.js"></script>
+<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/plugins/jgrowl/jquery.jgrowl.css" media="screen" />
+
 <title>Dandelion Admin - Dashboard</title>
 
 </head>
@@ -360,6 +364,15 @@
                                     	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/icons/black/32/powerpoint_documents_1.png" alt="Dashboard" />
                                     </span>
                                 	Websites
+                                </a>
+                            </li>
+                            <li class="os">
+                            	<a href="<?php echo $this->createUrl('administration/os_list');?>">
+                                	<!-- Icon Container -->
+                                	<span class="da-nav-icon">
+                                    	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/icons/black/32/windows.png" alt="Dashboard" />
+                                    </span>
+                                	Os
                                 </a>
                             </li>
                             <li class="appsgrabb">
