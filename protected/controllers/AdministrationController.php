@@ -178,6 +178,21 @@ class AdministrationController extends Controller
 		}
 		echo CJSON::encode($response);
 	}
+	public function actionWebsite_delete(){
+		$body = file_get_contents("php://input");
+		$json = CJSON::decode($body);
+		$website = new Website();
+		$deleted_rows = $website->deleteAll("id_website = ".$json["id_website"]);
+		if($deleted_rows == 1){
+			$response = array("err"=>false,
+					"message"=>"The website ".$json["id_website"]." was deleted successfuly");
+		}else{
+			$err_summary = Tools::get_errors_summary($website->errors);
+			$response = array("err"=>true,
+					"message"=>"Database error : ".$err_summary);
+		}
+		echo CJSON::encode($response);
+	}
 	/* public function actionWebsite_delete(){
 		if(isset(Yii::app()->getRequest()->getParam("id"))){
 			

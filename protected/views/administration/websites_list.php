@@ -24,17 +24,17 @@ $(document).ready(function(){
 					success : function(data) {
 						var json = $.parseJSON(data);
 						if (!json.err) {
-							$(".success").show();$(".error").hide();
-							$(".success").html(json.message);
+							$(".website_add_success").show();$(".website_add_error").hide();
+							$(".website_add_success").html(json.message);
 						} else {
-							$(".error").show();$(".success").hide();
-							$(".error").html(json.message);
+							$(".website_add_error").show();$(".website_add_success").hide();
+							$(".website_add_error").html(json.message);
 								}
 						}
 				});//end of ajax
 		}else{
-			$(".error").show();$(".success").hide();
-			$(".error").html("Label value is rong : "+label_website);				
+			$(".website_add_error").show();$(".website_add_success").hide();
+			$(".website_add_error").html("Label value is rong : "+label_website);				
 		}//end if pattern
 	});//end website_add.click()
 	$(".update_website").click(function(){
@@ -55,17 +55,17 @@ $(document).ready(function(){
 					success : function(data) {
 						var json = $.parseJSON(data);
 						if (!json.err) {
-							$(".edit_success").show();$(".edit_error").hide();
-							$(".edit_success").html(json.message);
+							$(".website_edit_success").show();$(".website_edit_error").hide();
+							$(".website_edit_success").html(json.message);
 						} else {
-							$(".edit_error").show();$(".edit_success").hide();
-							$(".edit_error").html(json.message);
+							$(".website_edit_error").show();$(".website_edit_success").hide();
+							$(".website_edit_error").html(json.message);
 								}
 						}
 				});//end of ajax
 		}else{
-			$(".edit_error").show();$(".edit_success").hide();
-			$(".edit_error").html("Label value is rong : "+update_label_website);				
+			$(".website_edit_error").show();$(".website_edit_success").hide();
+			$(".website_edit_error").html("Label value is rong : "+update_label_website);				
 		}//end if pattern
 	});//end update_website.click()
 
@@ -91,13 +91,52 @@ $(document).ready(function(){
 				}
 			});
 	});
-	$("#edit_website_div").dialog({
+	$("#edit_website_div").dialog({//prepare edit dialog
 		autoOpen: false, 
 		title: "Website edit form", 
 		modal: true, 
 		width: "640",
 	});
-
+	$("#delete_website_div").dialog({//prepare delete dialog
+		autoOpen: false, 
+		title: "Delete a website", 
+		modal: true, 
+		width: "640", 
+		buttons: [{
+				text: "Cancel", 
+				click: function() {
+					$( this ).dialog( "close" );
+				}},
+				{
+					text: "Continue", 
+					click: function() {
+						var id_website = $("strong.delete_id").html();
+						var json = "{"+" \"id_website\" : \""+id_website+"\" }";
+						$.ajax({ 
+							type : "POST",
+							url : "/website_delete",
+							data : json,
+							success : function(data) {
+								var json = $.parseJSON(data);
+								if (!json.err) {
+									$.jGrowl(json.message, {header: "Deleted", position: "bottom-right"});
+									$("#delete_website_div").dialog("close");
+								} else {
+									alert(json.message);
+									$("#delete_website_div").dialog("close");
+										}
+								}
+						});//end of ajax
+					}}
+				]
+	});
+	$(".website_delete").live("click",function(event){
+		var id_website = $(this).parents("tr.website_row").find("td.id_website").html();
+		$(".delete_success").show();
+		$(".delete_id").html(id_website);
+		$("#delete_website_div").dialog("option", {modal: true,id:id_website}).dialog("open");
+		event.preventDefault();
+		});
 });//end of .ready() body
 </script>
 
@@ -143,10 +182,10 @@ $this->menu=array(
 							</select>
 						</div>
 					</div>
-					<div class="da-message success" hidden="true">This is an error
-						message</div>
-					<div class="da-message error" hidden="true">This is an error
-						message</div>
+					<div class="da-message success website_add_success" hidden="true">This
+						is an error message</div>
+					<div class="da-message error website_add_error" hidden="true">This
+						is an error message</div>
 					<div class="da-button-row">
 						<span class="da-button green add_website"> <img
 							src="<?php echo $this->baseurl; ?>/images/icons/color/add.png">&nbsp;&nbsp;Add
@@ -175,7 +214,6 @@ $this->menu=array(
 						<th>Label</th>
 						<th>Language</th>
 						<th></th>
-
 					</tr>
 				</thead>
 				<tbody>
@@ -202,10 +240,10 @@ $this->menu=array(
 <div id="edit_website_div" class="no-padding">
 	<form id="da-ex-validate1" class="da-form">
 		<div class="da-form-inline">
-		<div class="da-form-row">
+			<div class="da-form-row">
 				<label>Id</label>
 				<div class="da-form-item">
-					<input type="text" name="req1" class="edit_id_website" disabled/>
+					<input type="text" name="req1" class="edit_id_website" disabled />
 				</div>
 			</div>
 			<div class="da-form-row">
@@ -225,10 +263,10 @@ $this->menu=array(
 					</select>
 				</div>
 			</div>
-			<div class="da-message success edit_success" hidden="true"></div>
-			<div class="da-message error edit_error" hidden="true"></div>
+			<div class="da-message success website_edit_success" hidden="true"></div>
+			<div class="da-message error website_edit_error" hidden="true"></div>
 			<div class="da-button-row">
-				<span class="da-button blue update_website"> <img
+				<span class="da-button green update_website"> <img
 					src="<?php echo $this->baseurl; ?>/images/icons/color/pencil.png">&nbsp;&nbsp;Update
 				</span>
 			</div>
@@ -236,6 +274,13 @@ $this->menu=array(
 	</form>
 </div>
 <!-- end edit dialog -->
+<div id="delete_website_div" style="display: none;">
+	<blockquote>
+		You are about to <strong><font color="#A6D037">DELETE</font> </strong>
+		website id : <font color="#A6D037"><strong class="delete_id"></strong>
+		</font>,&nbsp;&nbsp;are you sure ?
+	</blockquote>
+</div>
 
 
 

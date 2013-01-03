@@ -94,7 +94,10 @@
 
 <!-- Customizer JavaScript File (remove if not needed) -->
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/core/dandelion.customizer.js"></script>
-
+<!-- jGrowl Plugin -->
+<script type="text/javascript" src="<?php echo $this->baseurl;?>/plugins/jgrowl/jquery.jgrowl.min.js"></script>
+<link rel="stylesheet" href="<?php echo $this->baseurl;?>/plugins/jgrowl/jquery.jgrowl.css"
+	media="screen" />
 <title>Dandelion Admin - Dashboard</title>
 
 </head>
