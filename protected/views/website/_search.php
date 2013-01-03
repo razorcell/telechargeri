@@ -18,12 +18,12 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'label_website'); ?>
-		<?php echo $form->textField($model,'label_website',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->textField($model,'label_website',array('size'=>60,'maxlength'=>70)); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'language'); ?>
-		<?php echo $form->textField($model,'language',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->textField($model,'language',array('size'=>7,'maxlength'=>7)); ?>
 	</div>
 
 	<div class="row buttons">

@@ -55,17 +55,17 @@ $(document).ready(function(){
 					success : function(data) {
 						var json = $.parseJSON(data);
 						if (!json.err) {
-							$(".website_edit_success").show();$(".website_edit_error").hide();
+							$(".website_edit_success").show();$(".website_edit_warning").hide();
 							$(".website_edit_success").html(json.message);
 						} else {
-							$(".website_edit_error").show();$(".website_edit_success").hide();
-							$(".website_edit_error").html(json.message);
+							$(".website_edit_warning").show();$(".website_edit_success").hide();
+							$(".website_edit_warning").html(json.message);
 								}
 						}
 				});//end of ajax
 		}else{
-			$(".website_edit_error").show();$(".website_edit_success").hide();
-			$(".website_edit_error").html("Label value is rong : "+update_label_website);				
+			$(".website_edit_warning").show();$(".website_edit_success").hide();
+			$(".website_edit_warning").html("Label value is rong : "+update_label_website);				
 		}//end if pattern
 	});//end update_website.click()
 
@@ -132,9 +132,8 @@ $(document).ready(function(){
 	});
 	$(".website_delete").live("click",function(event){
 		var id_website = $(this).parents("tr.website_row").find("td.id_website").html();
-		$(".delete_success").show();
 		$(".delete_id").html(id_website);
-		$("#delete_website_div").dialog("option", {modal: true,id:id_website}).dialog("open");
+		$("#delete_website_div").dialog("option", {modal: true}).dialog("open");
 		event.preventDefault();
 		});
 });//end of .ready() body
@@ -145,14 +144,6 @@ $(document).ready(function(){
 /* @var $this WebsiteController */
 /* @var $dataProvider CActiveDataProvider */
 
-/*$this->breadcrumbs=array(
- 'Websites',
-);
-
-$this->menu=array(
-		array('label'=>'Create Website', 'url'=>array('create')),
-		array('label'=>'Manage Website', 'url'=>array('admin')),
-);*/
 ?>
 <div class="grid_4">
 	<div class="da-panel collapsible">
@@ -182,10 +173,8 @@ $this->menu=array(
 							</select>
 						</div>
 					</div>
-					<div class="da-message success website_add_success" hidden="true">This
-						is an error message</div>
-					<div class="da-message error website_add_error" hidden="true">This
-						is an error message</div>
+					<div class="da-message success website_add_success" hidden="true"></div>
+					<div class="da-message error website_add_error" hidden="true"></div>
 					<div class="da-button-row">
 						<span class="da-button green add_website"> <img
 							src="<?php echo $this->baseurl; ?>/images/icons/color/add.png">&nbsp;&nbsp;Add
@@ -263,8 +252,7 @@ $this->menu=array(
 					</select>
 				</div>
 			</div>
-			<div class="da-message success website_edit_success" hidden="true"></div>
-			<div class="da-message error website_edit_error" hidden="true"></div>
+			<div class="da-message success website_edit_success" hidden="true"></div>			<div class="da-message warning website_edit_warning" hidden="true"></div>
 			<div class="da-button-row">
 				<span class="da-button green update_website"> <img
 					src="<?php echo $this->baseurl; ?>/images/icons/color/pencil.png">&nbsp;&nbsp;Update

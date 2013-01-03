@@ -6,7 +6,7 @@ class WebsiteController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	//public $layout='//layouts/column2';
+	public $layout='//layouts/column2';
 
 	/**
 	 * @return array action filters
@@ -15,7 +15,6 @@ class WebsiteController extends Controller
 	{
 		return array(
 			'accessControl', // perform access control for CRUD operations
-			
 			'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
@@ -68,11 +67,11 @@ class WebsiteController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Website']))//si la wavelur website est rempli par utilisateur
+		if(isset($_POST['Website']))
 		{
 			$model->attributes=$_POST['Website'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id_website));//afficher la page "view" avec comme valeur "id_website"
+				$this->redirect(array('view','id'=>$model->id_website));
 		}
 
 		$this->render('create',array(

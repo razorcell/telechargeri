@@ -1,119 +1,20 @@
 <?php
-
 class AdministrationController extends Controller
 {
 	public $baseurl = NULL;
+	public $response = NULL;
 	public function init(){
 		$this->baseurl = Yii::app()->request->baseUrl;
 	}
 	public function actionIndex()
 	{
-		function get_web_page($url,$proxy = null)
-		{
-		$options = array(
-				CURLOPT_RETURNTRANSFER => true,     // return web page
-				CURLOPT_HEADER         => false,    // don't return headers
-				CURLOPT_FOLLOWLOCATION => true,     // follow redirects
-				CURLOPT_ENCODING       => "",       // handle all encodings
-				CURLOPT_USERAGENT      => "user", // who am i
-				CURLOPT_AUTOREFERER    => true,     // set referer on redirect
-				CURLOPT_CONNECTTIMEOUT => 120,      // timeout on connect
-				CURLOPT_TIMEOUT        => 120,      // timeout on response
-				CURLOPT_MAXREDIRS      => 10,       // stop after 10 redirects
-				CURLOPT_PROXY              => $proxy,
-		);
-		$ch      = curl_init( $url );
-		curl_setopt_array( $ch, $options );
-		$content = curl_exec( $ch );
-		$err     = curl_errno( $ch );
-		$errmsg  = curl_error( $ch );
-		$header  = curl_getinfo( $ch );
-		curl_close( $ch );
-			
-		$header['errno']   = $err;
-		$header['errmsg']  = $errmsg;
-		$header['content'] = $content;
-		return $header;
-		}
-		/*
-		function get_proxy(){//$content is $header['content']
-			$proxy = "";
-			do{
-				$proxys_page = get_web_page("www.activeproxies.org/random-proxies.php",null);
-				preg_match_all("/(<td>)(.*?)(<\/td>)/", $proxys_page["content"], $proxy1);//$proxy1[0] is the one containing proxys
-				preg_match("#[A-Z]*\.[A-Z]{1,3}#", $proxy1[0][0], $proxy2);//$proxys_table[0] is the one containing proxys
-				Yii::log("possible proxy : ".strtolower($proxy2[0]),CLogger::LEVEL_WARNING);
-				$proxy = strtolower($proxy2[0]);
-		
-			}while(strlen($proxy) < 5);//we assume that a good domaine name xx.fr
-			Yii::log("Final proxy proxy : ".$proxy,CLogger::LEVEL_WARNING);
-			return $proxy;//return the proxy in lowercase
-				
-		}
-		Yii::log("message", CLogger::LEVEL_WARNING, "category");*/
-		function get_proxy(){
-			do{
-				$data = get_web_page("http://www.aliveproxy.com/fastest-proxies/");
-				if($data["errno"] != 0 || $data["http_code"] != 200){
-					Yii::log("can't get proxies list page - Curl error : ".$data["errno"]."    -  HTTP CODE : ".$data["http_code"],CLogger::LEVEL_ERROR);
-				}
-				}while($data["errno"] != 0 || $data["http_code"] != 200);
-				//we got proxies list
-				$data = preg_replace('/\s+/', '', $data["content"]);
-				$data = htmlentities($data,ENT_IGNORE);
-				preg_match_all("#[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\:[0-9]{2,4}#", $data, $proxys);
-
-				$random_index = array_rand($proxys[0],1);
-				$random_proxy = $proxys[0][$random_index];
-				return $random_proxy;//array  [0] array IP:PORT
-		}
-		$got_current_apps_list = true;
-		do {//get the current page
-			$got_current_apps_list = true;//if false last time, we need to initialize it again to true
-			Yii::log('get page not found',CLogger::LEVEL_WARNING);
-			//Yii::log('',CLogger::LEVEL_WARNING,"Proxy : ".$proxy."         - Index : ".$index);
-			$current_proxy = get_proxy();
-			$current_apps_list = get_web_page("www.01net.com/telecharger/windows/Bureautique/agenda/index101.html",$current_proxy);
-			if($current_apps_list["errno"] != 0 || $current_apps_list["http_code"] != 200) {//ERROR OCCURED
-				Yii::log("   Proxy : ".$current_proxy."Message : ".$current_apps_list["errmsg"]."   -   HTTP CODE : ".$current_apps_list["http_code"],CLogger::LEVEL_ERROR);
-				$got_current_apps_list = false;
-			}else{
-				Yii::log("SUCCESS",CLogger::LEVEL_WARNING);
-				Yii::log("--------------->Using proxy : ".$current_proxy,CLogger::LEVEL_WARNING);
-				//$current_apps_list_withoutspaces = preg_replace('/\s+/', '', $current_apps_list["content"]);
-				//if(strpos($current_apps_list_withoutspaces, "Pagenontrouve") != FALSE){
-					
-					$this->render('index',array('res'=>strpos($current_apps_list["content"], "Page non trouv"),
-							'content'=>$current_apps_list["content"]
-							));
-			//	}
-			}
-		}while($got_current_apps_list == false);
-		
-		/*
-		function get_proxy2(){
-			$proxys_1 = get_proxys1();
-			$rnd = array_rand($proxys_1,1);
-			$rnd_proxy = $proxys_1[$rnd];
-			Yii::log("Random proxy : ".$rnd_proxy,CLogger::LEVEL_WARNING);
-			//http://www.hidemyass.com/proxy-list/search-227956
-			
-			$data = get_web_page("http://www.hidemyass.com/proxy-list/search-227956",$rnd_proxy);
-			Yii::log("Error number : ".$data["errno"],CLogger::LEVEL_WARNING);
-			$data = preg_replace('/\s+/', '', $data["content"]);
-			$data = htmlentities($data,ENT_IGNORE);
-			preg_match_all("#[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}#", $data, $proxys);
-			return $data;
-		}*/
-		
-		
+		$this->render('index');
 	}
 	public function actionWebsite_list(){
 		$website_list = Website::model()->findAll();
 		$this->render('websites_list',array(
 				'website_list'=>$website_list,
 		));
-		
 	}
 	public function actionWebsite_add(){
 		$body = file_get_contents("php://input");
@@ -122,13 +23,18 @@ class AdministrationController extends Controller
 			$website = new Website();
 			$website->setAttribute("label_website", $json["label_website"]);
 			$website->setAttribute("language", $json["language"]);
-			if($website->save()){
-				$response = array("err"=>false,
-						"message"=>"The website ".$json["label_website"]." was added successfuly");
+			if(is_null($website->find("label_website='".$json["label_website"]."'"))){
+				if($website->save()){
+					$response = array("err"=>false,
+							"message"=>"The website ".$json["label_website"]." was added successfuly");
+				}else{
+					$err_summary = Tools::get_errors_summary($website->errors);
+					$response = array("err"=>true,
+							"message"=>"Database error : ".$err_summary);
+				}
 			}else{
-				$err_summary = Tools::get_errors_summary($website->errors);
 				$response = array("err"=>true,
-						"message"=>"Database error : ".$err_summary);
+						"message"=>"Website already exists : ".$json["label_website"]);
 			}
 		}else{
 			$response = array("err"=>true,
@@ -167,10 +73,10 @@ class AdministrationController extends Controller
 			if($updated_rows == 1){
 				$response = array("err"=>false,
 						"message"=>"The website ".$json["label_website"]." was updated successfuly");
-			}else{
+			}elseif($updated_rows == 0){
 				$err_summary = Tools::get_errors_summary($website->errors);
 				$response = array("err"=>true,
-						"message"=>"Database error : ".$err_summary);
+						"message"=>"No rows were updated : ".$err_summary);
 			}
 		}else{
 			$response = array("err"=>true,
@@ -193,12 +99,6 @@ class AdministrationController extends Controller
 		}
 		echo CJSON::encode($response);
 	}
-	/* public function actionWebsite_delete(){
-		if(isset(Yii::app()->getRequest()->getParam("id"))){
-			
-		}
-		
-	} */
 	public function actionOs_list(){
 		$website_list = Website::model()->findAll();
 		$os_list = Os::model()->findAll();
@@ -206,12 +106,222 @@ class AdministrationController extends Controller
 				'os_list'=>$os_list,
 				'website_list'=>$website_list
 		));
-	
 	}
+	public function actionOs_add(){
+		$body = file_get_contents("php://input");
+		$json = CJSON::decode($body);
+		if(preg_match("#^[a-zA-Z0-9]{1,30}$#", $json["label_os"]) > 0){
+			$os = new Os();
+			$os->setAttribute("label_os", $json["label_os"]);
+			$os->setAttribute("id_website", $json["id_website"]);
+			if(is_null($os->find("label_os='".$json["label_os"]."' && id_website='".$json["id_website"]."'"))){
+				if($os->save()){
+					$response = array("err"=>false,
+							"message"=>"The OS ".$json["label_os"]." was added successfuly");
+				}else{
+					$err_summary = Tools::get_errors_summary($os->errors);
+					$response = array("err"=>true,
+							"message"=>"Database error : ".$err_summary);
+				}
+			}else{
+				
+				$response = array("err"=>true,
+						"message"=>"The combination (OS / Website) already exists");
+			}
+		}else{
+			$response = array("err"=>true,
+					"message"=>"OS label is rong : ".$json["label_os"]);
+		}
+		echo CJSON::encode($response);
+	}
+	public function actionOs_edit(){
+		$body = file_get_contents("php://input");
+		$json = CJSON::decode($body);
+		$id_os = $json["id_os"];
+		$os = new Os();
+		$wanted_os = $os->find("id_os = ".$id_os);
+		$response = NULL;
+		if(!is_null($wanted_os)){
+			$response = array("err"=>false,
+					"id_os"=>$wanted_os->id_os,
+					"label_os"=>$wanted_os->label_os,
+					"id_website"=>$wanted_os->id_website);
+		}else{
+			$err_summary = Tools::get_errors_summary($os->errors);
+			$response = array("err"=>true,
+					"message"=>"Database error : ".$err_summary);
+		}
+		echo CJSON::encode($response);
+	}
+	public function actionOs_update(){
+		$body = file_get_contents("php://input");
+		$json = CJSON::decode($body);
+		if(preg_match("#^[a-zA-Z0-9]{1,30}$#", $json["label_os"]) > 0){
+			$os = new Os();
+			if(is_null($os->find("label_os='".$json["label_os"]."' && id_website='".$json["id_website"]."'"))){
+				$updated_rows = $os->updateAll(array(
+						"label_os"=>$json["label_os"],
+						"id_website"=>$json["id_website"],
+				),"id_os=".$json["id_os"]);
+				if($updated_rows == 1){
+					$response = array("err"=>false,
+							"message"=>"The OS ".$json["label_os"]." was updated successfuly");
+				}elseif($updated_rows == 0){
+					$err_summary = Tools::get_errors_summary($os->errors);
+					$response = array("err"=>true,
+							"message"=>"No rows were updated : ".$err_summary);
+				}
+			}else{
+				$response = array("err"=>true,
+						"message"=>"The combination (OS / Website) already exists");
+			}
+		}else{
+			$response = array("err"=>true,
+					"message"=>"OS label is rong : ".$json["label_os"]);
+		}
+		echo CJSON::encode($response);
+	}
+	public function actionOs_delete(){
+		$body = file_get_contents("php://input");
+		$json = CJSON::decode($body);
+		$os = new Os();
+		$deleted_rows = $os->deleteAll("id_os = ".$json["id_os"]);
+		if($deleted_rows == 1){
+			$response = array("err"=>false,
+					"message"=>"The OS ".$json["id_os"]." was deleted successfuly");
+		}else{
+			$err_summary = Tools::get_errors_summary($os->errors);
+			$response = array("err"=>true,
+					"message"=>"Database error : ".$err_summary);
+		}
+		echo CJSON::encode($response);
+	}
+	public function actionCategory_list(){
+		$website_list = Website::model()->findAll();
+		$os_list = Os::model()->findAll();
+		$category_list = Category::model()->findAll();
+		$this->render('category_list',array(
+				'os_list'=>$os_list,
+				'website_list'=>$website_list,
+				'category_list'=>$category_list
+		));
+	}
+	public function actionUpdate_os_list(){
+		$body = file_get_contents("php://input");
+		$json = CJSON::decode($body);
+		$website_os_list = Os::model()->findAll("id_website =".$json["id_website"]);
+		$tab_label_os_list = NULL;
+		if(!empty($website_os_list)){
+			$response = array("err"=>false,
+					"message"=>"",
+					"os_list"=>$website_os_list);
+		}else{
+			$response = array("err"=>true,
+					"message"=>"There is no OS in this site",
+					"os_list"=>$tab_label_os_list);
+		}
+		echo CJSON::encode($response);
+	}
+	public function actionCategory_add(){
+		$body = file_get_contents("php://input");
+		$json = CJSON::decode($body);
+		if(preg_match("#^[a-zA-Z0-9]{1,30}$#", $json["label_category"]) > 0){
+			$category = new Category();
+			$category->setAttribute("label_category", $json["label_category"]);
+			$category->setAttribute("id_website", $json["id_website"]);
+			$category->setAttribute("id_os", $json["id_os"]);
+			if(is_null($category->find("label_category='".$json["label_category"]."' && id_website='".$json["id_website"]."' && id_os='".$json["id_os"]."'"))){
+				if($category->save()){
+					$response = array("err"=>false,
+							"message"=>"The Category ".$json["label_category"]." was added successfuly");
+				}else{
+					$err_summary = Tools::get_errors_summary($category->errors);
+					$response = array("err"=>true,
+							"message"=>"Database error : ".$err_summary);
+				}
+			}else{
 	
-	
-	
-	
+				$response = array("err"=>true,
+						"message"=>"The combination (Category / Website / OS )already exists");
+			}
+		}else{
+			$response = array("err"=>true,
+					"message"=>"Category label is rong : ".$json["label_os"]);
+		}
+		echo CJSON::encode($response);
+	}
+	public function actionCategory_edit(){
+		$body = file_get_contents("php://input");
+		$json = CJSON::decode($body);
+		$category = new Category();
+		$wanted_category = $category->find("id_category = ".$json["id_category"]);
+		$response = NULL;
+		if(!is_null($wanted_category)){
+			$response = array("err"=>false,
+					"id_category"=>$wanted_category->id_category,
+					"label_category"=>$wanted_category->label_category,
+					"id_os"=>$wanted_category->id_os,
+					"id_website"=>$wanted_category->id_website);
+		}else{
+			$err_summary = Tools::get_errors_summary($category->errors);
+			$response = array("err"=>true,
+					"message"=>"Database error : ".$err_summary);
+		}
+		echo CJSON::encode($response);
+	}
+	public function actionCategory_update(){
+		$body = file_get_contents("php://input");
+		$json = CJSON::decode($body);
+		
+		if(preg_match("#^[a-zA-Z0-9]{1,30}$#", $json["label_category"]) > 0){
+			$category = new Category();
+			if(is_null($category->find("label_category='".$json["label_category"]."' && id_website='".$json["id_website"]."' && id_os='".$json["id_os"]."'"))){
+				$updated_rows = $category->updateAll(array(
+						"label_category"=>$json["label_category"],
+						"id_website"=>$json["id_website"],
+						"id_os"=>$json["id_os"]
+				),"id_os=".$json["id_os"]);
+				if($updated_rows == 1){
+					$response = array("err"=>false,
+							"message"=>"The Category ".$json["label_category"]." was updated successfuly");
+				}elseif($updated_rows == 0){
+					$err_summary = Tools::get_errors_summary($category->errors);
+					$response = array("err"=>true,
+							"message"=>"No rows were updated : ".$err_summary);
+				}
+			}else{
+				$response = array("err"=>true,
+						"message"=>"The combination (Category / OS / Website) already exists");
+			}
+		}else{
+			$response = array("err"=>true,
+					"message"=>"Category label is rong : ".$json["label_os"]);
+		}
+		echo CJSON::encode($response);
+	}
+	public function actionCategory_delete(){
+		$body = file_get_contents("php://input");
+		$json = CJSON::decode($body);
+		$Category = new Category();
+		$deleted_rows = $Category->deleteAll("id_category = ".$json["id_category"]);
+		if($deleted_rows == 1){
+			$response = array("err"=>false,
+					"message"=>"The Category ".$json["id_category"]." was deleted successfuly");
+		}else{
+			$err_summary = Tools::get_errors_summary($Category->errors);
+			$response = array("err"=>true,
+					"message"=>"Database error : ".$err_summary);
+		}
+		echo CJSON::encode($response);
+	}
+	public function actionSection_list(){
+		$section_list = Section::model()->findAll();
+		$category_list = Category::model()->findAll();
+		$this->render('section_list',array(
+				'section_list'=>$section_list,
+				'category_list'=>$category_list
+		));
+	}
 	public function actionAppsGrabb(){
 		Yii::log("actionAppsGrabb()",CLogger::LEVEL_WARNING);
 		/**
@@ -284,10 +394,7 @@ class AdministrationController extends Controller
 			$string = str_replace("</a>", "", $string);
 			return $string;
 		}
-		function logit($string){
-			Yii::log($string,CLogger::LEVEL_WARNING);
-		}
-		
+
 		
 		
 		

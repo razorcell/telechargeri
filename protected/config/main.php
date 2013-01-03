@@ -50,12 +50,26 @@ return array(
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',*/
 					'administration'=>'administration/index',
 					'administration/websites'=>'administration/website_list',
-					'administration/os'=>'administration/os_list',
+					'administration/operatingsystems'=>'administration/os_list',
 					'administration/applications'=>'administration/appsgrabb',
+					'administration/categories'=>'administration/category_list',
+					
 					'website_add'=>'administration/website_add',
 					'website_edit'=>'administration/website_edit',
 					'website_delete'=>'administration/website_delete',
-					'website_update'=>'administration/website_update'
+					'website_update'=>'administration/website_update',
+					
+					'os_add'=>'administration/os_add',
+					'os_edit'=>'administration/os_edit',
+					'os_delete'=>'administration/os_delete',
+					'os_update'=>'administration/os_update',
+					
+					'category_add'=>'administration/category_add',
+					'category_edit'=>'administration/category_edit',
+					'category_delete'=>'administration/category_delete',
+					'category_update'=>'administration/category_update'
+					
+					
 					//'home'=>'/site/index',	
 			),
 				'showScriptName'=>false,
@@ -67,7 +81,7 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=telechargeri',
+			'connectionString' => 'mysql:host=localhost;dbname=telechargeri2',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => 'xampp',

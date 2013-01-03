@@ -9,7 +9,9 @@
  * @property string $language
  *
  * The followings are the available model relations:
- * @property WebsiteOs[] $websiteOses
+ * @property Application[] $applications
+ * @property Category[] $categories
+ * @property Os[] $oses
  */
 class Website extends CActiveRecord
 {
@@ -39,8 +41,9 @@ class Website extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('label_website', 'required'),
-			array('label_website, language', 'length', 'max'=>70),
+			array('label_website, language', 'required'),
+			array('label_website', 'length', 'max'=>70),
+			array('language', 'length', 'max'=>7),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id_website, label_website, language', 'safe', 'on'=>'search'),
@@ -55,7 +58,9 @@ class Website extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'websiteOses' => array(self::HAS_MANY, 'WebsiteOs', 'id_website'),
+			'applications' => array(self::HAS_MANY, 'Application', 'id_website'),
+			'categories' => array(self::HAS_MANY, 'Category', 'id_website'),
+			'oses' => array(self::HAS_MANY, 'Os', 'id_website'),
 		);
 	}
 

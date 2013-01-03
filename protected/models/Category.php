@@ -1,23 +1,26 @@
 <?php
 
 /**
- * This is the model class for table "Os".
+ * This is the model class for table "Category".
  *
- * The followings are the available columns in table 'Os':
- * @property string $id_os
- * @property string $label_os
+ * The followings are the available columns in table 'Category':
+ * @property string $id_category
+ * @property string $label_category
  * @property string $id_website
+ * @property string $id_os
  *
  * The followings are the available model relations:
- * @property Category[] $categories
+ * @property Application[] $applications
+ * @property Os $idOs
  * @property Website $idWebsite
+ * @property Section[] $sections
  */
-class Os extends CActiveRecord
+class Category extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Os the static model class
+	 * @return Category the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -29,7 +32,7 @@ class Os extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'Os';
+		return 'Category';
 	}
 
 	/**
@@ -40,12 +43,12 @@ class Os extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('label_os, id_website', 'required'),
-			array('label_os', 'length', 'max'=>30),
-			array('id_website', 'length', 'max'=>10),
+			array('label_category, id_website, id_os', 'required'),
+			array('label_category', 'length', 'max'=>30),
+			array('id_website, id_os', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id_os, label_os, id_website', 'safe', 'on'=>'search'),
+			array('id_category, label_category, id_website, id_os', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -57,8 +60,10 @@ class Os extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'categories' => array(self::HAS_MANY, 'Category', 'id_os'),
+			'applications' => array(self::HAS_MANY, 'Application', 'id_category'),
+			'idOs' => array(self::BELONGS_TO, 'Os', 'id_os'),
 			'idWebsite' => array(self::BELONGS_TO, 'Website', 'id_website'),
+			'sections' => array(self::HAS_MANY, 'Section', 'id_category'),
 		);
 	}
 
@@ -68,9 +73,10 @@ class Os extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id_os' => 'Id Os',
-			'label_os' => 'Label Os',
+			'id_category' => 'Id Category',
+			'label_category' => 'Label Category',
 			'id_website' => 'Id Website',
+			'id_os' => 'Id Os',
 		);
 	}
 
@@ -85,9 +91,10 @@ class Os extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id_os',$this->id_os,true);
-		$criteria->compare('label_os',$this->label_os,true);
+		$criteria->compare('id_category',$this->id_category,true);
+		$criteria->compare('label_category',$this->label_category,true);
 		$criteria->compare('id_website',$this->id_website,true);
+		$criteria->compare('id_os',$this->id_os,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

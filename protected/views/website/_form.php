@@ -16,14 +16,14 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'label_website'); ?>//see Website::attributeLabels(), change the values of labels if wanted
-		<?php echo $form->textField($model,'label_website',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->labelEx($model,'label_website'); ?>
+		<?php echo $form->textField($model,'label_website',array('size'=>60,'maxlength'=>70)); ?>
 		<?php echo $form->error($model,'label_website'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'language'); ?>
-		<?php echo $form->textField($model,'language',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->textField($model,'language',array('size'=>7,'maxlength'=>7)); ?>
 		<?php echo $form->error($model,'language'); ?>
 	</div>
 
