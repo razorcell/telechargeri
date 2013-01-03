@@ -95,10 +95,6 @@
 <!-- Customizer JavaScript File (remove if not needed) -->
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/core/dandelion.customizer.js"></script>
 
-<!-- jGrowl Plugin -->
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/plugins/jgrowl/jquery.jgrowl.min.js"></script>
-<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/plugins/jgrowl/jquery.jgrowl.css" media="screen" />
-
 <title>Dandelion Admin - Dashboard</title>
 
 </head>
@@ -348,7 +344,7 @@
                     <!-- Main Navigation -->
                     <div id="da-main-nav" class="da-button-container">
                         <ul>
-                            <li class="active home">
+                            <li class="home">
                             	<a href="<?php echo $this->createUrl('administration/index');?>">
                                 	<!-- Icon Container -->
                                 	<span class="da-nav-icon">

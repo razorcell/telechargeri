@@ -52,6 +52,10 @@ return array(
 					'administration/websites'=>'administration/website_list',
 					'administration/os'=>'administration/os_list',
 					'administration/applications'=>'administration/appsgrabb',
+					'website_add'=>'administration/website_add',
+					'website_edit'=>'administration/website_edit',
+					'website_delete'=>'administration/website_delete',
+					'website_update'=>'administration/website_update'
 					//'home'=>'/site/index',	
 			),
 				'showScriptName'=>false,

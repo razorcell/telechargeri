@@ -40,7 +40,7 @@ class Website extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('label_website', 'required'),
-			array('label_website, language', 'length', 'max'=>10),
+			array('label_website, language', 'length', 'max'=>70),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id_website, label_website, language', 'safe', 'on'=>'search'),

@@ -2,6 +2,10 @@
 
 class AdministrationController extends Controller
 {
+	public $baseurl = NULL;
+	public function init(){
+		$this->baseurl = Yii::app()->request->baseUrl;
+	}
 	public function actionIndex()
 	{
 		function get_web_page($url,$proxy = null)
@@ -112,8 +116,74 @@ class AdministrationController extends Controller
 		
 	}
 	public function actionWebsite_add(){
-		
+		$body = file_get_contents("php://input");
+		$json = CJSON::decode($body);
+		if(preg_match("#^[0-9a-z-]+(\.(com|fr|net|org|edu|gov|uk|ca|de|jp|au|us|co|c))+$#", $json["label_website"]) > 0){
+			$website = new Website();
+			$website->setAttribute("label_website", $json["label_website"]);
+			$website->setAttribute("language", $json["language"]);
+			if($website->save()){
+				$response = array("err"=>false,
+						"message"=>"The website ".$json["label_website"]." was added successfuly");
+			}else{
+				$err_summary = Tools::get_errors_summary($website->errors);
+				$response = array("err"=>true,
+						"message"=>"Database error : ".$err_summary);
+			}
+		}else{
+			$response = array("err"=>true,
+					"message"=>"Website label is rong : ".$json["label_website"]);
+		}
+		echo CJSON::encode($response);
 	}
+	public function actionWebsite_edit(){
+		$body = file_get_contents("php://input");
+		$json = CJSON::decode($body);
+		$id_website = $json["id_website"];
+		$website = new Website();
+		$wanted_website = $website->find("id_website = ".$id_website);
+		$response = NULL;
+		if(!is_null($wanted_website)){
+			$response = array("err"=>false,
+					"id_website"=>$wanted_website->id_website,
+					"label_website"=>$wanted_website->label_website,
+					"language"=>$wanted_website->language);
+		}else{
+			$err_summary = Tools::get_errors_summary($website->errors);
+			$response = array("err"=>true,
+					"message"=>"Database error : ".$err_summary);
+		}
+		echo CJSON::encode($response);
+	}
+	public function actionWebsite_update(){
+		$body = file_get_contents("php://input");
+		$json = CJSON::decode($body);
+		if(preg_match("#^[0-9a-z-]+(\.(com|fr|net|org|edu|gov|uk|ca|de|jp|au|us|co|c))+$#", $json["label_website"]) > 0){
+			$website = new Website();
+			$updated_rows = $website->updateAll(array(
+						"label_website"=>$json["label_website"],
+						"language"=>$json["language"],
+					),"id_website=".$json["id_website"]);
+			if($updated_rows == 1){
+				$response = array("err"=>false,
+						"message"=>"The website ".$json["label_website"]." was updated successfuly");
+			}else{
+				$err_summary = Tools::get_errors_summary($website->errors);
+				$response = array("err"=>true,
+						"message"=>"Database error : ".$err_summary);
+			}
+		}else{
+			$response = array("err"=>true,
+					"message"=>"Website label is rong : ".$json["label_website"]);
+		}
+		echo CJSON::encode($response);
+	}
+	/* public function actionWebsite_delete(){
+		if(isset(Yii::app()->getRequest()->getParam("id"))){
+			
+		}
+		
+	} */
 	public function actionOs_list(){
 		$website_list = Website::model()->findAll();
 		$os_list = Os::model()->findAll();
