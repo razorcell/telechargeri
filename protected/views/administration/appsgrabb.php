@@ -5,6 +5,28 @@ $(document).ready(function(){
 	$(".websites").removeClass("active");
 	$(".appsgrabb").addClass("active");
 	$(".da-circular-stat").daCircularStat();
+	$(".start").click(function(){
+		$.ajax({ 
+			type : "POST",
+			url : "/start",
+			});//end of ajax
+		});
+	setInterval(function(){
+		$.ajax({ 
+			type : "POST",
+			url : "/info",
+			data : json,
+			success : function(data) {
+				var json = $.parseJSON(data);
+					$(".os").val(json.os);
+					$(".category").val(json.category);
+					$(".section").val(json.section);
+					$(".application_link").val(json.application_link);
+					$(".application_name").val(json.application_name);
+						}
+		});//end of ajax
+		}
+			,1000);
 
 });
 </script>
@@ -35,42 +57,42 @@ $(document).ready(function(){
 							<label>Website</label>
 							<div class="da-form-item">
 								<span class="formNote">Description</span> <input
-									type="text" name="req1" class="label_os" />
+									type="text" name="req1" class="website" />
 							</div>
 						</div>
 						<div class="da-form-row">
 							<label>Os</label>
 							<div class="da-form-item">
 								<span class="formNote">Description</span> <input
-									type="text" name="req1" class="label_os" />
+									type="text" name="req1" class="os" />
 							</div>
 						</div>
 						<div class="da-form-row">
 							<label>Category</label>
 							<div class="da-form-item">
 								<span class="formNote">Description</span> <input
-									type="text" name="req1" class="label_os" />
+									type="text" name="req1" class="category" />
 							</div>
 						</div>
 						<div class="da-form-row">
 							<label>Section</label>
 							<div class="da-form-item">
 								<span class="formNote">Description</span> <input
-									type="text" name="req1" class="label_os" />
+									type="text" name="req1" class="section" />
 							</div>
 						</div>
 						<div class="da-form-row">
 							<label>Application link</label>
 							<div class="da-form-item large">
 								<span class="formNote">Description</span> <input
-									type="text" name="req1" class="label_os" />
+									type="text" name="req1" class="application_link" />
 							</div>
 						</div>
 						<div class="da-form-row">
 							<label>Application name</label>
 							<div class="da-form-item">
 								<span class="formNote">Description</span> <input
-									type="text" name="req1" class="label_os" />
+									type="text" name="req1" class="Application_name" />
 							</div>
 						</div>
 						<div class="da-button-row">

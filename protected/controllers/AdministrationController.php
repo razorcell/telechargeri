@@ -19,6 +19,16 @@ class AdministrationController extends Controller
 		$tools = new Tools();
 		$this->baseurl = Yii::app()->request->baseUrl;
 	}
+	public function actionGet_scan_info(){
+		$info = array("website"=>$this->current_website,
+				"os"=>$this->current_os,
+				"category"=>$this->current_category,
+				"section"=>$this->current_section,
+				"list_link"=>$this->current_list_link,
+				"application_link"=>$this->current_application_link,
+				"application_name"=>$this->current_application_name);
+		echo CJSON::encode($info);
+	}
 	public function actionIndex()
 	{
 		$this->render('index');
@@ -394,6 +404,9 @@ class AdministrationController extends Controller
 		echo CJSON::encode($response);
 	}
 	public function actionAppsGrabb(){
+		$this->render('appsgrabb');
+	}
+	public function actionStart(){
 		function scan_apps_lists($link_before_index,$os,$category,$section = NULL){
 			$global_apps_list = "";
 			$index = 2;// using to alter index (x).html for apps lists, it starts from 2 because we have some issues on index1.html, the apps there are not all from the equivalent section
@@ -416,9 +429,16 @@ class AdministrationController extends Controller
 					preg_match_all($regex_app_link, $current_apps_list["content"], $apps_links_names);//extract link and name part 1
 					foreach($apps_links_names[0] as $app){//$apps_links_names[0] contains occurences of our search
 						preg_match_all($regex_app_name,$app,$link_name);
-						foreach($link_name[0] as $element){
-							$element = $this->clean_name($element);
-							$global_apps_list .= "<p style=\"white-space:nowrap\">".htmlspecialchars($element,ENT_IGNORE)."</p>";//ADD the new apps_names list to the global list
+						$x = 0;
+						foreach($link_name[0] as $element){//element is either app link or app name 0 : link 1 : name / 2 : link  3 : name
+							if(is_int($x % 2)){//this is a link
+								$this->current_application_link = $element;
+							}else{//this is a name
+								$element = $this->clean_name($element);
+								$this->current_application_name = $element;
+							}
+							$global_apps_list .= "\n".$element."\n";//ADD the new apps_names list to the global list
+							$x++;
 						}
 					}
 					$index++;//go to next page
@@ -435,28 +455,35 @@ class AdministrationController extends Controller
 		{
 			$website_list = Website::model()->findAll();
 			foreach($website_list as $website){
+				$this->current_website = $website["label_website"];
 				$os_list = Os::model()->find("id_website="."'".$website["id_website"]."'");
 				foreach($os_list as $os){
+					$this->current_os = $os["label_os"];
 					$category_list = Category::model()->find("id_os="."'".$os["id_os"]."' && id_website="."'".$website["id_website"]."'");
 					foreach($category_list as $category){
+						$this->current_category = $category["label_category"];
 						$section_list = Section::model()->find("id_category="."'".$category["id_category"]."'");
 						$apps_list_link = NULL;
 						if(!empty($section_list)){//if this category has sections
 							foreach($section_list as $section){
+								$this->current_section = $section["label_section"];
 								$apps_list_link = "www.".$website["label_website"]."/".$os["label_os"]."/".$category["label_category"]."/".$section["label_section"]."/";
+								$this->current_list_link = $apps_list_link;
 								$global_apps_list = scan_apps_lists($apps_list_link,$os["label_os"],$category["label_category"],$section["label_section"]);
-								$this->tools->log_text("website : ".$website);
+								$this->tools->log_text("website : ".$website["label_website"]." - Os : ".$os["label_os"]." - category : ".$category["label_category"]." Section : ".$section["label_section"]." : \n\n\n".$global_apps_list);
 							}
 						}else{//if category has NO sections
+							$this->current_section = "This category has no sections";
 							$apps_list_link = "www.".$website["label_website"]."/".$os["label_os"]."/".$category["label_category"]."/";
-							scan_apps_lists($apps_list_link,$os["label_os"],$category["label_category"]);
+							$this->current_list_link = $apps_list_link;
+							$global_apps_list = scan_apps_lists($apps_list_link,$os["label_os"],$category["label_category"]);
+							$this->tools->log_text("website : ".$website["label_website"]." - Os : ".$os["label_os"]." - category : ".$category["label_category"]." : \n\n\n".$global_apps_list);
 						}
 					}
 				}
 			}
 			//Yii::app()->end();
 		}
-		$this->render('appsgrabb');
 	}
 	
 
