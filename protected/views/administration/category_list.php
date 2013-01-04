@@ -20,6 +20,8 @@ $(document).ready(function(){
 		edit_cl.setFPS(24); // default is 24
 		//cl.hide(); // Hidden by default
 	$('.id_website').change(function() {
+		$(".update_os_warning").hide();
+		$('.id_os').removeAttr('disabled');
 		cl.show();
 		var id_website = $(".id_website") .val();
 		var json = "{"+" \"id_website\" : \""+id_website+"\" }";
@@ -38,7 +40,10 @@ $(document).ready(function(){
 					var t=setTimeout(function(){cl.hide()},500);
 					
 				} else {
-					alert("error from server")
+					$(".update_os_warning").show();
+					$(".update_os_warning").html(json.message);
+					var t=setTimeout(function(){cl.hide()},500);
+					$('.id_os').attr('disabled', 'disabled');
 						}
 				}
 		});//end of ajax
@@ -249,6 +254,7 @@ $(document).ready(function(){
 					</div>
 					<div class="da-message success category_add_success" hidden="true"></div>
 					<div class="da-message error category_add_error" hidden="true"></div>
+					<div class="da-message warning update_os_warning" hidden="true"></div>
 					<div class="da-button-row">
 						<span class="da-button green add_category"> <img
 							src="<?php echo $this->baseurl; ?>/images/icons/color/add.png">&nbsp;&nbsp;Add
@@ -265,7 +271,7 @@ $(document).ready(function(){
 		<div class="da-panel-header">
 			<span class="da-panel-title"> <img
 				src="<?php echo $this->baseurl; ?>/images/icons/black/16/list.png"
-				alt="" /> Operationg systems
+				alt="" />Categories
 			</span>
 		</div>
 		<div class="da-panel-content">

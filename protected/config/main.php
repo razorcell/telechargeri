@@ -53,6 +53,7 @@ return array(
 					'administration/operatingsystems'=>'administration/os_list',
 					'administration/applications'=>'administration/appsgrabb',
 					'administration/categories'=>'administration/category_list',
+					'administration/sections'=>'administration/section_list',
 					
 					'website_add'=>'administration/website_add',
 					'website_edit'=>'administration/website_edit',
@@ -67,7 +68,14 @@ return array(
 					'category_add'=>'administration/category_add',
 					'category_edit'=>'administration/category_edit',
 					'category_delete'=>'administration/category_delete',
-					'category_update'=>'administration/category_update'
+					'category_update'=>'administration/category_update',
+					
+					'section_add'=>'administration/section_add',
+					'section_edit'=>'administration/section_edit',
+					'section_delete'=>'administration/section_delete',
+					'section_update'=>'administration/section_update',
+					
+					'applications'=>'administration/applications',
 					
 					
 					//'home'=>'/site/index',	

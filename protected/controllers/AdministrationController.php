@@ -210,15 +210,27 @@ class AdministrationController extends Controller
 		$body = file_get_contents("php://input");
 		$json = CJSON::decode($body);
 		$website_os_list = Os::model()->findAll("id_website =".$json["id_website"]);
-		$tab_label_os_list = NULL;
 		if(!empty($website_os_list)){
 			$response = array("err"=>false,
 					"message"=>"",
 					"os_list"=>$website_os_list);
 		}else{
 			$response = array("err"=>true,
-					"message"=>"There is no OS in this site",
-					"os_list"=>$tab_label_os_list);
+					"message"=>"There is no OS in this Site");
+		}
+		echo CJSON::encode($response);
+	}
+	public function actionUpdate_category_list(){
+		$body = file_get_contents("php://input");
+		$json = CJSON::decode($body);
+		$os_category_list = Category::model()->findAll("id_os =".$json["id_os"]);
+		if(!empty($os_category_list)){
+			$response = array("err"=>false,
+					"message"=>"",
+					"category_list"=>$os_category_list);
+		}else{
+			$response = array("err"=>true,
+					"message"=>"There is no Categories in this OS");
 		}
 		echo CJSON::encode($response);
 	}
@@ -316,11 +328,57 @@ class AdministrationController extends Controller
 	}
 	public function actionSection_list(){
 		$section_list = Section::model()->findAll();
+		$website_list = Website::model()->findAll();
+		$os_list = Os::model()->findAll();
 		$category_list = Category::model()->findAll();
 		$this->render('section_list',array(
-				'section_list'=>$section_list,
-				'category_list'=>$category_list
+				'os_list'=>$os_list,
+				'website_list'=>$website_list,
+				'category_list'=>$category_list,
+				'section_list'=>$section_list
 		));
+	}
+	public function actionSection_add(){
+		$body = file_get_contents("php://input");
+		$json = CJSON::decode($body);
+		if(preg_match("#^[a-zA-Z0-9]{1,30}$#", $json["label_section"]) > 0){
+			$section = new Section();
+			$section->setAttribute("label_section", $json["label_section"]);
+			$section->setAttribute("id_category", $json["id_category"]);
+			if(is_null($section->find("label_section='".$json["label_section"]."' && id_category='".$json["id_category"]."'"))){
+				if($section->save()){
+					$response = array("err"=>false,
+							"message"=>"The Section ".$json["label_section"]." was added successfuly");
+				}else{
+					$err_summary = Tools::get_errors_summary($section->errors);
+					$response = array("err"=>true,
+							"message"=>"Database error : ".$err_summary);
+				}
+			}else{
+	
+				$response = array("err"=>true,
+						"message"=>"The combination (Section / Category) already exists");
+			}
+		}else{
+			$response = array("err"=>true,
+					"message"=>"Section label is rong : ".$json["label_os"]);
+		}
+		echo CJSON::encode($response);
+	}
+	public function actionSection_delete(){
+		$body = file_get_contents("php://input");
+		$json = CJSON::decode($body);
+		$Section = new Section();
+		$deleted_rows = $Section->deleteAll("id_section = ".$json["id_section"]);
+		if($deleted_rows == 1){
+			$response = array("err"=>false,
+					"message"=>"The Section ".$json["id_section"]." was deleted successfuly");
+		}else{
+			$err_summary = Tools::get_errors_summary($Section->errors);
+			$response = array("err"=>true,
+					"message"=>"Database error : ".$err_summary);
+		}
+		echo CJSON::encode($response);
 	}
 	public function actionAppsGrabb(){
 		Yii::log("actionAppsGrabb()",CLogger::LEVEL_WARNING);

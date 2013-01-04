@@ -5,8 +5,10 @@ $(document).ready(function(){
 	$(".websites").removeClass("active");
 	$(".appsgrabb").removeClass("active");
 	$(".os").removeClass("active");
-	$(".category").addClass("active");
+	$(".category").removeClass("active");
+	$(".section").addClass("active");
 	
+	//$(".id_os").val(1);
 	<!-- This script creates a new CanvasLoader instance and places it in the wrapper div -->
 		var cl = new CanvasLoader('canvasloader-container');
 		cl.setDiameter(20); // default is 40
@@ -18,8 +20,22 @@ $(document).ready(function(){
 		edit_cl.setDensity(41); // default is 40
 		edit_cl.setRange(0.5); // default is 1.3
 		edit_cl.setFPS(24); // default is 24
+		var category_cl = new CanvasLoader('category_canvasloader-container');
+		category_cl.setDiameter(20); // default is 40
+		category_cl.setDensity(41); // default is 40
+		category_cl.setRange(0.5); // default is 1.3
+		category_cl.setFPS(24); // default is 24
 		//cl.hide(); // Hidden by default
+		var edit_category_cl = new CanvasLoader('edit_category_canvasloader-container');
+		edit_category_cl.setDiameter(20); // default is 40
+		edit_category_cl.setDensity(41); // default is 40
+		edit_category_cl.setRange(0.5); // default is 1.3
+		edit_category_cl.setFPS(24); // default is 24
+		
 	$('.id_website').change(function() {
+		$(".update_os_warning").hide();
+		$('.id_os').removeAttr('disabled');
+		$('.id_category').removeAttr('disabled');
 		cl.show();
 		var id_website = $(".id_website") .val();
 		var json = "{"+" \"id_website\" : \""+id_website+"\" }";
@@ -35,14 +51,77 @@ $(document).ready(function(){
 							new_os_list += "<option value="+os["id_os"]+">"+os["label_os"]+"</option>";
 						});
 					$(".id_os").html(new_os_list);
-					var t=setTimeout(function(){cl.hide()},500);
+					var t=setTimeout(function(){cl.hide();$('.id_os').trigger('change');},500);
 					
 				} else {
-					alert("error from server")
+					$(".update_os_warning").show();
+					$(".update_os_warning").html(json.message);
+					var t=setTimeout(function(){cl.hide()},500);
+					$('.id_os').attr('disabled', 'disabled');
+					$('.id_category').attr('disabled', 'disabled');
+						}
+				}
+		});//end of ajax
+		
+		});
+	$('.id_os').change(function() {
+		$(".update_category_warning").hide();
+		$('.id_category').removeAttr('disabled');
+		category_cl.show();
+		var id_os = $(".id_os") .val();
+		var json = "{"+" \"id_os\" : \""+id_os+"\" }";
+		$.ajax({ 
+			type : "POST",
+			url : "/administration/update_category_list",
+			data : json,
+			success : function(data) {
+				var json = $.parseJSON(data);
+				if (!json.err) {
+					var new_category_list = "";
+					json.category_list.forEach(function(category){
+							new_category_list += "<option value="+category["id_category"]+">"+category["label_category"]+"</option>";
+						});
+					$(".id_category").html(new_category_list);
+					var t=setTimeout(function(){category_cl.hide()},500);
+					
+				} else {
+					$(".update_category_warning").show();
+					$(".update_category_warning").html(json.message);
+					var t=setTimeout(function(){category_cl.hide()},500);
+					$('.id_category').attr('disabled', 'disabled');
 						}
 				}
 		});//end of ajax
 		});
+	$(".add_section").click(function(){
+		var label_section = $(".label_section").val();
+		var id_category = $(".id_category").val();
+			var pattern = new RegExp("^[a-zA-Z0-9]{1,30}$")
+			if(pattern.test(label_section)){
+				var json = '{';
+				json += ' "label_section" : "'+label_section+'", ';
+				json += ' "id_category" : "'+id_category+'", ';
+				json +='}';
+				$.ajax({ 
+					type : "POST",
+					url : "/section_add",
+					data : json,
+					success : function(data) {
+						var json = $.parseJSON(data);
+						if (!json.err) {
+							$(".section_add_success").show();$(".section_add_error").hide();
+							$(".section_add_success").html(json.message);
+						} else {
+							$(".section_add_error").show();$(".section_add_success").hide();
+							$(".section_add_error").html(json.message);
+								}
+						}
+				});//end of ajax
+		}else{
+			$(".section_add_error").show();$(".section_add_success").hide();
+			$(".section_add_error").html("Label value is rong : "+label_section);				
+		}//end if pattern
+	});//end section_add.click()
 	$('.edit_id_website').change(function() {
 		edit_cl.show();
 		var id_website = $(".edit_id_website") .val();
@@ -68,37 +147,8 @@ $(document).ready(function(){
 		});//end of ajax
 		});
 	
-	$(".add_section").click(function(){
-		var label_section = $(".label_section").val();
-		var id_website = $(".id_website") .val();
-		var id_os = $(".id_os").val();
-			var pattern = new RegExp("^[a-zA-Z0-9]{1,30}$")
-			if(pattern.test(label_section)){
-				var json = '{';
-				json += ' "label_section" : "'+label_section+'", ';
-				json += ' "id_os" : "'+id_os+'", ';
-				json += ' "id_website" : "'+id_website+'" ';
-				json +='}';
-				$.ajax({ 
-					type : "POST",
-					url : "/section_add",
-					data : json,
-					success : function(data) {
-						var json = $.parseJSON(data);
-						if (!json.err) {
-							$(".section_add_success").show();$(".section_add_error").hide();
-							$(".section_add_success").html(json.message);
-						} else {
-							$(".section_add_error").show();$(".section_add_success").hide();
-							$(".section_add_error").html(json.message);
-								}
-						}
-				});//end of ajax
-		}else{
-			$(".section_add_error").show();$(".section_add_success").hide();
-			$(".section_add_error").html("Label value is rong : "+label_section);				
-		}//end if pattern
-	});//end section_add.click()
+	
+	
 	$(".update_section").click(function(){
 		var update_id_section = $(".edit_id_section").val();
 		var update_label_section = $(".edit_label_section") .val();
@@ -200,10 +250,12 @@ $(document).ready(function(){
 		$("#delete_section_div").dialog("option", {modal: true}).dialog("open");
 		event.preventDefault();
 		});
+	//$('.label_section').focus(function() {
+		$('.id_website').trigger('change');//this one triggers  $('.id_os').trigger('change') look up
+		//var t=setTimeout(function(){$('.id_os').trigger('change')},500);
+		//});
 });
 </script>
-
-
 <!-- add section -->
 <div class="grid_4">
 	<div class="da-panel collapsible">
@@ -219,8 +271,8 @@ $(document).ready(function(){
 					<div class="da-form-row">
 						<label>Label</label>
 						<div class="da-form-item">
-							<span class="formNote">Ex : Windows / Windows7 / Mac </span> <input
-								type="text" name="req1" class="label_section" />
+							<span class="formNote">Ex : Agenda / Adbloc / Calculator </span>
+							<input type="text" name="req1" class="label_section" />
 						</div>
 					</div>
 					<div class="da-form-row">
@@ -240,15 +292,26 @@ $(document).ready(function(){
 						<div class="da-form-item">
 							<select class="id_os" name="os">
 								<?php foreach($os_list as $os){
-									if($os["id_website"] == 1){
-										echo "<option value=".$os->id_os.">".$os->label_os."</option>";
-									}
+									echo "<option value=".$os->id_os.">".$os->label_os."</option>";
+							}?>
+							</select>
+						</div>
+					</div>
+					<div class="da-form-row">
+						<label>Category<span id="category_canvasloader-container" class="wrapper"></span>
+						</label>
+						<div class="da-form-item">
+							<select class="id_category" name="category">
+								<?php foreach($category_list as $category){
+									echo "<option value=".$category->id_category.">".$category->label_category."</option>";
 							}?>
 							</select>
 						</div>
 					</div>
 					<div class="da-message success section_add_success" hidden="true"></div>
 					<div class="da-message error section_add_error" hidden="true"></div>
+					<div class="da-message error update_os_warning" hidden="true"></div>
+					<div class="da-message error update_category_warning" hidden="true"></div>
 					<div class="da-button-row">
 						<span class="da-button green add_section"> <img
 							src="<?php echo $this->baseurl; ?>/images/icons/color/add.png">&nbsp;&nbsp;Add
@@ -265,7 +328,7 @@ $(document).ready(function(){
 		<div class="da-panel-header">
 			<span class="da-panel-title"> <img
 				src="<?php echo $this->baseurl; ?>/images/icons/black/16/list.png"
-				alt="" /> Operationg systems
+				alt="" /> Sections
 			</span>
 		</div>
 		<div class="da-panel-content">
@@ -274,28 +337,40 @@ $(document).ready(function(){
 					<tr>
 						<th>Id</th>
 						<th>Label</th>
-						<th>Website</th>
+						<th>Categorie</th>
 						<th>Os</th>
+						<th>Website</th>
+
+
 						<th></th>
 					</tr>
 				</thead>
 				<tbody>
 					<?php 
 					foreach($section_list as $section){
-
+						$current_category_os_id = NULL;
+						$current_os_website_id = NULL;
 						echo '<tr class="section_row">';
 						echo "<td class=\"id_section\">".$section->id_section.'</td>';
 						echo "<td>".$section->label_section.'</td>';
+						foreach($category_list as $category){
+							if($category["id_category"] == $section["id_category"]){
+								echo "<td class=\"label_category\">".$category["label_category"]."</td>";
+								$current_category_os_id = $category["id_os"];
+							}
+						}
 						foreach($os_list as $os){
-							if($os["id_os"] == $section["id_os"]){
+							if($os["id_os"] == $current_category_os_id){
 								echo "<td>".$os["label_os"].'</td>';
+								$current_os_website_id = $os["id_website"];
 							}
 						}
 						foreach($website_list as $website){
-							if($website["id_website"] == $section["id_website"]){
+							if($website["id_website"] == $current_os_website_id){
 								echo "<td>".$website["label_website"].'</td>';
 							}
 						}
+						echo "";
 						echo "<td class=\"da-icon-column\">";
 						echo "<img class=\"section_edit\" style=\"cursor:pointer\" src=".Yii::app()->request->baseUrl."/images/icons/color/pencil.png>&nbsp;&nbsp;";
 						echo "<img class=\"section_delete\" style=\"cursor:pointer\" src=".Yii::app()->request->baseUrl."/images/icons/color/cross.png>";
@@ -321,35 +396,48 @@ $(document).ready(function(){
 			<div class="da-form-row">
 				<label>Label</label>
 				<div class="da-form-item">
-					<span class="formNote">Ex : Windows / Windows7 / Mac </span> <input
+					<span class="formNote">Ex : Agenda / Adbloc / Calculator </span> <input
 						type="text" name="req1" class="edit_label_section" />
 				</div>
 			</div>
 			<div class="da-form-row">
-				<label>website</label>
+				<label>Website</label>
 				<div class="da-form-item">
-					<select class="edit_id_website" name="website">
-						<?php foreach($website_list as $website){
+					<select class="edit_id_website" name="edit_website">
+						<?php 
+						foreach($website_list as $website){
 							echo "<option value=".$website->id_website.">".$website->label_website."</option>";
 							}?>
 					</select>
 				</div>
 			</div>
 			<div class="da-form-row">
-				<label>Os<span id="edit_canvasloader-container" class="wrapper"></span></label>
+				<label>Os<span id="edit_canvasloader-container" class="wrapper"></span>
+				</label>
 				<div class="da-form-item">
-					<select class="edit_id_os" name="os">
+					<select class="edit_id_os" name="edit_os">
 						<?php foreach($os_list as $os){
 							echo "<option value=".$os->id_os.">".$os->label_os."</option>";
 							}?>
 					</select>
 				</div>
 			</div>
+			<div class="da-form-row">
+				<label>Category<span id="edit_category_canvasloader-container" class="wrapper"></span>
+				</label>
+				<div class="da-form-item">
+					<select class="edit_id_category" name="edit_category">
+						<?php foreach($category_list as $category){
+							echo "<option value=".$category->id_category.">".$category->label_category."</option>";
+							}?>
+					</select>
+				</div>
+			</div>
 			<div class="da-message success section_edit_success" hidden="true"></div>
-			<div class="da-message warning section_edit_warning" hidden="true"></div>
+			<div class="da-message error section_edit_error" hidden="true"></div>
 			<div class="da-button-row">
-				<span class="da-button green update_section"> <img
-					src="<?php echo $this->baseurl; ?>/images/icons/color/pencil.png">&nbsp;&nbsp;Update
+				<span class="da-button green edit_section"> <img
+					src="<?php echo $this->baseurl; ?>/images/icons/color/add.png">&nbsp;&nbsp;Add
 				</span>
 			</div>
 		</div>

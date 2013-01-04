@@ -379,6 +379,14 @@
 								</span> Sections
 							</a>
 							</li>
+							<li class="section"><a
+								href="<?php echo $this->createUrl('administration/applications');?>">
+									<!-- Icon Container --> <span class="da-nav-icon"> <img
+										src="<?php echo Yii::app()->request->baseUrl; ?>/images/icons/black/32/applications.png"
+										alt="Dashboard" />
+								</span> Applications
+							</a>
+							</li>
 							<li class="appsgrabb"><a
 								href="<?php echo $this->createUrl('administration/appsgrabb');?>">
 									<!-- Icon Container --> <span class="da-nav-icon"> <img
