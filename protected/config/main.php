@@ -79,7 +79,7 @@ return array(
 					'applications'=>'administration/applications',
 					
 					'info'=>'administration/get_scan_info',
-					'start'=>'administration/start,'
+					'start'=>'administration/start',
 					
 					
 					//'home'=>'/site/index',	

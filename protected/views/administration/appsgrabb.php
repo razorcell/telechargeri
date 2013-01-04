@@ -6,27 +6,27 @@ $(document).ready(function(){
 	$(".appsgrabb").addClass("active");
 	$(".da-circular-stat").daCircularStat();
 	$(".start").click(function(){
+		setInterval(function(){
+			$.ajax({ 
+				type : "POST",
+				url : "/info",
+				success : function(data) {
+					var json = $.parseJSON(data);
+						$(".os").val(json.os);
+						$(".category").val(json.category);
+						$(".section").val(json.section);
+						$(".application_link").val(json.application_link);
+						$(".application_name").val(json.application_name);
+							}
+			});//end of ajax
+			}
+				,10000);
 		$.ajax({ 
 			type : "POST",
 			url : "/start",
 			});//end of ajax
 		});
-	setInterval(function(){
-		$.ajax({ 
-			type : "POST",
-			url : "/info",
-			data : json,
-			success : function(data) {
-				var json = $.parseJSON(data);
-					$(".os").val(json.os);
-					$(".category").val(json.category);
-					$(".section").val(json.section);
-					$(".application_link").val(json.application_link);
-					$(".application_name").val(json.application_name);
-						}
-		});//end of ajax
-		}
-			,1000);
+	
 
 });
 </script>
