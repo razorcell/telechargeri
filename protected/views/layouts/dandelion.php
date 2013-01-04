@@ -39,7 +39,10 @@
 <link rel="stylesheet" type="text/css"
 	href="<?php echo Yii::app()->request->baseUrl; ?>/css/demo.css"
 	media="screen" />
-
+<!-- Statistics -->
+<link rel="stylesheet" type="text/css"
+	href="<?php echo Yii::app()->request->baseUrl; ?>/css/core/statistic.css"
+	media="screen" />
 <!-- jQuery JavaScript File -->
 <script type="text/javascript"
 	src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.7.2.min.js"></script>
@@ -112,16 +115,8 @@
 	href="<?php echo Yii::app()->request->baseUrl; ?>/plugins/fullcalendar/fullcalendar.print.css"
 	media="print" />
 
-<!-- Load Google Chart Plugin 
-<script type="text/javascript" src="<?php //echo Yii::app()->request->baseUrl; ?>https://www.google.com/jsapi"></script>
-<script type="text/javascript">
-	// Load the Visualization API and the piechart package.
-	google.load('visualization', '1.0', {'packages':['corechart']});
-</script>-->
-<!-- Debounced resize script for preventing to many window.resize events
-      Recommended for Google Charts to perform optimally when resizing 
-<script type="text/javascript" src="<?php //echo Yii::app()->request->baseUrl; ?>/js/jquery.debouncedresize.js"></script>
--->
+
+
 <!-- DataTables Plugin -->
 <script type="text/javascript"
 	src="<?php echo Yii::app()->request->baseUrl; ?>/plugins/datatables/jquery.dataTables.min.js"></script>

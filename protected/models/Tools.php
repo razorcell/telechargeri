@@ -1,10 +1,10 @@
 <?php 
 
 class Tools{
-	public static function logit($string){
+	public function logit($string){
 		Yii::log($string,CLogger::LEVEL_WARNING);
 	}
-	public static function get_errors_summary($arrays_of_errors){
+	public function get_errors_summary($arrays_of_errors){
 		$err_summary = NULL;
 		foreach($arrays_of_errors as $errs){
 			foreach($errs as $err){
@@ -13,7 +13,7 @@ class Tools{
 		}
 		return $err_summary;
 	}
-	public static function log_text($text){
+	public function log_text($text){
 		$filename = dirname(__FILE__).'/../runtime/logfile';
 		if(!$handler = fopen($filename,'a')){
 			fclose($handler);
@@ -22,7 +22,7 @@ class Tools{
 			fwrite($handler, $_SERVER['REQUEST_TIME']." : ".$text."\n");
 		}
 	}
-	public static function clean_name($string){
+	public  function clean_name($string){
 		$string = str_replace("\">", "", $string);
 		$string = str_replace("</a>", "", $string);
 		return $string;
