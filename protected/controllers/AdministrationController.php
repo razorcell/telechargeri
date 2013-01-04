@@ -237,7 +237,7 @@ class AdministrationController extends Controller
 	public function actionCategory_add(){
 		$body = file_get_contents("php://input");
 		$json = CJSON::decode($body);
-		if(preg_match("#^[a-zA-Z0-9]{1,30}$#", $json["label_category"]) > 0){
+		if(preg_match("#^[a-zA-Z0-9\_\-]{1,30}$#", $json["label_category"]) > 0){
 			$category = new Category();
 			$category->setAttribute("label_category", $json["label_category"]);
 			$category->setAttribute("id_website", $json["id_website"]);
@@ -341,7 +341,7 @@ class AdministrationController extends Controller
 	public function actionSection_add(){
 		$body = file_get_contents("php://input");
 		$json = CJSON::decode($body);
-		if(preg_match("#^[a-zA-Z0-9]{1,30}$#", $json["label_section"]) > 0){
+		if(preg_match("#^[a-zA-Z0-9\_\-]{1,30}$#", $json["label_section"]) > 0){
 			$section = new Section();
 			$section->setAttribute("label_section", $json["label_section"]);
 			$section->setAttribute("id_category", $json["id_category"]);

@@ -96,7 +96,7 @@ $(document).ready(function(){
 	$(".add_section").click(function(){
 		var label_section = $(".label_section").val();
 		var id_category = $(".id_category").val();
-			var pattern = new RegExp("^[a-zA-Z0-9]{1,30}$")
+			var pattern = new RegExp("^[a-zA-Z0-9\_\-]{1,30}$")
 			if(pattern.test(label_section)){
 				var json = '{';
 				json += ' "label_section" : "'+label_section+'", ';

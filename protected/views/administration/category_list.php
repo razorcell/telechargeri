@@ -77,7 +77,7 @@ $(document).ready(function(){
 		var label_category = $(".label_category").val();
 		var id_website = $(".id_website") .val();
 		var id_os = $(".id_os").val();
-			var pattern = new RegExp("^[a-zA-Z0-9]{1,30}$")
+			var pattern = new RegExp("^[a-zA-Z0-9\_\-]{1,30}$")
 			if(pattern.test(label_category)){
 				var json = '{';
 				json += ' "label_category" : "'+label_category+'", ';
