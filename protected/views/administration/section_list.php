@@ -6,6 +6,8 @@ $(document).ready(function(){
 	$(".appsgrabb").removeClass("active");
 	$(".os").removeClass("active");
 	$(".category").removeClass("active");
+	$(".application").removeClass("active");
+	
 	$(".section").addClass("active");
 	
 	//$(".id_os").val(1);

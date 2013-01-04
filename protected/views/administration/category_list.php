@@ -72,7 +72,6 @@ $(document).ready(function(){
 				}
 		});//end of ajax
 		});
-	
 	$(".add_category").click(function(){
 		var label_category = $(".label_category").val();
 		var id_website = $(".id_website") .val();

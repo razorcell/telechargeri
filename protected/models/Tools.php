@@ -13,9 +13,84 @@ class Tools{
 		}
 		return $err_summary;
 	}
+	public static function log_text($text){
+		$filename = dirname(__FILE__).'/../runtime/logfile';
+		if(!$handler = fopen($filename,'a')){
+			fclose($handler);
+			exit;
+		}else{
+			fwrite($handler, $_SERVER['REQUEST_TIME']." : ".$text."\n");
+		}
+	}
+	public static function clean_name($string){
+		$string = str_replace("\">", "", $string);
+		$string = str_replace("</a>", "", $string);
+		return $string;
+	}
+	public function get_web_page( $url, $proxy = null)
+	{
+		$options = array(
+				CURLOPT_RETURNTRANSFER => true,     // return web page
+				CURLOPT_HEADER         => false,    // don't return headers
+				CURLOPT_FOLLOWLOCATION => true,     // follow redirects
+				CURLOPT_ENCODING       => "",       // handle all encodings
+				CURLOPT_USERAGENT      => "user", // who am i
+				CURLOPT_AUTOREFERER    => true,     // set referer on redirect
+				CURLOPT_CONNECTTIMEOUT => 30,      // timeout on connect
+				CURLOPT_TIMEOUT        => 30,      // timeout on response
+				CURLOPT_MAXREDIRS      => 10,       // stop after 10 redirects
+				CURLOPT_PROXY              => $proxy,
+		);
+		$ch      = curl_init( $url );
+		curl_setopt_array( $ch, $options );
+		$content = curl_exec( $ch );
+		$err     = curl_errno( $ch );
+		$errmsg  = curl_error( $ch );
+		$header  = curl_getinfo( $ch );
+		curl_close( $ch );
+			
+		$header['errno']   = $err;
+		$header['errmsg']  = $errmsg;
+		$header['content'] = $content;
+		return $header;
+	}
+	public function get_proxy(){
+		do{
+			$data = $this->get_web_page("http://www.aliveproxy.com/fastest-proxies/");
+			if($data["errno"] != 0 || $data["http_code"] != 200){
+				Yii::log("can't get proxies list page - Curl error : ".$data["errno"]."    -  HTTP CODE : ".$data["http_code"],CLogger::LEVEL_ERROR);
+			}
+		}while($data["errno"] != 0 || $data["http_code"] != 200);
+		//we got proxies list
+		$data = preg_replace('/\s+/', '', $data["content"]);
+		$data = htmlentities($data,ENT_IGNORE);
+		preg_match_all("#[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\:[0-9]{2,4}#", $data, $proxys);
+	
+		$random_index = array_rand($proxys[0],1);
+		$random_proxy = $proxys[0][$random_index];
+		return $random_proxy;//array  [0] array IP:PORT
+	}
+	public function get_page($url){
+		Yii::log('-----------get_page()',CLogger::LEVEL_WARNING);
+		$page = NULL;
+		do {//while we did not get the page
+			$got_page = true;//if false last time, we need to initialize it again to true
+			$proxy = $this->get_proxy();
+			$page = $this->get_web_page($url,$proxy);
+			if($page["errno"] != 0 || $page["http_code"] != 200) {//ERROR OCCURED
+				Yii::log("Page : ".$url."   Proxy : ".$proxy."Message : ".$page["errmsg"]."   -   HTTP CODE : ".$page["http_code"],CLogger::LEVEL_ERROR);
+				$got_page = false;
+			}else{
+				Yii::log("SUCCESS : ".$url,CLogger::LEVEL_WARNING);
+				Yii::log("--------------->Using proxy : ".$proxy,CLogger::LEVEL_WARNING);
+			}
+		}while($got_page == false);
+		return $page;
+	}
 	
 	
 	
+	/*
 	//down here are some real SHIT CRAP
 	function get_web_page($url,$proxy = null)
 	{
@@ -59,7 +134,7 @@ class Tools{
 	return $proxy;//return the proxy in lowercase
 	
 	}
-	Yii::log("message", CLogger::LEVEL_WARNING, "category");*/
+	Yii::log("message", CLogger::LEVEL_WARNING, "category");
 	function get_proxy(){
 		do{
 			$data = get_web_page("http://www.aliveproxy.com/fastest-proxies/");

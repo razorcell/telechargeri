@@ -379,7 +379,7 @@
 								</span> Sections
 							</a>
 							</li>
-							<li class="section"><a
+							<li class="application"><a
 								href="<?php echo $this->createUrl('administration/applications');?>">
 									<!-- Icon Container --> <span class="da-nav-icon"> <img
 										src="<?php echo Yii::app()->request->baseUrl; ?>/images/icons/black/32/applications.png"
