@@ -82,6 +82,7 @@ return array(
 					'start'=>'administration/start',
 					
 					
+					
 					//'home'=>'/site/index',	
 			),
 				'showScriptName'=>false,

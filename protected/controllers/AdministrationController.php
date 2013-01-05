@@ -6,27 +6,33 @@ class AdministrationController extends Controller
 	public $tools = NULL;
 	public $baseurl = NULL;
 	public $response = NULL;
-	public $global_progress = NULL;
-	public $current_website = NULL;
-	public $current_os = NULL;
-	public $current_category = NULL;
-	public $current_section = NULL;
-	public $current_list_link = NULL;
-	public $current_application_link = NULL;
-	public $current_application_name = NULL;
+	public $downloaded_pages = NULL;
 
 	public function init(){
 		$this->tools = new Tools();
 		$this->baseurl = Yii::app()->request->baseUrl;
 	}
 	public function actionGet_scan_info(){
-		$info = array("website"=>$this->current_website,
-				"os"=>$this->current_os,
-				"category"=>$this->current_category,
-				"section"=>$this->current_section,
-				"list_link"=>$this->current_list_link,
-				"application_link"=>$this->current_application_link,
-				"application_name"=>$this->current_application_name);
+		$status = Status::model()->find("id=1");
+		$elapsed_time = $this->tools->time_elapsed(time(),$status->start_time);
+		$info = array("elapsed_time"=>$elapsed_time,
+				"website"=>$status->website,
+				"scanned_apps"=>$status->scanned_apps,
+				"os"=>$status->os,
+				"category"=>$status->category,
+				"section"=>$status->section,
+				"list_link"=>$status->list_link,
+				"application_link"=>$status->application_link,
+				"application_name"=>$status->application_name,
+				"downloaded_pages"=>$status->downloaded_pages,
+				"applications_added"=>$status->applications_added,
+				"applications_updated"=>$status->applications_updated,
+				"progression_section"=>$status->progression_section,
+				"total_section"=>$status->total_section,
+				"progression_category"=>$status->progression_category,
+				"total_category"=>$status->total_category,
+				"prograssion_os"=>$status->progression_os,
+				"total_os"=>$status->total_os);
 		echo CJSON::encode($info);
 	}
 	public function actionIndex()
@@ -403,17 +409,16 @@ class AdministrationController extends Controller
 		}
 		echo CJSON::encode($response);
 	}
-	public function test(){
-		
-	}
 	public function scan_apps_lists($link_before_index,$os,$category,$section = NULL){
 		$global_apps_list = "";
 		$index = 2;// using to alter index (x).html for apps lists, it starts from 2 because we have some issues on index1.html, the apps there are not all from the equivalent section
 		$pagenotfound = false;// if true than PAGE NOT FOUND REACHED
-		Yii::log("EXTRACT PROCESS STARTED");
+		$this->tools->log_text("EXTRACT PROCESS STARTED");
 		do{//do while we did not reach NOT FOUND PAGE
-			$current_apps_list = $link_before_index."index".$index.".html";
-			$current_apps_list = $tools->get_page($current_apps_list);
+			$current_apps_list_link_string = $link_before_index."index".$index.".html";
+			$current_apps_list = $this->tools->get_page($current_apps_list_link_string);
+			Status::model()->updateAll(array("downloaded_pages"=>$this->downloaded_pages++,
+					"list_link"=>$current_apps_list_link_string),"id=1");
 			if(strpos($current_apps_list["content"], "Page non trouv") === FALSE){
 				$regex_app_link = NULL;
 				$regex_app_name = NULL;
@@ -430,13 +435,18 @@ class AdministrationController extends Controller
 					preg_match_all($regex_app_name,$app,$link_name);
 					$x = 0;
 					foreach($link_name[0] as $element){//element is either app link or app name 0 : link 1 : name / 2 : link  3 : name
-						if(is_int($x % 2)){//this is a link
-							$this->current_application_link = $element;
+						if($x % 2 == 0){//this is a link
+							$this->tools->log_text("this is a link  : ".$element);
+							Status::model()->updateAll(array("application_link"=>$element),"id=1");
 						}else{//this is a name
-							$element = $this->clean_name($element);
-							$this->current_application_name = $element;
+							$query = "UPDATE Status SET scanned_apps = scanned_apps + 1 WHERE id=1";
+							Yii::app()->db->createCommand($query)->execute();
+							$element = $this->tools->clean_name($element);
+							Status::model()->updateAll(array("application_name"=>$element),"id=1");
+							$this->tools->log_text("this is a name  : ".$element);
 						}
 						$global_apps_list .= "\n".$element."\n";//ADD the new apps_names list to the global list
+						
 						$x++;
 					}
 				}
@@ -444,47 +454,64 @@ class AdministrationController extends Controller
 			}else{
 				//404 PAGE NOT FOUND REACHED
 				$pagenotfound = true;
-				$tools->logit("------------------------------> PAGE NOT FOUND");
+				$this->tools->logit("------------------------------> PAGE NOT FOUND");
 				$pagenotfound = true;//GET OUT and SHOW APPS LIST
 			}
 		}while($pagenotfound != true);
 		return $global_apps_list;
 	}
 	public function actionAppsGrabb(){
+		$this->render('appsgrabb');
+	}
+	public function actionStart(){
 		if (ERunActions::runBackground())
 		{
+			$total_section = Section::model()->find();
+			$total_category = Category::model()->findAll();
+			$total_os  = Os::model()->findAll();
+			Status::model()->updateByPk(1,array("total_section"=>count($total_section),
+					"total_category"=>count($total_category),
+					"total_os"=>count($total_os),
+					"scanned_apps"=>0,
+					"start_time"=>time()));
+			$this->downloaded_pages = 0;
+			$progression_os = 0;
+			$progression_category = 0;
+			$progression_section = 0;
 			$website_list = Website::model()->findAll();
 			foreach($website_list as $website){
-				$this->current_website = $website->label_website;
 				$os_list = Os::model()->findAll("id_website=".$website->id_website);
 				foreach($os_list as $os){
-					$this->current_os = $os->label_os;
+					Status::model()->updateAll(array("progression_os"=>$progression_os++),"id=1");
 					$category_list = Category::model()->findAll("id_os="."'".$os->id_os."' && id_website="."'".$website->id_website."'");
 					foreach($category_list as $category){
-						$this->current_category = $category["label_category"];
-						$section_list = Section::model()->findAll("id_category="."'".$category["id_category"]."'");
+						Status::model()->updateAll(array("progression_category"=>$progression_category++),"id=1");
+						$section_list = Section::model()->findAll("id_category="."'".$category->id_category."'");
 						$apps_list_link = NULL;
 						if(!empty($section_list)){//if this category has sections
 							foreach($section_list as $section){
-								$this->current_section = $section["label_section"];
-								$apps_list_link = "www.".$website["label_website"]."/".$os["label_os"]."/".$category["label_category"]."/".$section["label_section"]."/";
-								$this->current_list_link = $apps_list_link;
-								$global_apps_list = $this->scan_apps_lists($apps_list_link,$os["label_os"],$category["label_category"],$section["label_section"],$this->tools);
-								$this->tools->log_text("SCANNED : website : ".$website["label_website"]." - Os : ".$os["label_os"]." - category : ".$category["label_category"]." Section : ".$section["label_section"]." : \n\n\n".$global_apps_list);
+								Status::model()->updateAll(array("progression_section"=>$progression_section++),"id=1");
+								$status = Status::model()->updateAll(array("website"=>$website->label_website,
+										"os"=>$os->label_os,
+										"category"=>$category->label_category,
+										"section"=>$section->label_section,"id=1"));
+								$apps_list_link = "www.".$website->label_website."/".$os->label_os."/".$category->label_category."/".$section->label_section."/";
+								$global_apps_list = $this->scan_apps_lists($apps_list_link,$os->label_os,$category->label_category,$section->label_section);
+								$this->tools->log_text("SCANNED : website : ".$website->label_website." - Os : ".$os->label_os." - category : ".$category->label_category." Section : ".$section->label_section." : \n\n\n");
 							}
 						}else{//if category has NO sections
-							$this->current_section = "This category has no sections";
-							$apps_list_link = "www.".$website["label_website"]."/".$os["label_os"]."/".$category["label_category"]."/";
-							$this->current_list_link = $apps_list_link;
-							$global_apps_list = $this->scan_apps_lists($apps_list_link,$os["label_os"],$category["label_category"],$this->tools);
-							$this->tools->log_text("SCANNED : website : ".$website["label_website"]." - Os : ".$os["label_os"]." - category : ".$category["label_category"]." : \n\n\n".$global_apps_list);
+							$status = Status::model()->updateAll(array("website"=>$website->label_website,
+									"os"=>$os->label_os,
+									"category"=>$category->label_category,
+									"section"=>"No section in this category","id=1"));
+							$apps_list_link = "www.".$website->label_website."/".$os->label_os."/".$category->label_category."/";
+							$global_apps_list = $this->scan_apps_lists($apps_list_link,$os->label_os,$category->label_category);
+							$this->tools->log_text("SCANNED : website : ".$website->label_website." - Os : ".$os->label_os." - category : ".$category->label_category." : \n\n\n".$global_apps_list);
 						}
 					}
 				}
 			}
-			//Yii::app()->end();
 		}//end runBackground
-		$this->render('appsgrabb');
 	}
 	
 
