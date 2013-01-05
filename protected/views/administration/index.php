@@ -11,6 +11,7 @@
 	<?php echo $this->id . '/' . $this->action->id; ?>
 </h1>
 HOME PAGE
+<?php echo $string;?>
 
 
 

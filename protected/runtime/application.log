@@ -1,4 +1,147 @@
-2013/01/05 17:40:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] No such file or directory' in /opt/lampp/htdocs/telechargeri-com/framework/db/CDbConnection.php:382
+2013/01/05 23:06:53 [error] [exception.CException] exception 'CException' with message 'Property "SiteController.baseurl" is not defined.' in /opt/lampp/htdocs/telechargeri-com/framework/base/CComponent.php:131
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/protected/views/layouts/dandelion.php(133): CComponent->__get('baseurl')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CBaseController.php(127): require('/opt/lampp/htdo...')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CBaseController.php(96): CBaseController->renderInternal('/opt/lampp/htdo...', Array, true)
+#3 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(785): CBaseController->renderFile('/opt/lampp/htdo...', Array, true)
+#4 /opt/lampp/htdocs/telechargeri-com/protected/controllers/SiteController.php(32): CController->render('index')
+#5 /opt/lampp/htdocs/telechargeri-com/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#6 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('')
+#10 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#11 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/
+---
+2013/01/05 23:06:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/01/05 23:07:33 [error] [exception.CException] exception 'CException' with message 'Property "SiteController.baseurl" is not defined.' in /opt/lampp/htdocs/telechargeri-com/framework/base/CComponent.php:131
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/protected/views/layouts/dandelion.php(133): CComponent->__get('baseurl')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CBaseController.php(127): require('/opt/lampp/htdo...')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CBaseController.php(96): CBaseController->renderInternal('/opt/lampp/htdo...', Array, true)
+#3 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(785): CBaseController->renderFile('/opt/lampp/htdo...', Array, true)
+#4 /opt/lampp/htdocs/telechargeri-com/protected/controllers/SiteController.php(32): CController->render('index')
+#5 /opt/lampp/htdocs/telechargeri-com/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#6 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('')
+#10 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#11 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/
+---
+2013/01/05 23:07:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/01/05 23:09:20 [error] [exception.CException] exception 'CException' with message 'Property "SiteController.baseurl" is not defined.' in /opt/lampp/htdocs/telechargeri-com/framework/base/CComponent.php:131
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/protected/views/layouts/dandelion.php(133): CComponent->__get('baseurl')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CBaseController.php(127): require('/opt/lampp/htdo...')
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CBaseController.php(96): CBaseController->renderInternal('/opt/lampp/htdo...', Array, true)
+#3 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(785): CBaseController->renderFile('/opt/lampp/htdo...', Array, true)
+#4 /opt/lampp/htdocs/telechargeri-com/protected/controllers/SiteController.php(32): CController->render('index')
+#5 /opt/lampp/htdocs/telechargeri-com/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#6 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('')
+#10 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#11 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/
+---
+2013/01/05 23:09:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/01/05 23:09:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "home".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('home')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/home
+---
+2013/01/05 23:09:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "<h1>CException</h1><p>Property".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('<h1>CException<...')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/%3Ch1%3ECException%3C/h1%3E%3Cp%3EProperty
+HTTP_REFERER=http://telechargeri.localhost/home
+---
+2013/01/05 23:09:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/01/05 23:10:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/01/05 23:10:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/01/05 23:10:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/01/05 23:26:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/01/05 23:36:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/01/05 23:37:20 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] No such file or directory' in /opt/lampp/htdocs/telechargeri-com/framework/db/CDbConnection.php:382
 Stack trace:
 #0 /opt/lampp/htdocs/telechargeri-com/framework/db/CDbConnection.php(331): CDbConnection->open()
 #1 /opt/lampp/htdocs/telechargeri-com/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
@@ -21,26 +164,33 @@ Stack trace:
 REQUEST_URI=/info
 HTTP_REFERER=http://telechargeri.localhost/administration/applications
 ---
-2013/01/05 17:40:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] No such file or directory' in /opt/lampp/htdocs/telechargeri-com/framework/db/CDbConnection.php:382
+2013/01/05 23:37:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
 Stack trace:
-#0 /opt/lampp/htdocs/telechargeri-com/framework/db/CDbConnection.php(331): CDbConnection->open()
-#1 /opt/lampp/htdocs/telechargeri-com/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
-#2 /opt/lampp/htdocs/telechargeri-com/framework/base/CModule.php(388): CDbConnection->init()
-#3 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(431): CModule->getComponent('db')
-#4 /opt/lampp/htdocs/telechargeri-com/framework/db/ar/CActiveRecord.php(624): CApplication->getDb()
-#5 /opt/lampp/htdocs/telechargeri-com/framework/db/ar/CActiveRecord.php(2311): CActiveRecord->getDbConnection()
-#6 /opt/lampp/htdocs/telechargeri-com/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Status))
-#7 /opt/lampp/htdocs/telechargeri-com/protected/models/Status.php(28): CActiveRecord::model('Status')
-#8 /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php(16): Status::model()
-#9 /opt/lampp/htdocs/telechargeri-com/framework/web/actions/CInlineAction.php(50): AdministrationController->actionGet_scan_info()
-#10 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
-#11 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
-#12 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#13 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): CController->run('get_scan_info')
-#14 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('administration/...')
-#15 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
-#16 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
-#17 {main}
-REQUEST_URI=/info
-HTTP_REFERER=http://telechargeri.localhost/administration/applications
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
 ---
+2013/01/05 23:38:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/telechargeri-com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/01/05 23:38:07 [error] [php] array_splice() expects parameter 1 to be array, null given (/opt/lampp/htdocs/telechargeri-com/protected/models/Tools.php:19)
+Stack trace:
+#0 /opt/lampp/htdocs/telechargeri-com/framework/web/actions/CInlineAction.php(50): AdministrationController->actionGet_scan_info()
+#1 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(287): AdministrationController->runAction()
+#3 /opt/lampp/htdocs/telechargeri-com/framework/web/CController.php(266): AdministrationController->runActionWithFilters()
+#4 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(283): AdministrationController->run()
+#5 /opt/lampp/htdocs/telechargeri-com/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#6 /opt/lampp/htdocs/telechargeri-com/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /opt/lampp/htdocs/telechargeri-com/index.php(13): CWebApplication->run()
+REQUEST_URI=/info
+in /opt/lampp/htdocs/telechargeri-com/protected/models/Tools.php (19)
+in /opt/lampp/htdocs/telechargeri-com/protected/controllers/AdministrationController.php (17)
+in /opt/lampp/htdocs/telechargeri-com/index.php (13)

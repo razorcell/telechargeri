@@ -16,6 +16,7 @@ class AdministrationController extends Controller
 		$status = Status::model()->find("id=1");
 		$elapsed_time = $this->tools->time_elapsed(time(),$status->start_time);
 		$info = array("elapsed_time"=>$elapsed_time,
+				"current_proxy"=>$status->current_proxy,
 				"website"=>$status->website,
 				"scanned_apps"=>$status->scanned_apps,
 				"os"=>$status->os,
@@ -37,7 +38,15 @@ class AdministrationController extends Controller
 	}
 	public function actionIndex()
 	{
-		$this->render('index');
+		$array = array(1,2,3,4,5,6,7,8);
+		$string = "";
+		foreach($array as $key=>$element){
+			if($key % 2 == 0){
+				$string .= " / current : ".$element." - next : ".$array[$key+1];
+			}
+				
+		}
+		$this->render('index',array("string"=>$string));
 	}
 	public function actionWebsite_list(){
 		$website_list = Website::model()->findAll();
@@ -433,21 +442,23 @@ class AdministrationController extends Controller
 				preg_match_all($regex_app_link, $current_apps_list["content"], $apps_links_names);//extract link and name part 1
 				foreach($apps_links_names[0] as $app){//$apps_links_names[0] contains occurences of our search
 					preg_match_all($regex_app_name,$app,$link_name);
-					$x = 0;
-					foreach($link_name[0] as $element){//element is either app link or app name 0 : link 1 : name / 2 : link  3 : name
-						if($x % 2 == 0){//this is a link
-							$this->tools->log_text("this is a link  : ".$element);
-							Status::model()->updateAll(array("application_link"=>$element),"id=1");
-						}else{//this is a name
+					//$x = 0;
+					foreach($link_name[0] as $key=>$element){//element is either app link or app name 0 : link 1 : name / 2 : link  3 : name
+						if($key % 2 == 0){//this is a link
+							$current_app_name = $link_name[0][$key+1];//this is a name
+							$current_app_link = $element;
+							$this->tools->log_text("\nLink  : ".$current_app_link);
+							Status::model()->updateAll(array("application_link"=>$current_app_link),"id=1");
+
+							$current_app_name = $this->tools->clean_name($current_app_name);
+							Status::model()->updateAll(array("application_name"=>$current_app_name),"id=1");
+							$this->scan_app_link($current_app_link, $current_app_name);
+								
+							//this part must be at the end
 							$query = "UPDATE Status SET scanned_apps = scanned_apps + 1 WHERE id=1";
 							Yii::app()->db->createCommand($query)->execute();
-							$element = $this->tools->clean_name($element);
-							Status::model()->updateAll(array("application_name"=>$element),"id=1");
-							$this->tools->log_text("this is a name  : ".$element);
+							$global_apps_list .= "\n".$element."\n";//ADD the new apps_names list to the global list
 						}
-						$global_apps_list .= "\n".$element."\n";//ADD the new apps_names list to the global list
-						
-						$x++;
 					}
 				}
 				$index++;//go to next page
@@ -460,60 +471,95 @@ class AdministrationController extends Controller
 		}while($pagenotfound != true);
 		return $global_apps_list;
 	}
+	public function scan_app_link($app_link,$app_name){
+		$this->tools->log_text("scan_app_link started(".$app_name." , ".$app_link.")");
+		$url = "www.01net.com".$app_link;
+		$app_page = $this->tools->get_page($url);
+		$this->tools->log_text("got the page");
+		//if app exists in DB
+		$res = Application::model()->findAll("label_application = :app_name",array(":app_name"=>$app_name));
+		if(empty($res)){//app does not exists
+			$this->tools->log_text("\n     Not found in DB app_name : " .$app_name);
+			//get image links
+			$this->get_image_link($app_page["content"], $app_name);
+		}else{
+			$this->tools->log_text("NOT Empty result");
+		}
+	}
+	public function get_image_link($app_page_content,$app_name){
+		//<a class="tc_onglet_off_liens" href="/telecharger/windows/Bureautique/agenda/fiches/img50789.html">Captures<br>d'écran</a>
+		$regex_capture_ecran_tab_link = "#\/telecharger\/.*\.html\">[\s]*Captures#";
+		$x = preg_match_all($regex_capture_ecran_tab_link, $app_page_content, $res);
+		if($x > 0){
+			foreach($res[0] as $key=>$link){
+				$link = str_replace("Captures","",$link);
+				$link = str_replace("\">","",$link);
+				$this->tools->log_text("\REGEX SUCCESS : napp_name = ".$app_name." :  link[".$key."]  = ".$link);
+			}
+		}else{
+			$this->tools->log_text("\n".$app_name." : NO IMAGE REGEX did not find anything, x = ".$x);
+		}
+
+
+
+	}
 	public function actionAppsGrabb(){
 		$this->render('appsgrabb');
 	}
 	public function actionStart(){
-		if (ERunActions::runBackground())
-		{
-			$total_section = Section::model()->find();
-			$total_category = Category::model()->findAll();
-			$total_os  = Os::model()->findAll();
-			Status::model()->updateByPk(1,array("total_section"=>count($total_section),
-					"total_category"=>count($total_category),
-					"total_os"=>count($total_os),
-					"scanned_apps"=>0,
-					"start_time"=>time()));
-			$this->downloaded_pages = 0;
-			$progression_os = 0;
-			$progression_category = 0;
-			$progression_section = 0;
-			$website_list = Website::model()->findAll();
-			foreach($website_list as $website){
-				$os_list = Os::model()->findAll("id_website=".$website->id_website);
-				foreach($os_list as $os){
-					Status::model()->updateAll(array("progression_os"=>$progression_os++),"id=1");
-					$category_list = Category::model()->findAll("id_os="."'".$os->id_os."' && id_website="."'".$website->id_website."'");
-					foreach($category_list as $category){
-						Status::model()->updateAll(array("progression_category"=>$progression_category++),"id=1");
-						$section_list = Section::model()->findAll("id_category="."'".$category->id_category."'");
-						$apps_list_link = NULL;
-						if(!empty($section_list)){//if this category has sections
-							foreach($section_list as $section){
-								Status::model()->updateAll(array("progression_section"=>$progression_section++),"id=1");
-								$status = Status::model()->updateAll(array("website"=>$website->label_website,
-										"os"=>$os->label_os,
-										"category"=>$category->label_category,
-										"section"=>$section->label_section,"id=1"));
-								$apps_list_link = "www.".$website->label_website."/".$os->label_os."/".$category->label_category."/".$section->label_section."/";
-								$global_apps_list = $this->scan_apps_lists($apps_list_link,$os->label_os,$category->label_category,$section->label_section);
-								$this->tools->log_text("SCANNED : website : ".$website->label_website." - Os : ".$os->label_os." - category : ".$category->label_category." Section : ".$section->label_section." : \n\n\n");
-							}
-						}else{//if category has NO sections
+		//if (ERunActions::runBackground())
+		//{
+		$total_section = Section::model()->find();
+		$total_category = Category::model()->findAll();
+		$total_os  = Os::model()->findAll();
+		Status::model()->updateByPk(1,array("total_section"=>count($total_section),
+				"total_category"=>count($total_category),
+				"total_os"=>count($total_os),
+				"scanned_apps"=>0,
+				"application_link"=>"",
+				"application_name"=>"",
+				"downloaded_pages"=>0,
+				"start_time"=>time()));
+		$this->downloaded_pages = 0;
+		$progression_os = 0;
+		$progression_category = 0;
+		$progression_section = 0;
+		$website_list = Website::model()->findAll();
+		foreach($website_list as $website){
+			$os_list = Os::model()->findAll("id_website=".$website->id_website);
+			foreach($os_list as $os){
+				Status::model()->updateAll(array("progression_os"=>$progression_os++),"id=1");
+				$category_list = Category::model()->findAll("id_os="."'".$os->id_os."' && id_website="."'".$website->id_website."'");
+				foreach($category_list as $category){
+					Status::model()->updateAll(array("progression_category"=>$progression_category++),"id=1");
+					$section_list = Section::model()->findAll("id_category="."'".$category->id_category."'");
+					$apps_list_link = NULL;
+					if(!empty($section_list)){//if this category has sections
+						foreach($section_list as $section){
+							Status::model()->updateAll(array("progression_section"=>$progression_section++),"id=1");
 							$status = Status::model()->updateAll(array("website"=>$website->label_website,
 									"os"=>$os->label_os,
 									"category"=>$category->label_category,
-									"section"=>"No section in this category","id=1"));
-							$apps_list_link = "www.".$website->label_website."/".$os->label_os."/".$category->label_category."/";
-							$global_apps_list = $this->scan_apps_lists($apps_list_link,$os->label_os,$category->label_category);
-							$this->tools->log_text("SCANNED : website : ".$website->label_website." - Os : ".$os->label_os." - category : ".$category->label_category." : \n\n\n".$global_apps_list);
+									"section"=>$section->label_section,"id=1"));
+							$apps_list_link = "www.".$website->label_website."/".$os->label_os."/".$category->label_category."/".$section->label_section."/";
+							$global_apps_list = $this->scan_apps_lists($apps_list_link,$os->label_os,$category->label_category,$section->label_section);
+							$this->tools->log_text("SCANNED : website : ".$website->label_website." - Os : ".$os->label_os." - category : ".$category->label_category." Section : ".$section->label_section." : \n\n\n");
 						}
+					}else{//if category has NO sections
+						$status = Status::model()->updateAll(array("website"=>$website->label_website,
+								"os"=>$os->label_os,
+								"category"=>$category->label_category,
+								"section"=>"No section in this category","id=1"));
+						$apps_list_link = "www.".$website->label_website."/".$os->label_os."/".$category->label_category."/";
+						$global_apps_list = $this->scan_apps_lists($apps_list_link,$os->label_os,$category->label_category);
+						$this->tools->log_text("SCANNED : website : ".$website->label_website." - Os : ".$os->label_os." - category : ".$category->label_category." : \n\n\n".$global_apps_list);
 					}
 				}
 			}
-		}//end runBackground
+		}
+		//}//end runBackground
 	}
-	
+
 
 	// Uncomment the following methods and override them if needed
 	/*

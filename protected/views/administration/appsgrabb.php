@@ -24,6 +24,7 @@ $(document).ready(function(){
 				success : function(data) {
 					var json = $.parseJSON(data);
 						$(".elapsed_time").html(json.elapsed_time);
+						$(".current_proxy").val(json.current_proxy);
 						$(".os").val(json.os);
 						$(".category").val(json.category);
 						$(".section").val(json.section);
@@ -38,7 +39,7 @@ $(document).ready(function(){
 							}
 			});//end of ajax
 			}
-				,1500);
+				,500);
 	});
 });
 </script>
@@ -58,6 +59,13 @@ $(document).ready(function(){
 						<div class="da-form-item">
 							<span class="formNote"><span class="elapsed_time">0 days 0 hours 0 minutes and 0 seconds ago.</span></span>
 							<div id="progression" class="animated blue"></div>
+						</div>
+					</div>
+					<div class="da-form-row">
+						<label>Proxy</label>
+						<div class="da-form-item">
+							<span class="formNote">Currently used proxy</span> <input type="text"
+								name="req1" class="current_proxy" value="" />
 						</div>
 					</div>
 					<div class="da-form-row">

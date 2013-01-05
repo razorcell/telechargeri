@@ -102,6 +102,7 @@ class Tools{
 				$got_page = false;
 			}else{
 				Yii::log("SUCCESS : ".$url,CLogger::LEVEL_WARNING);
+				Status::model()->updateAll(array("current_proxy"=>$proxy),"id=1");
 				Yii::log("--------------->Using proxy : ".$proxy,CLogger::LEVEL_WARNING);
 			}
 		}while($got_page == false);
