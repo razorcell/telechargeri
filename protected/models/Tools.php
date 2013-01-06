@@ -74,18 +74,37 @@ class Tools{
 		$header['content'] = $content;
 		return $header;
 	}
+	public function get_proxy2(){
+		$proxies_sources = array("proxynova"=>"http://www.proxynova.com/proxy_list.txt",
+				"multiproxy"=>"http://multiproxy.org/txt_anon/proxy.txt",
+				"proxies"=>"http://www.pr0xies.org/");
+		$global_proxy_list = array();
+		foreach($proxies_sources as $name=>$source){
+			$data = $this->get_web_page($source);
+			if($data["errno"] != 0 || $data["http_code"] != 200){
+				$this->log_text($name." : ERROR can't get proxies list page - Curl error : ".$data["errno"]."    -  HTTP CODE : ".$data["http_code"],CLogger::LEVEL_ERROR);
+			}else{
+				//we got proxies list
+				preg_match_all("#([0-9]{1,3}.){3}[0-9]{1,3}:[0-9]{2,6}#", $data["content"], $proxys);
+				$global_proxy_list = array_merge($global_proxy_list,$proxys[0]);
+			}
+		}
+		$random_index = array_rand($global_proxy_list,1);
+		$random_proxy = $global_proxy_list[$random_index];
+		return $random_proxy;//array  [0] array IP:PORT
+	}
 	public function get_proxy(){
-		do{
+		do{//proxies list 1
 			$data = $this->get_web_page("http://www.aliveproxy.com/fastest-proxies/");
 			if($data["errno"] != 0 || $data["http_code"] != 200){
-				Yii::log("can't get proxies list page - Curl error : ".$data["errno"]."    -  HTTP CODE : ".$data["http_code"],CLogger::LEVEL_ERROR);
+				Yii::log("aliveproxy : can't get proxies list page - Curl error : ".$data["errno"]."    -  HTTP CODE : ".$data["http_code"],CLogger::LEVEL_ERROR);
 			}
 		}while($data["errno"] != 0 || $data["http_code"] != 200);
 		//we got proxies list
 		$data = preg_replace('/\s+/', '', $data["content"]);
 		$data = htmlentities($data,ENT_IGNORE);
 		preg_match_all("#[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\:[0-9]{2,4}#", $data, $proxys);
-
+		
 		$random_index = array_rand($proxys[0],1);
 		$random_proxy = $proxys[0][$random_index];
 		return $random_proxy;//array  [0] array IP:PORT
@@ -95,7 +114,7 @@ class Tools{
 		$page = NULL;
 		do {//while we did not get the page
 			$got_page = true;//if false last time, we need to initialize it again to true
-			$proxy = $this->get_proxy();
+			$proxy = $this->get_proxy2();
 			$page = $this->get_web_page($url,$proxy);
 			if($page["errno"] != 0 || $page["http_code"] != 200) {//ERROR OCCURED
 				Yii::log("Page : ".$url."   Proxy : ".$proxy."Message : ".$page["errmsg"]."   -   HTTP CODE : ".$page["http_code"],CLogger::LEVEL_ERROR);

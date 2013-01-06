@@ -44,7 +44,7 @@ class AdministrationController extends Controller
 			if($key % 2 == 0){
 				$string .= " / current : ".$element." - next : ".$array[$key+1];
 			}
-				
+
 		}
 		$this->render('index',array("string"=>$string));
 	}
@@ -453,7 +453,7 @@ class AdministrationController extends Controller
 							$current_app_name = $this->tools->clean_name($current_app_name);
 							Status::model()->updateAll(array("application_name"=>$current_app_name),"id=1");
 							$this->scan_app_link($current_app_link, $current_app_name);
-								
+
 							//this part must be at the end
 							$query = "UPDATE Status SET scanned_apps = scanned_apps + 1 WHERE id=1";
 							Yii::app()->db->createCommand($query)->execute();
@@ -472,36 +472,109 @@ class AdministrationController extends Controller
 		return $global_apps_list;
 	}
 	public function scan_app_link($app_link,$app_name){
+		$current_app_info = array("label_application"=>$app_name,
+				"download_link"=>"",
+				"image_link"=>"",
+				"description"=>"");
 		$this->tools->log_text("scan_app_link started(".$app_name." , ".$app_link.")");
 		$url = "www.01net.com".$app_link;
-		$app_page = $this->tools->get_page($url);
+		$app_page = $this->tools->get_page($url);//current application page
 		$this->tools->log_text("got the page");
 		//if app exists in DB
 		$res = Application::model()->findAll("label_application = :app_name",array(":app_name"=>$app_name));
 		if(empty($res)){//app does not exists
 			$this->tools->log_text("\n     Not found in DB app_name : " .$app_name);
 			//get image links
-			$this->get_image_link($app_page["content"], $app_name);
+			$current_app_info["image_link"] = $this->get_image_link($app_page["content"], $app_name);
+			$current_app_info["description"] = $this->get_description($app_page["content"]);
+			$current_app_info["download_link"] = $this->get_download_link($app_page["content"]);
+			$this->tools->log_text(">>>>>>>>>>>>BOOOM : image_link : ".$current_app_info["image_link"]."\n".
+					 "description : ".$current_app_info["description"]."\n"
+					."download link : ".$current_app_info["download_link"]);
 		}else{
-			$this->tools->log_text("NOT Empty result");
+			$this->tools->log_text("\nApplication FOUND IN DB app_name = ".$app_name);
 		}
 	}
+	public function get_download_link($app_page_content){
+		$app_download_link = NULL;
+		$status = Status::model()->find("id=1");
+		if(!is_null($status)){
+			$os = $status->os;
+			$category = $status->category;//No section in this category
+			$section = $status->section;
+			$regex = "";
+			///outils/telecharger/windows/Internet/ftp/fiches/tele17966.html
+			if($section == "No section in this category"){
+				$regex = "/outils/telecharger/".$os."/".$category."/fiches/";
+			}else{
+				$regex = "/outils/telecharger/".$os."/".$category."/".$section."/"."fiches/";
+			}
+			$regex = "#".$regex.".*\.html#";//Ex : "#/outils/telecharger/linux/Programmation/fiches/.*\.html#"
+			$x = preg_match_all($regex, $app_page_content, $res);
+			if($x > 0){
+				foreach ($res[0] as $element){
+					$app_download_link = $element;//Ex: /outils/telecharger/linux/Programmation/fiches/tele29223.html
+				}
+			}else{
+				$this->tools->log_text("DESCRIPTION REGEX FOUND NOTHING");
+			}
+			$app_download_link = "www.01net.com".$app_download_link;
+			$final_download_link_page = $this->tools->get_page($app_download_link);
+			$regex = "#href=\".*target=\"_blank\">cliquer ici#";
+			$x = preg_match_all($regex, $final_download_link_page["content"], $res);
+			if($x > 0){
+				foreach ($res[0] as $element){
+					$element = str_replace(array("href=\""),"",$element);
+					$element = preg_replace("#\".*#","",$element);
+					$app_download_link = $element;
+				}
+			}else{
+				echo "ERROR couldn't get the final link pagex = ".$x;
+			}
+		}else{
+			$this->tools->log_text("ERROR Status is NULL");
+		}
+		return $app_download_link;
+	}
+	public function get_description($app_page_content){
+		$app_description = NULL;
+		$regex = "#tc_description_logiciel(.*){0,500}#";
+		$x = preg_match_all($regex, $app_page_content, $res);
+		if($x > 0){
+			foreach ($res[0] as $element){
+				$element = str_replace(array("tc_description_logiciel\">","<em>","</em>","&nbsp;","</p></div>"),"",$element);
+				$element = preg_replace("#(<[\w\/]{1,10}>)#","",$element);
+				$element = preg_replace("#<.*>#","",$element);
+				$app_description = $element;
+			}
+		}else{
+			$this->tools->log_text("DESCRIPTION REGEX FOUND NOTHING");
+		}
+		return $app_description;
+	}
 	public function get_image_link($app_page_content,$app_name){
+		$official_image_link = NULL;
 		//<a class="tc_onglet_off_liens" href="/telecharger/windows/Bureautique/agenda/fiches/img50789.html">Captures<br>d'écran</a>
 		$regex_capture_ecran_tab_link = "#\/telecharger\/.*\.html\">[\s]*Captures#";
 		$x = preg_match_all($regex_capture_ecran_tab_link, $app_page_content, $res);
 		if($x > 0){
-			foreach($res[0] as $key=>$link){
+			foreach($res[0] as $key=>$link){//image found
 				$link = str_replace("Captures","",$link);
-				$link = str_replace("\">","",$link);
-				$this->tools->log_text("\REGEX SUCCESS : napp_name = ".$app_name." :  link[".$key."]  = ".$link);
+				$link = str_replace("\">","",$link);//we have now a clean link
+				$link = "www.01net.com".$link;
+				$image_page = $this->tools->get_page($link);//get the official image link
+				$regex_official_image_link = "#/images/logiciel/.*\.jpg#";
+				$x = preg_match_all($regex_official_image_link, $image_page["content"], $res);
+				if($x > 0){//got official image link
+					$official_image_link =  $res[0][0];
+				}else{//regex found nothing
+					$this->tools->log_text("\n ERREUR REGEX 2 found no IMAGE for app_name : ".$app_name);
+				}
 			}
-		}else{
-			$this->tools->log_text("\n".$app_name." : NO IMAGE REGEX did not find anything, x = ".$x);
+		}else{//no image found
+			$this->tools->log_text("\n".$app_name." : NO IMAGES for this application, x = ".$x);
 		}
-
-
-
+		return $official_image_link;
 	}
 	public function actionAppsGrabb(){
 		$this->render('appsgrabb');
@@ -512,13 +585,19 @@ class AdministrationController extends Controller
 		$total_section = Section::model()->find();
 		$total_category = Category::model()->findAll();
 		$total_os  = Os::model()->findAll();
-		Status::model()->updateByPk(1,array("total_section"=>count($total_section),
-				"total_category"=>count($total_category),
-				"total_os"=>count($total_os),
+		Status::model()->updateByPk(1,array("progression_section"=>0,
+				"os"=>"",
+				"category"=>"",
+				"section"=>"",
+				"list_link"=>"",
+				"progression_category"=>0,
+				"progression_os"=>0,
 				"scanned_apps"=>0,
 				"application_link"=>"",
 				"application_name"=>"",
 				"downloaded_pages"=>0,
+				"applications_added"=>0,
+				"current_proxy"=>"",
 				"start_time"=>time()));
 		$this->downloaded_pages = 0;
 		$progression_os = 0;
