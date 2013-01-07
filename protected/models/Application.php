@@ -8,14 +8,11 @@
  * @property string $label_application
  * @property string $description
  * @property string $image_link
- * @property string $version
  * @property string $insert_date
  * @property string $id_category
  * @property string $id_section
- * @property string $id_website
  *
  * The followings are the available model relations:
- * @property Website $idWebsite
  * @property Category $idCategory
  * @property Section $idSection
  * @property DownloadLink[] $downloadLinks
@@ -48,14 +45,13 @@ class Application extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('label_application, description, image_link, version, insert_date, id_category, id_website', 'required'),
+			array('label_application, description, insert_date, id_category', 'required'),
 			array('label_application, insert_date', 'length', 'max'=>100),
 			array('image_link', 'length', 'max'=>300),
-			array('version', 'length', 'max'=>20),
-			array('id_category, id_section, id_website', 'length', 'max'=>10),
+			array('id_category, id_section', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id_application, label_application, description, image_link, version, insert_date, id_category, id_section, id_website', 'safe', 'on'=>'search'),
+			array('id_application, label_application, description, image_link, insert_date, id_category, id_section', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -67,7 +63,6 @@ class Application extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'idWebsite' => array(self::BELONGS_TO, 'Website', 'id_website'),
 			'idCategory' => array(self::BELONGS_TO, 'Category', 'id_category'),
 			'idSection' => array(self::BELONGS_TO, 'Section', 'id_section'),
 			'downloadLinks' => array(self::HAS_MANY, 'DownloadLink', 'id_application'),
@@ -84,11 +79,9 @@ class Application extends CActiveRecord
 			'label_application' => 'Label Application',
 			'description' => 'Description',
 			'image_link' => 'Image Link',
-			'version' => 'Version',
 			'insert_date' => 'Insert Date',
 			'id_category' => 'Id Category',
 			'id_section' => 'Id Section',
-			'id_website' => 'Id Website',
 		);
 	}
 
@@ -107,11 +100,9 @@ class Application extends CActiveRecord
 		$criteria->compare('label_application',$this->label_application,true);
 		$criteria->compare('description',$this->description,true);
 		$criteria->compare('image_link',$this->image_link,true);
-		$criteria->compare('version',$this->version,true);
 		$criteria->compare('insert_date',$this->insert_date,true);
 		$criteria->compare('id_category',$this->id_category,true);
 		$criteria->compare('id_section',$this->id_section,true);
-		$criteria->compare('id_website',$this->id_website,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

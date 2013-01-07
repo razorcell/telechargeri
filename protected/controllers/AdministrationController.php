@@ -16,6 +16,7 @@ class AdministrationController extends Controller
 		$status = Status::model()->find("id=1");
 		$elapsed_time = $this->tools->time_elapsed(time(),$status->start_time);
 		$info = array("elapsed_time"=>$elapsed_time,
+				"total_proxies"=>$status->total_proxies,
 				"current_proxy"=>$status->current_proxy,
 				"website"=>$status->website,
 				"scanned_apps"=>$status->scanned_apps,
@@ -31,7 +32,6 @@ class AdministrationController extends Controller
 				"progression_section"=>$status->progression_section,
 				"total_section"=>$status->total_section,
 				"progression_category"=>$status->progression_category,
-				"total_category"=>$status->total_category,
 				"prograssion_os"=>$status->progression_os,
 				"total_os"=>$status->total_os);
 		echo CJSON::encode($info);
@@ -47,6 +47,14 @@ class AdministrationController extends Controller
 
 		}
 		$this->render('index',array("string"=>$string));
+	}
+	public function actionApplications(){
+		$application_list = Application::model()->findAll();
+		$category_list = Category::model()->findAll();
+		$section_list = Section::model()->findAll();
+		$this->render("application_list",array("application_list"=>$application_list,
+				"category_list"=>$category_list,
+				));
 	}
 	public function actionWebsite_list(){
 		$website_list = Website::model()->findAll();
@@ -447,12 +455,12 @@ class AdministrationController extends Controller
 						if($key % 2 == 0){//this is a link
 							$current_app_name = $link_name[0][$key+1];//this is a name
 							$current_app_link = $element;
-							$this->tools->log_text("\nLink  : ".$current_app_link);
+							$this->tools->log_text("\nLink to application page  : ".$current_app_link);
 							Status::model()->updateAll(array("application_link"=>$current_app_link),"id=1");
-
 							$current_app_name = $this->tools->clean_name($current_app_name);
 							Status::model()->updateAll(array("application_name"=>$current_app_name),"id=1");
-							$this->scan_app_link($current_app_link, $current_app_name);
+							
+							$this->scan_app_link($current_app_link, $current_app_name,$category,$section);//get all apps in the page
 
 							//this part must be at the end
 							$query = "UPDATE Status SET scanned_apps = scanned_apps + 1 WHERE id=1";
@@ -471,15 +479,18 @@ class AdministrationController extends Controller
 		}while($pagenotfound != true);
 		return $global_apps_list;
 	}
-	public function scan_app_link($app_link,$app_name){
+	public function scan_app_link($app_link,$app_name,$category,$section = NULL){
 		$current_app_info = array("label_application"=>$app_name,
 				"download_link"=>"",
 				"image_link"=>"",
-				"description"=>"");
+				"description"=>"",
+				"id_category"=>"",
+				"id_section"=>"");
 		$this->tools->log_text("scan_app_link started(".$app_name." , ".$app_link.")");
 		$url = "www.01net.com".$app_link;
 		$app_page = $this->tools->get_page($url);//current application page
-		$this->tools->log_text("got the page");
+		Status::model()->updateAll(array("downloaded_pages"=>$this->downloaded_pages++));
+		//$this->tools->log_text("got the page");
 		//if app exists in DB
 		$res = Application::model()->findAll("label_application = :app_name",array(":app_name"=>$app_name));
 		if(empty($res)){//app does not exists
@@ -488,9 +499,51 @@ class AdministrationController extends Controller
 			$current_app_info["image_link"] = $this->get_image_link($app_page["content"], $app_name);
 			$current_app_info["description"] = $this->get_description($app_page["content"]);
 			$current_app_info["download_link"] = $this->get_download_link($app_page["content"]);
-			$this->tools->log_text(">>>>>>>>>>>>BOOOM : image_link : ".$current_app_info["image_link"]."\n".
-					 "description : ".$current_app_info["description"]."\n"
-					."download link : ".$current_app_info["download_link"]);
+			$application = new Application();
+			$app_category = Category::model()->find("label_category = :label_category",array("label_category"=>$category));
+			if(!is_null($app_category)){//category found
+				$this->tools->log_text("category found = ".$app_category->id_category);//----------------------------------------------------------------->
+				$current_app_info["id_category"] = $app_category->id_category;
+				if(is_null($section)){//this app has no section
+					$this->tools->log_text("this app has no section app_name = ".$app_name);
+					$current_app_info["id_section"] = NULL;
+				}else{//this app has section we need to find it
+					$section = Section::model()->find("label_section = :label_section",array("label_section"=>$section));
+					if(!is_null($section)){//section found
+						$this->tools->log_text("section found app_name = ".$app_name);
+						$current_app_info["id_section"] = $section->id_section;
+					}else{
+						$this->tools->log_text("ERROR couldn't find section app_name = ".$app_name);
+					}
+				}
+				$this->tools->log_text("before app saving");
+				
+				$application->setAttributes(array("label_application"=>$app_name,
+						"description"=>$current_app_info["description"],
+						"insert_date"=>date("D.M.Y"),
+						"id_section"=>$current_app_info["id_section"],
+						"id_category"=>$current_app_info["id_category"]));
+				if(!is_null($current_app_info["image_link"])){//if image exists we add it
+					$application->setAttributes(array("image_link"=>$current_app_info["image_link"]));
+				}
+				if($application->save()){//save download link
+					$last_inserted_app_id = Yii::app()->db->lastInsertID;
+					$download_link = new DownloadLink();
+					$download_link->setAttributes(array("label_download_link"=>$current_app_info["download_link"],
+							"id_application"=>$last_inserted_app_id));
+					if($download_link->save()){
+						$this->tools->log_text("\n\n\nAPPLICATION ADDED TO DB : \n
+								NAME : ".$app_name."\n
+								IMAGE_LINK : ".$current_app_info["image_link"]."\n".
+								"DESCRIPTION : ".$current_app_info["description"]."\n"
+								."DOWNLOAD LINK : ".$current_app_info["download_link"]);
+					}
+				}else{
+					$this->tools->log_text("ERROR : can't save application REPORT : ".$this->tools->get_errors_summary($application->errors));
+				}
+			}else{
+				$this->tools->log_text("ERROR couldn't get the category, app_name = ".$app_name);
+			}
 		}else{
 			$this->tools->log_text("\nApplication FOUND IN DB app_name = ".$app_name);
 		}
@@ -520,6 +573,7 @@ class AdministrationController extends Controller
 			}
 			$app_download_link = "www.01net.com".$app_download_link;
 			$final_download_link_page = $this->tools->get_page($app_download_link);
+			Status::model()->updateAll(array("downloaded_pages"=>$this->downloaded_pages++));
 			$regex = "#href=\".*target=\"_blank\">cliquer ici#";
 			$x = preg_match_all($regex, $final_download_link_page["content"], $res);
 			if($x > 0){
@@ -563,6 +617,7 @@ class AdministrationController extends Controller
 				$link = str_replace("\">","",$link);//we have now a clean link
 				$link = "www.01net.com".$link;
 				$image_page = $this->tools->get_page($link);//get the official image link
+				Status::model()->updateAll(array("downloaded_pages"=>$this->downloaded_pages++));
 				$regex_official_image_link = "#/images/logiciel/.*\.jpg#";
 				$x = preg_match_all($regex_official_image_link, $image_page["content"], $res);
 				if($x > 0){//got official image link
@@ -597,6 +652,7 @@ class AdministrationController extends Controller
 				"application_name"=>"",
 				"downloaded_pages"=>0,
 				"applications_added"=>0,
+				"total_proxies"=>0,
 				"current_proxy"=>"",
 				"start_time"=>time()));
 		$this->downloaded_pages = 0;
@@ -636,7 +692,7 @@ class AdministrationController extends Controller
 				}
 			}
 		}
-		//}//end runBackground
+	//	}//end runBackground
 	}
 
 

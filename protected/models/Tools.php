@@ -11,14 +11,14 @@ class Tools{
 				' minute'    => $secs / 60 % 60,
 				' second'    => $secs % 60
 		);
-		 
+			
 		foreach($bit as $k => $v){
 			if($v > 1)$ret[] = $v . $k . 's';
 			if($v == 1)$ret[] = $v . $k;
 		}
 		array_splice($ret, count($ret)-1, 0, 'and');
 		$ret[] = 'ago.';
-		 
+			
 		return join(' ', $ret);
 	}
 	public function logit($string){
@@ -56,8 +56,8 @@ class Tools{
 				CURLOPT_ENCODING       => "",       // handle all encodings
 				CURLOPT_USERAGENT      => "user", // who am i
 				CURLOPT_AUTOREFERER    => true,     // set referer on redirect
-				CURLOPT_CONNECTTIMEOUT => 30,      // timeout on connect
-				CURLOPT_TIMEOUT        => 30,      // timeout on response
+				CURLOPT_CONNECTTIMEOUT => 3,      // timeout on connect
+				CURLOPT_TIMEOUT        => 3,      // timeout on response
 				CURLOPT_MAXREDIRS      => 10,       // stop after 10 redirects
 				CURLOPT_PROXY              => $proxy,
 		);
@@ -74,6 +74,33 @@ class Tools{
 		$header['content'] = $content;
 		return $header;
 	}
+	/// http://proxy-ip-list.com/free-usa-proxy-ip.html
+	//http://proxy-ip-list.com/free-usa-proxy-ip.html
+	//http://www.slyhold.com/proxy_any_any.txt
+	//http://www.freeproxy.ch/proxy.txt
+	public function get_proxy3(){
+		$proxies_sources = array("proxynova"=>"http://www.proxynova.com/proxy_list.txt",
+				"multiproxy"=>"http://multiproxy.org/txt_anon/proxy.txt",
+				"proxies"=>"http://www.pr0xies.org/");
+		$proxy_source = array("freeproxy"=>"http://www.freeproxy.ch/proxylight.txt");
+		$data = NULL;
+		do{
+			$random_proxy_source_index = array_rand($proxy_source,1);
+			$random_proxy_source = $proxy_source[$random_proxy_source_index];
+			$data = $this->get_web_page($random_proxy_source);
+			if($data["errno"] != 0 || $data["http_code"] != 200){
+				$this->log_text($random_proxy_source_index." : ERROR can't get proxies list page - Curl error : ".$data["errno"]."    -  HTTP CODE : ".$data["http_code"]);
+			}
+		}while($data["errno"] != 0 || $data["http_code"] != 200);
+		preg_match_all("#([0-9]{1,3}\.){3}[0-9]{1,3}:[0-9]{2,6}#", $data["content"], $proxys);
+		$fast_proxies = $this->get_from_array($proxys[0],0,400);
+		$random_index = array_rand($fast_proxies,1);
+		$random_proxy = $fast_proxies[$random_index];
+		Status::model()->updateByPk(1, array("total_proxies"=>count($fast_proxies)));
+
+		//$this->log_text('Number of proxies : '.count($global_proxy_list));
+		return $random_proxy;//array  [0] array IP:PORT
+	}
 	public function get_proxy2(){
 		$proxies_sources = array("proxynova"=>"http://www.proxynova.com/proxy_list.txt",
 				"multiproxy"=>"http://multiproxy.org/txt_anon/proxy.txt",
@@ -85,12 +112,15 @@ class Tools{
 				$this->log_text($name." : ERROR can't get proxies list page - Curl error : ".$data["errno"]."    -  HTTP CODE : ".$data["http_code"],CLogger::LEVEL_ERROR);
 			}else{
 				//we got proxies list
-				preg_match_all("#([0-9]{1,3}.){3}[0-9]{1,3}:[0-9]{2,6}#", $data["content"], $proxys);
+				preg_match_all("#([0-9]{1,3}\.){3}[0-9]{1,3}:[0-9]{2,6}#", $data["content"], $proxys);
 				$global_proxy_list = array_merge($global_proxy_list,$proxys[0]);
 			}
 		}
 		$random_index = array_rand($global_proxy_list,1);
 		$random_proxy = $global_proxy_list[$random_index];
+		Status::model()->updateByPk(1, array("total_proxies"=>count($global_proxy_list)));
+
+		//$this->log_text('Number of proxies : '.count($global_proxy_list));
 		return $random_proxy;//array  [0] array IP:PORT
 	}
 	public function get_proxy(){
@@ -104,9 +134,10 @@ class Tools{
 		$data = preg_replace('/\s+/', '', $data["content"]);
 		$data = htmlentities($data,ENT_IGNORE);
 		preg_match_all("#[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\:[0-9]{2,4}#", $data, $proxys);
-		
+
 		$random_index = array_rand($proxys[0],1);
 		$random_proxy = $proxys[0][$random_index];
+		Status::model()->updateByPk(1, array("total_proxies"=>count($proxys[0])));
 		return $random_proxy;//array  [0] array IP:PORT
 	}
 	public function get_page($url){
@@ -114,7 +145,7 @@ class Tools{
 		$page = NULL;
 		do {//while we did not get the page
 			$got_page = true;//if false last time, we need to initialize it again to true
-			$proxy = $this->get_proxy2();
+			$proxy = $this->get_proxy();
 			$page = $this->get_web_page($url,$proxy);
 			if($page["errno"] != 0 || $page["http_code"] != 200) {//ERROR OCCURED
 				Yii::log("Page : ".$url."   Proxy : ".$proxy."Message : ".$page["errmsg"]."   -   HTTP CODE : ".$page["http_code"],CLogger::LEVEL_ERROR);
@@ -127,6 +158,20 @@ class Tools{
 		}while($got_page == false);
 		return $page;
 	}
+	public function get_from_array($arr, $start, $length)
+	{
+		$sliced = array();
+		foreach ($arr as $k => $v)
+		{
+			if ($start <= $k && $k <= $start + $length - 1)
+			{
+				$sliced[] = $v;
+				if (count($sliced) == $length) break;
+			}
+		}
+		return $sliced;
+	}
+	
 
 
 
@@ -153,7 +198,7 @@ class Tools{
 	$errmsg  = curl_error( $ch );
 	$header  = curl_getinfo( $ch );
 	curl_close( $ch );
-		
+
 	$header['errno']   = $err;
 	$header['errmsg']  = $errmsg;
 	$header['content'] = $content;

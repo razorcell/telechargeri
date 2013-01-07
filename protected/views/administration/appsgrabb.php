@@ -24,7 +24,9 @@ $(document).ready(function(){
 				success : function(data) {
 					var json = $.parseJSON(data);
 						$(".elapsed_time").html(json.elapsed_time);
+						$(".total_proxies").html(json.total_proxies);
 						$(".current_proxy").val(json.current_proxy);
+						$(".website").val(json.website);
 						$(".os").val(json.os);
 						$(".category").val(json.category);
 						$(".section").val(json.section);
@@ -62,9 +64,9 @@ $(document).ready(function(){
 						</div>
 					</div>
 					<div class="da-form-row">
-						<label>Proxy</label>
+						<label>Current proxy</label>
 						<div class="da-form-item">
-							<span class="formNote">Currently used proxy</span> <input type="text"
+							<span class="formNote">Total proxies : <strong><span class="total_proxies"></span></strong></span> <input type="text"
 								name="req1" class="current_proxy" value="" />
 						</div>
 					</div>
@@ -72,7 +74,7 @@ $(document).ready(function(){
 						<label>Website</label>
 						<div class="da-form-item">
 							<span class="formNote">Current Website</span> <input type="text"
-								name="req1" class="website" value="01net.com" />
+								name="req1" class="website" />
 						</div>
 					</div>
 					<div class="da-form-row">

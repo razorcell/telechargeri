@@ -2,10 +2,10 @@
 -- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Jan 04, 2013 at 03:56 AM
--- Server version: 5.5.27
--- PHP Version: 5.4.7
+-- Client: localhost
+-- Généré le: Lun 07 Janvier 2013 à 00:33
+-- Version du serveur: 5.5.27
+-- Version de PHP: 5.4.7
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,21 +17,20 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `telechargeri`
+-- Base de données: `telechargeri`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Application`
+-- Structure de la table `Application`
 --
 
 CREATE TABLE IF NOT EXISTS `Application` (
   `id_application` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `label_application` varchar(100) NOT NULL,
-  `description` text NOT NULL,
-  `image_link` varchar(300) NOT NULL,
-  `version` varchar(20) NOT NULL,
+  `label_application` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `description` text CHARACTER SET utf8 NOT NULL,
+  `image_link` varchar(300) CHARACTER SET utf8 DEFAULT NULL,
   `insert_date` varchar(100) NOT NULL,
   `id_category` int(10) unsigned NOT NULL,
   `id_section` int(10) unsigned DEFAULT NULL,
@@ -43,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `Application` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Category`
+-- Structure de la table `Category`
 --
 
 CREATE TABLE IF NOT EXISTS `Category` (
@@ -58,7 +57,7 @@ CREATE TABLE IF NOT EXISTS `Category` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
 
 --
--- Dumping data for table `Category`
+-- Contenu de la table `Category`
 --
 
 INSERT INTO `Category` (`id_category`, `label_category`, `id_website`, `id_os`) VALUES
@@ -78,12 +77,12 @@ INSERT INTO `Category` (`id_category`, `label_category`, `id_website`, `id_os`) 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Download_link`
+-- Structure de la table `Download_link`
 --
 
 CREATE TABLE IF NOT EXISTS `Download_link` (
   `id_download_link` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `label_download_link` varchar(300) NOT NULL,
+  `label_download_link` varchar(300) CHARACTER SET utf8 NOT NULL,
   `id_application` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id_download_link`),
   KEY `id_application` (`id_application`)
@@ -92,7 +91,7 @@ CREATE TABLE IF NOT EXISTS `Download_link` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Os`
+-- Structure de la table `Os`
 --
 
 CREATE TABLE IF NOT EXISTS `Os` (
@@ -105,7 +104,7 @@ CREATE TABLE IF NOT EXISTS `Os` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
--- Dumping data for table `Os`
+-- Contenu de la table `Os`
 --
 
 INSERT INTO `Os` (`id_os`, `label_os`, `id_website`) VALUES
@@ -116,7 +115,7 @@ INSERT INTO `Os` (`id_os`, `label_os`, `id_website`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Section`
+-- Structure de la table `Section`
 --
 
 CREATE TABLE IF NOT EXISTS `Section` (
@@ -129,7 +128,7 @@ CREATE TABLE IF NOT EXISTS `Section` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=64 ;
 
 --
--- Dumping data for table `Section`
+-- Contenu de la table `Section`
 --
 
 INSERT INTO `Section` (`id_section`, `label_section`, `id_category`) VALUES
@@ -200,7 +199,45 @@ INSERT INTO `Section` (`id_section`, `label_section`, `id_category`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Website`
+-- Structure de la table `Status`
+--
+
+CREATE TABLE IF NOT EXISTS `Status` (
+  `scanned_apps` int(11) DEFAULT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `website` varchar(30) DEFAULT NULL,
+  `os` varchar(30) DEFAULT NULL,
+  `category` varchar(30) DEFAULT NULL,
+  `section` varchar(30) DEFAULT NULL,
+  `list_link` text,
+  `application_link` text,
+  `application_name` text,
+  `downloaded_pages` int(11) DEFAULT NULL,
+  `applications_added` int(11) DEFAULT NULL,
+  `applications_updated` int(11) DEFAULT NULL,
+  `progression_section` int(11) DEFAULT NULL,
+  `total_section` int(11) DEFAULT NULL,
+  `progression_category` int(11) DEFAULT NULL,
+  `total_category` int(11) DEFAULT NULL,
+  `progression_os` int(11) DEFAULT NULL,
+  `total_os` int(11) DEFAULT NULL,
+  `start_time` varchar(50) DEFAULT NULL,
+  `current_proxy` varchar(30) DEFAULT NULL,
+  `total_proxies` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Contenu de la table `Status`
+--
+
+INSERT INTO `Status` (`scanned_apps`, `id`, `website`, `os`, `category`, `section`, `list_link`, `application_link`, `application_name`, `downloaded_pages`, `applications_added`, `applications_updated`, `progression_section`, `total_section`, `progression_category`, `total_category`, `progression_os`, `total_os`, `start_time`, `current_proxy`, `total_proxies`) VALUES
+(6, 1, '01net.com', 'windows', 'Bureautique', 'agenda', 'www.01net.com/windows/Bureautique/agenda/index2.html', '/telecharger/windows/Bureautique/agenda/fiches/705.html', 'Memo', 18, 0, 0, 0, 1, 0, 12, 0, 3, '1357514929', '5.9.187.106:8080', 25);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `Website`
 --
 
 CREATE TABLE IF NOT EXISTS `Website` (
@@ -212,44 +249,44 @@ CREATE TABLE IF NOT EXISTS `Website` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `Website`
+-- Contenu de la table `Website`
 --
 
 INSERT INTO `Website` (`id_website`, `label_website`, `language`) VALUES
 (1, '01net.com', 'French');
 
 --
--- Constraints for dumped tables
+-- Contraintes pour les tables exportées
 --
 
 --
--- Constraints for table `Application`
+-- Contraintes pour la table `Application`
 --
 ALTER TABLE `Application`
   ADD CONSTRAINT `Application_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `Category` (`id_category`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `Application_ibfk_2` FOREIGN KEY (`id_section`) REFERENCES `Section` (`id_section`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `Category`
+-- Contraintes pour la table `Category`
 --
 ALTER TABLE `Category`
-  ADD CONSTRAINT `Category_ibfk_2` FOREIGN KEY (`id_os`) REFERENCES `Os` (`id_os`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `Category_ibfk_1` FOREIGN KEY (`id_website`) REFERENCES `Website` (`id_website`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `Category_ibfk_1` FOREIGN KEY (`id_website`) REFERENCES `Website` (`id_website`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `Category_ibfk_2` FOREIGN KEY (`id_os`) REFERENCES `Os` (`id_os`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `Download_link`
+-- Contraintes pour la table `Download_link`
 --
 ALTER TABLE `Download_link`
   ADD CONSTRAINT `Download_link_ibfk_1` FOREIGN KEY (`id_application`) REFERENCES `Application` (`id_application`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `Os`
+-- Contraintes pour la table `Os`
 --
 ALTER TABLE `Os`
   ADD CONSTRAINT `Os_ibfk_1` FOREIGN KEY (`id_website`) REFERENCES `Website` (`id_website`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `Section`
+-- Contraintes pour la table `Section`
 --
 ALTER TABLE `Section`
   ADD CONSTRAINT `Section_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `Category` (`id_category`) ON DELETE CASCADE ON UPDATE CASCADE;
