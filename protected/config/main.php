@@ -77,6 +77,9 @@ return array(
 					'section_update'=>'administration/section_update',
 					
 					'applications'=>'administration/applications',
+					'application_delete'=>'administration/application_delete',
+					'application_edit'=>'administration/application_edit',
+					'application_update'=>'administration/application_update',
 					
 					'info'=>'administration/get_scan_info',
 					'start'=>'administration/start',

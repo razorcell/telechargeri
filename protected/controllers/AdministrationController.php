@@ -52,9 +52,61 @@ class AdministrationController extends Controller
 		$application_list = Application::model()->findAll();
 		$category_list = Category::model()->findAll();
 		$section_list = Section::model()->findAll();
+		$os_list = Os::model()->findAll();
 		$this->render("application_list",array("application_list"=>$application_list,
 				"category_list"=>$category_list,
-				));
+				"section_list"=>$section_list,
+				"os_list"=>$os_list
+		));
+	}
+	public function actionApplication_delete(){
+		$body = file_get_contents("php://input");
+		$json = CJSON::decode($body);
+		$application = new Application();
+		$deleted_rows = $application->deleteAll("id_application = ".$json["id_application"]);
+		if($deleted_rows == 1){
+			$response = array("err"=>false,
+					"message"=>"The Application ".$json["id_application"]." was deleted successfuly");
+		}else{
+			$err_summary = $this->tools->get_errors_summary($application->errors);
+			$response = array("err"=>true,
+					"message"=>"Database error : ".$err_summary);
+		}
+		echo CJSON::encode($response);
+	}
+	public function actionApplication_edit(){
+		$body = file_get_contents("php://input");
+		$json = CJSON::decode($body);
+		$application = new Application();
+		$wanted_application = $application->find("id_application = ".$json["id_application"]);
+		$response = NULL;
+		if(!is_null($wanted_application)){
+			$response = array("err"=>false,
+					"id_application"=>$wanted_application->id_application,
+					"description"=>$wanted_application->description);
+		}else{
+			$err_summary = $this->tools->get_errors_summary($application->errors);
+			$response = array("err"=>true,
+					"message"=>"Database error : ".$err_summary);
+		}
+		echo CJSON::encode($response);
+	}
+	public function actionApplication_update(){
+		$body = file_get_contents("php://input");
+		$json = CJSON::decode($body);
+		$application = new Application();
+			$updated_rows = $application->updateAll(array(
+					"description"=>$json["description"],
+			),"id_application=".$json["id_application"]);
+			if($updated_rows == 1){
+				$response = array("err"=>false,
+						"message"=>"The application ".$json["id_application"]." was updated successfuly");
+			}elseif($updated_rows == 0){
+				$err_summary = $this->tools->get_errors_summary($application->errors);
+				$response = array("err"=>true,
+						"message"=>"No rows were updated : ".$err_summary);
+			}
+		echo CJSON::encode($response);
 	}
 	public function actionWebsite_list(){
 		$website_list = Website::model()->findAll();
@@ -74,7 +126,7 @@ class AdministrationController extends Controller
 					$response = array("err"=>false,
 							"message"=>"The website ".$json["label_website"]." was added successfuly");
 				}else{
-					$err_summary = $tools->get_errors_summary($website->errors);
+					$err_summary = $this->tools->get_errors_summary($website->errors);
 					$response = array("err"=>true,
 							"message"=>"Database error : ".$err_summary);
 				}
@@ -101,7 +153,7 @@ class AdministrationController extends Controller
 					"label_website"=>$wanted_website->label_website,
 					"language"=>$wanted_website->language);
 		}else{
-			$err_summary = $tools->get_errors_summary($website->errors);
+			$err_summary = $this->tools->get_errors_summary($website->errors);
 			$response = array("err"=>true,
 					"message"=>"Database error : ".$err_summary);
 		}
@@ -120,7 +172,7 @@ class AdministrationController extends Controller
 				$response = array("err"=>false,
 						"message"=>"The website ".$json["label_website"]." was updated successfuly");
 			}elseif($updated_rows == 0){
-				$err_summary = $tools->get_errors_summary($website->errors);
+				$err_summary = $this->tools->get_errors_summary($website->errors);
 				$response = array("err"=>true,
 						"message"=>"No rows were updated : ".$err_summary);
 			}
@@ -139,7 +191,7 @@ class AdministrationController extends Controller
 			$response = array("err"=>false,
 					"message"=>"The website ".$json["id_website"]." was deleted successfuly");
 		}else{
-			$err_summary = $tools->get_errors_summary($website->errors);
+			$err_summary = $this->tools->get_errors_summary($website->errors);
 			$response = array("err"=>true,
 					"message"=>"Database error : ".$err_summary);
 		}
@@ -165,7 +217,7 @@ class AdministrationController extends Controller
 					$response = array("err"=>false,
 							"message"=>"The OS ".$json["label_os"]." was added successfuly");
 				}else{
-					$err_summary = $tools->get_errors_summary($os->errors);
+					$err_summary = $this->tools->get_errors_summary($os->errors);
 					$response = array("err"=>true,
 							"message"=>"Database error : ".$err_summary);
 				}
@@ -193,7 +245,7 @@ class AdministrationController extends Controller
 					"label_os"=>$wanted_os->label_os,
 					"id_website"=>$wanted_os->id_website);
 		}else{
-			$err_summary = $tools->get_errors_summary($os->errors);
+			$err_summary = $this->tools->get_errors_summary($os->errors);
 			$response = array("err"=>true,
 					"message"=>"Database error : ".$err_summary);
 		}
@@ -213,7 +265,7 @@ class AdministrationController extends Controller
 					$response = array("err"=>false,
 							"message"=>"The OS ".$json["label_os"]." was updated successfuly");
 				}elseif($updated_rows == 0){
-					$err_summary = $tools->get_errors_summary($os->errors);
+					$err_summary = $this->tools->get_errors_summary($os->errors);
 					$response = array("err"=>true,
 							"message"=>"No rows were updated : ".$err_summary);
 				}
@@ -236,7 +288,7 @@ class AdministrationController extends Controller
 			$response = array("err"=>false,
 					"message"=>"The OS ".$json["id_os"]." was deleted successfuly");
 		}else{
-			$err_summary = $tools->get_errors_summary($os->errors);
+			$err_summary = $this->tools->get_errors_summary($os->errors);
 			$response = array("err"=>true,
 					"message"=>"Database error : ".$err_summary);
 		}
@@ -293,7 +345,7 @@ class AdministrationController extends Controller
 					$response = array("err"=>false,
 							"message"=>"The Category ".$json["label_category"]." was added successfuly");
 				}else{
-					$err_summary = $tools->get_errors_summary($category->errors);
+					$err_summary = $this->tools->get_errors_summary($category->errors);
 					$response = array("err"=>true,
 							"message"=>"Database error : ".$err_summary);
 				}
@@ -321,7 +373,7 @@ class AdministrationController extends Controller
 					"id_os"=>$wanted_category->id_os,
 					"id_website"=>$wanted_category->id_website);
 		}else{
-			$err_summary = $tools->get_errors_summary($category->errors);
+			$err_summary = $this->tools->get_errors_summary($category->errors);
 			$response = array("err"=>true,
 					"message"=>"Database error : ".$err_summary);
 		}
@@ -338,12 +390,12 @@ class AdministrationController extends Controller
 						"label_category"=>$json["label_category"],
 						"id_website"=>$json["id_website"],
 						"id_os"=>$json["id_os"]
-				),"id_os=".$json["id_os"]);
+				),"id_category=".$json["id_category"]);
 				if($updated_rows == 1){
 					$response = array("err"=>false,
 							"message"=>"The Category ".$json["label_category"]." was updated successfuly");
 				}elseif($updated_rows == 0){
-					$err_summary = $tools->get_errors_summary($category->errors);
+					$err_summary = $this->tools->get_errors_summary($category->errors);
 					$response = array("err"=>true,
 							"message"=>"No rows were updated : ".$err_summary);
 				}
@@ -366,7 +418,7 @@ class AdministrationController extends Controller
 			$response = array("err"=>false,
 					"message"=>"The Category ".$json["id_category"]." was deleted successfuly");
 		}else{
-			$err_summary = $tools->get_errors_summary($Category->errors);
+			$err_summary = $this->tools->get_errors_summary($Category->errors);
 			$response = array("err"=>true,
 					"message"=>"Database error : ".$err_summary);
 		}
@@ -396,7 +448,7 @@ class AdministrationController extends Controller
 					$response = array("err"=>false,
 							"message"=>"The Section ".$json["label_section"]." was added successfuly");
 				}else{
-					$err_summary = $tools->get_errors_summary($section->errors);
+					$err_summary = $this->tools->get_errors_summary($section->errors);
 					$response = array("err"=>true,
 							"message"=>"Database error : ".$err_summary);
 				}
@@ -420,7 +472,7 @@ class AdministrationController extends Controller
 			$response = array("err"=>false,
 					"message"=>"The Section ".$json["id_section"]." was deleted successfuly");
 		}else{
-			$err_summary = $tools->get_errors_summary($Section->errors);
+			$err_summary = $this->tools->get_errors_summary($Section->errors);
 			$response = array("err"=>true,
 					"message"=>"Database error : ".$err_summary);
 		}
@@ -459,7 +511,7 @@ class AdministrationController extends Controller
 							Status::model()->updateAll(array("application_link"=>$current_app_link),"id=1");
 							$current_app_name = $this->tools->clean_name($current_app_name);
 							Status::model()->updateAll(array("application_name"=>$current_app_name),"id=1");
-							
+								
 							$this->scan_app_link($current_app_link, $current_app_name,$category,$section);//get all apps in the page
 
 							//this part must be at the end
@@ -517,7 +569,7 @@ class AdministrationController extends Controller
 					}
 				}
 				$this->tools->log_text("before app saving");
-				
+
 				$application->setAttributes(array("label_application"=>$app_name,
 						"description"=>$current_app_info["description"],
 						"insert_date"=>date("D.M.Y"),
@@ -692,7 +744,7 @@ class AdministrationController extends Controller
 				}
 			}
 		}
-	//	}//end runBackground
+		//	}//end runBackground
 	}
 
 
