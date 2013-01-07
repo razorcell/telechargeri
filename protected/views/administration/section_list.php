@@ -34,7 +34,7 @@ $(document).ready(function(){
 		edit_category_cl.setRange(0.5); // default is 1.3
 		edit_category_cl.setFPS(24); // default is 24
 		
-	$('.id_website').change(function() {
+	$('.id_website').change(function() {//triggers also $('.id_os').trigger('change')
 		$(".update_os_warning").hide();
 		$('.id_os').removeAttr('disabled');
 		$('.id_category').removeAttr('disabled');
@@ -148,21 +148,45 @@ $(document).ready(function(){
 				}
 		});//end of ajax
 		});
-	
-	
-	
+	$('.edit_id_os').change(function() {
+		$(".edit_update_category_warning").hide();
+		$('.edit_id_category').removeAttr('disabled');
+		edit_category_cl.show();
+		var id_os = $(".edit_id_os") .val();
+		var json = "{"+" \"id_os\" : \""+id_os+"\" }";
+		$.ajax({ 
+			type : "POST",
+			url : "/administration/update_category_list",
+			data : json,
+			success : function(data) {
+				var json = $.parseJSON(data);
+				if (!json.err) {
+					var new_category_list = "";
+					json.category_list.forEach(function(category){
+							new_category_list += "<option value="+category["id_category"]+">"+category["label_category"]+"</option>";
+						});
+					$(".edit_id_category").html(new_category_list);
+					var t=setTimeout(function(){edit_category_cl.hide()},500);
+					
+				} else {
+					$(".edit_update_category_warning").show();
+					$(".edit_update_category_warning").html(json.message);
+					var t=setTimeout(function(){edit_category_cl.hide()},500);
+					$('.edit_id_category').attr('disabled', 'disabled');
+						}
+				}
+		});//end of ajax
+		});
 	$(".update_section").click(function(){
 		var update_id_section = $(".edit_id_section").val();
+		var update_id_category = $(".edit_id_category") .val();
 		var update_label_section = $(".edit_label_section") .val();
-		var update_id_website = $(".edit_id_website") .val();
-		var update_id_os = $(".edit_id_section").val();
 			var pattern = new RegExp("^[a-zA-Z0-9]{1,30}$")
 			if(pattern.test(update_label_section)){
 				var json = '{';
 				json += ' "id_section" : "'+update_id_section+'", ';
-				json += ' "id_os" : "'+update_id_os+'", ';
 				json += ' "label_section" : "'+update_label_section+'", ';
-				json += ' "id_website" : "'+update_id_website+'" ';
+				json += ' "id_category" : "'+update_id_category+'" ';
 				json +='}';
 				$.ajax({ 
 					type : "POST",
@@ -199,6 +223,8 @@ $(document).ready(function(){
 						$(".edit_id_section").val(json.id_section);
 						$(".edit_label_section").val(json.label_section);
 						$(".edit_id_website").val(json.id_website);
+						$(".edit_id_os").val(json.id_os);
+						$(".edit_id_category").val(json.id_category);
 						$("#edit_section_div").dialog("option", {modal: true}).dialog("open");
 						event.preventDefault();
 					}else{
@@ -436,10 +462,10 @@ $(document).ready(function(){
 				</div>
 			</div>
 			<div class="da-message success section_edit_success" hidden="true"></div>
-			<div class="da-message error section_edit_error" hidden="true"></div>
+			<div class="da-message warning section_edit_warning" hidden="true"></div>
 			<div class="da-button-row">
-				<span class="da-button green edit_section"> <img
-					src="<?php echo $this->baseurl; ?>/images/icons/color/add.png">&nbsp;&nbsp;Add
+				<span class="da-button green update_section"> <img
+					src="<?php echo $this->baseurl; ?>/images/icons/color/pencil.png">&nbsp;&nbsp;Update
 				</span>
 			</div>
 		</div>

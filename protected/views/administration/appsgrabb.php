@@ -107,7 +107,7 @@ $(document).ready(function(){
 					</div>
 					<div class="da-form-row">
 						<label>Application name</label>
-						<div class="da-form-item">
+						<div class="da-form-item large">
 							<span class="formNote">Current application name(the process goes faster than the refresh time used here)</span> <input type="text"
 								name="req1" class="application_name" />
 						</div>

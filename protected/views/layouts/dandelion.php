@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
 
 <!-- Viewport metatags -->
 <meta name="HandheldFriendly" content="true" />
@@ -190,7 +190,7 @@
 						<div id="da-logo">
 							<div id="da-logo-img">
 								<a
-									href="<?php echo Yii::app()->request->baseUrl; ?>/dashboard.html">
+									href="<?php echo Yii::app()->request->baseUrl; ?>/administration">
 									<img
 									src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo.png"
 									alt="Dandelion Admin" />
@@ -198,105 +198,154 @@
 							</div>
 						</div>
 					</div>
-
 					<!-- Header Toolbar Menu -->
-					<div id="da-header-toolbar" class="clearfix">
-						<div id="da-user-profile">
-							<div id="da-user-avatar">
-								<img
-									src="<?php echo Yii::app()->request->baseUrl; ?>/images/pp.jpg"
-									alt="" />
-							</div>
-							<div id="da-user-info">
-								John Doe <span class="da-user-title">Creative Director</span>
-							</div>
-							<ul class="da-header-dropdown">
-								<li class="da-dropdown-caret"><span class="caret-outer"></span>
-									<span class="caret-inner"></span>
-								</li>
-								<li class="da-dropdown-divider"></li>
-								<li><a
-									href="<?php echo Yii::app()->request->baseUrl; ?>/dashboard.html">Dashboard</a>
-								</li>
-								<li class="da-dropdown-divider"></li>
-								<li><a href="#">Profile</a></li>
-								<li><a href="#">Settings</a></li>
-								<li><a href="#">Change Password</a></li>
-							</ul>
-						</div>
-						<div id="da-header-button-container">
-							<ul>
-								<li class="da-header-button notif"><span class="da-button-count">32</span>
-									<a href="#">Notifications</a>
-									<ul class="da-header-dropdown">
-										<li class="da-dropdown-caret"><span class="caret-outer"></span>
-											<span class="caret-inner"></span>
-										</li>
-										<li><span class="da-dropdown-sub-title">Notifications</span>
-											<ul class="da-dropdown-sub">
-												<li class="unread"><a href="#"> <span class="message"> Lorem
-															ipsum dolor sit amet consectetur adipiscing elit, et al
-															commore </span> <span class="time"> January 21, 2012 </span>
-												</a>
-												</li>
-												<li class="unread"><a href="#"> <span class="message"> Lorem
-															ipsum dolor sit amet </span> <span class="time"> January
-															21, 2012 </span>
-												</a>
-												</li>
-												<li class="read"><a href="#"> <span class="message"> Lorem
-															ipsum dolor sit amet </span> <span class="time"> January
-															21, 2012 </span>
-												</a>
-												</li>
-												<li class="read"><a href="#"> <span class="message"> Lorem
-															ipsum dolor sit amet </span> <span class="time"> January
-															21, 2012 </span>
-												</a>
-												</li>
-											</ul> <a class="da-dropdown-sub-footer"> View all
-												notifications </a>
-										</li>
-									</ul>
-								</li>
-								<li class="da-header-button message"><span
-									class="da-button-count">5</span> <a href="#">Messages</a>
-									<ul class="da-header-dropdown">
-										<li class="da-dropdown-caret"><span class="caret-outer"></span>
-											<span class="caret-inner"></span>
-										</li>
-										<li><span class="da-dropdown-sub-title">Messages</span>
-											<ul class="da-dropdown-sub">
-												<li class="unread"><a href="#"> <span class="message"> Lorem
-															ipsum dolor sit amet consectetur adipiscing elit, et al
-															commore </span> <span class="time"> January 21, 2012 </span>
-												</a>
-												</li>
-												<li class="unread"><a href="#"> <span class="message"> Lorem
-															ipsum dolor sit amet </span> <span class="time"> January
-															21, 2012 </span>
-												</a>
-												</li>
-												<li class="read"><a href="#"> <span class="message"> Lorem
-															ipsum dolor sit amet </span> <span class="time"> January
-															21, 2012 </span>
-												</a>
-												</li>
-												<li class="read"><a href="#"> <span class="message"> Lorem
-															ipsum dolor sit amet </span> <span class="time"> January
-															21, 2012 </span>
-												</a>
-												</li>
-											</ul> <a class="da-dropdown-sub-footer"> View all messages </a>
-										</li>
-									</ul>
-								</li>
-								<li class="da-header-button logout"><a href="index.html">Logout</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-
+					 <!-- Header Toolbar Menu -->
+                    <div id="da-header-toolbar" class="clearfix">
+                        <div id="da-user-profile">
+                            <div id="da-user-avatar">
+                                <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/pp.jpg" alt="" />
+                            </div>
+                            <div id="da-user-info">
+                                John Doe
+                                <span class="da-user-title">Creative Director</span>
+                            </div>
+                            <ul class="da-header-dropdown">
+                                <li class="da-dropdown-caret">
+                                    <span class="caret-outer"></span>
+                                    <span class="caret-inner"></span>
+                                </li>
+                                <li class="da-dropdown-divider"></li>
+                                <li><a href="dashboard.html">Dashboard</a></li>
+                                <li class="da-dropdown-divider"></li>
+                                <li><a href="#">Profile</a></li>
+                                <li><a href="#">Settings</a></li>
+                                <li><a href="#">Change Password</a></li>
+                            </ul>
+                        </div>
+                        <div id="da-header-button-container">
+                        	<ul>
+                            	<li class="da-header-button notif">
+                                	<span class="da-button-count">32</span>
+                                	<a href="#">Notifications</a>
+                                    <ul class="da-header-dropdown">
+                                        <li class="da-dropdown-caret">
+                                            <span class="caret-outer"></span>
+                                            <span class="caret-inner"></span>
+                                        </li>
+                                        <li>
+                                        	<span class="da-dropdown-sub-title">Notifications</span>
+                                        	<ul class="da-dropdown-sub">
+                                                <li class="unread">
+                                                    <a href="#">
+                                                        <span class="message">
+                                                            Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
+                                                        </span>
+                                                        <span class="time">
+                                                            January 21, 2012
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li class="unread">
+                                                    <a href="#">
+                                                        <span class="message">
+                                                            Lorem ipsum dolor sit amet
+                                                        </span>
+                                                        <span class="time">
+                                                            January 21, 2012
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li class="read">
+                                                    <a href="#">
+                                                        <span class="message">
+                                                            Lorem ipsum dolor sit amet
+                                                        </span>
+                                                        <span class="time">
+                                                            January 21, 2012
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li class="read">
+                                                    <a href="#">
+                                                        <span class="message">
+                                                            Lorem ipsum dolor sit amet
+                                                        </span>
+                                                        <span class="time">
+                                                            January 21, 2012
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <a class="da-dropdown-sub-footer">
+                                            	View all notifications
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            	<li class="da-header-button message">
+                                	<span class="da-button-count">5</span>
+                                	<a href="#">Messages</a>
+                                    <ul class="da-header-dropdown">
+                                        <li class="da-dropdown-caret">
+                                            <span class="caret-outer"></span>
+                                            <span class="caret-inner"></span>
+                                        </li>
+                                        <li>
+                                        	<span class="da-dropdown-sub-title">Messages</span>
+                                        	<ul class="da-dropdown-sub">
+                                                <li class="unread">
+                                                    <a href="#">
+                                                        <span class="message">
+                                                            Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
+                                                        </span>
+                                                        <span class="time">
+                                                            January 21, 2012
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li class="unread">
+                                                    <a href="#">
+                                                        <span class="message">
+                                                            Lorem ipsum dolor sit amet
+                                                        </span>
+                                                        <span class="time">
+                                                            January 21, 2012
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li class="read">
+                                                    <a href="#">
+                                                        <span class="message">
+                                                            Lorem ipsum dolor sit amet
+                                                        </span>
+                                                        <span class="time">
+                                                            January 21, 2012
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li class="read">
+                                                    <a href="#">
+                                                        <span class="message">
+                                                            Lorem ipsum dolor sit amet
+                                                        </span>
+                                                        <span class="time">
+                                                            January 21, 2012
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <a class="da-dropdown-sub-footer">
+                                            	View all messages
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            	<li class="da-header-button logout">
+                                	<a href="">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 				</div>
 			</div>
 

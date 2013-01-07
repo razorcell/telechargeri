@@ -56,8 +56,8 @@ class Tools{
 				CURLOPT_ENCODING       => "",       // handle all encodings
 				CURLOPT_USERAGENT      => "user", // who am i
 				CURLOPT_AUTOREFERER    => true,     // set referer on redirect
-				CURLOPT_CONNECTTIMEOUT => 3,      // timeout on connect
-				CURLOPT_TIMEOUT        => 3,      // timeout on response
+				CURLOPT_CONNECTTIMEOUT => 6,      // timeout on connect
+				CURLOPT_TIMEOUT        => 6,      // timeout on response
 				CURLOPT_MAXREDIRS      => 10,       // stop after 10 redirects
 				CURLOPT_PROXY              => $proxy,
 		);
@@ -82,7 +82,7 @@ class Tools{
 		$proxies_sources = array("proxynova"=>"http://www.proxynova.com/proxy_list.txt",
 				"multiproxy"=>"http://multiproxy.org/txt_anon/proxy.txt",
 				"proxies"=>"http://www.pr0xies.org/");
-		$proxy_source = array("freeproxy"=>"http://www.freeproxy.ch/proxylight.txt");
+		$proxy_source = array("freeproxy"=>"http://www.proxynova.com/proxy_list.txt");
 		$data = NULL;
 		do{
 			$random_proxy_source_index = array_rand($proxy_source,1);

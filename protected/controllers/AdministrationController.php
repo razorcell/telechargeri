@@ -463,6 +463,71 @@ class AdministrationController extends Controller
 		}
 		echo CJSON::encode($response);
 	}
+	public function actionSection_edit(){
+		$body = file_get_contents("php://input");
+		$json = CJSON::decode($body);
+		$section = new Section();
+		$wanted_section = $section->find("id_section = ".$json["id_section"]);
+		$response = NULL;
+		if(!is_null($wanted_section)){
+			$section_category = Category::model()->find("id_category = ".$wanted_section["id_category"]);
+				if(!is_null($section_category)){
+					$section_category_os = Os::model()->find("id_os = ".$section_category["id_os"]);
+					if(!is_null($section_category_os)){
+						$response = array("err"=>false,
+								"id_section"=>$wanted_section->id_section,
+								"label_section"=>$wanted_section->label_section,
+								"id_category"=>$wanted_section->id_category,
+								"id_os"=>$section_category_os->id_os,
+								"id_website"=>$section_category_os->id_website);
+					}else{
+						$err_summary = $this->tools->get_errors_summary($section_category->errors);
+						$response = array("err"=>true,
+								"message"=>"Database error LEVEL : \$section_category_os".$err_summary);
+					}
+				}else{
+					$err_summary = $this->tools->get_errors_summary($section_category->errors);
+					$response = array("err"=>true,
+							"message"=>"Database error LEVEL : \$section_category".$err_summary);
+				}
+			
+			
+		}else{
+			$err_summary = $this->tools->get_errors_summary($section->errors);
+			$response = array("err"=>true,
+					"message"=>"Database error : ".$err_summary);
+		}
+		echo CJSON::encode($response);
+	}
+	public function actionSection_update(){
+		$body = file_get_contents("php://input");
+		$json = CJSON::decode($body);
+	
+		if(preg_match("#^[a-zA-Z0-9\-\_]{1,30}$#", $json["label_section"]) > 0){
+			$section = new Section();
+			if(is_null($section->find("label_section='".$json["label_section"]."' && id_category='".$json["id_category"]."'"))){
+				$updated_rows = $section->updateAll(array(
+						"label_section"=>$json["label_section"],
+						"id_category"=>$json["id_category"],
+				),"id_section=".$json["id_section"]);
+				if($updated_rows == 1){
+					$response = array("err"=>false,
+							"message"=>"The Section ".$json["label_section"]." was updated successfuly");
+				}elseif($updated_rows == 0){
+					$err_summary = $this->tools->get_errors_summary($section->errors);
+					$response = array("err"=>true,
+							"message"=>"No rows were updated : ".$err_summary);
+				}
+			}else{
+				$response = array("err"=>true,
+						"message"=>"The combination (Section / Category) already exists");
+			}
+		}else{
+			$response = array("err"=>true,
+					"message"=>"Section label is rong : ".$json["label_section"]);
+		}
+		echo CJSON::encode($response);
+	}
 	public function actionSection_delete(){
 		$body = file_get_contents("php://input");
 		$json = CJSON::decode($body);
@@ -510,6 +575,7 @@ class AdministrationController extends Controller
 							$this->tools->log_text("\nLink to application page  : ".$current_app_link);
 							Status::model()->updateAll(array("application_link"=>$current_app_link),"id=1");
 							$current_app_name = $this->tools->clean_name($current_app_name);
+							$current_app_name = utf8_encode($current_app_name);
 							Status::model()->updateAll(array("application_name"=>$current_app_name),"id=1");
 								
 							$this->scan_app_link($current_app_link, $current_app_name,$category,$section);//get all apps in the page
@@ -656,7 +722,7 @@ class AdministrationController extends Controller
 		}else{
 			$this->tools->log_text("DESCRIPTION REGEX FOUND NOTHING");
 		}
-		return $app_description;
+		return utf8_encode($app_description);
 	}
 	public function get_image_link($app_page_content,$app_name){
 		$official_image_link = NULL;

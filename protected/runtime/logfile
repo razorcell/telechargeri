@@ -1,34 +1,66 @@
 
-Mon Jan  7 00:44:15 2013 : EXTRACT PROCESS STARTED
-Mon Jan  7 00:44:18 2013 : 
-Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/29408.html
-Mon Jan  7 00:44:18 2013 : scan_app_link started(Post'it , /telecharger/windows/Bureautique/agenda/fiches/29408.html)
-Mon Jan  7 00:44:25 2013 : 
-     Not found in DB app_name : Post'it
-Mon Jan  7 00:44:25 2013 : 
-Post'it : NO IMAGES for this application, x = 0
-Mon Jan  7 00:44:27 2013 : category found = 1
-Mon Jan  7 00:44:27 2013 : section found app_name = Post'it
-Mon Jan  7 00:44:27 2013 : before app saving
-Mon Jan  7 00:44:27 2013 : 
+Mon Jan  7 17:45:04 2013 : EXTRACT PROCESS STARTED
+Mon Jan  7 17:45:06 2013 : 
+Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/105776.html
+Mon Jan  7 17:45:06 2013 : scan_app_link started(Microsoft Office Outlook 2007 avec Gestionnaire de Contacts Professionnels , /telecharger/windows/Bureautique/agenda/fiches/105776.html)
+Mon Jan  7 17:45:15 2013 : 
+Application FOUND IN DB app_name = Microsoft Office Outlook 2007 avec Gestionnaire de Contacts Professionnels
+Mon Jan  7 17:45:15 2013 : 
+Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/telecharger-50789.html
+Mon Jan  7 17:45:15 2013 : scan_app_link started(eoCalendrier , /telecharger/windows/Bureautique/agenda/fiches/telecharger-50789.html)
+Mon Jan  7 17:45:26 2013 : 
+Application FOUND IN DB app_name = eoCalendrier
+Mon Jan  7 17:45:26 2013 : 
+Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/105633.html
+Mon Jan  7 17:45:26 2013 : scan_app_link started(Planning de vos congÃ©s annuels - macro Excel , /telecharger/windows/Bureautique/agenda/fiches/105633.html)
+Mon Jan  7 17:45:29 2013 : 
+     Not found in DB app_name : Planning de vos congÃ©s annuels - macro Excel
+Mon Jan  7 17:45:43 2013 : category found = 1
+Mon Jan  7 17:45:43 2013 : section found app_name = Planning de vos congÃ©s annuels - macro Excel
+Mon Jan  7 17:45:43 2013 : before app saving
+Mon Jan  7 17:45:43 2013 : 
 
 
 APPLICATION ADDED TO DB : 
 
-								NAME : Post'it
+								NAME : Planning de vos congÃ©s annuels - macro Excel
 
-								IMAGE_LINK : 
-DESCRIPTION : Post'it est un utilitaire qui vous rappellera vos rendez-vous importants. Entrez manuellement vos rendez-vous et le moment venu, une fenêtre s'affichera sur votre écran en guise de rappel. Vous avez également la possibilité d'accompagner l'alerte d'une image et d'un son. Si une alerte devait s'afficher alors que votre ordinateur était éteint, le programme vous le rappellera lorsque vous aurez rallumé votre ordinateur.
-DOWNLOAD LINK : http://www.hiasoft.fr/load/Postit.exe
-Mon Jan  7 00:44:27 2013 : 
+								IMAGE_LINK : /images/logiciel/105633b.jpg
+DESCRIPTION : Dessinez automatiquement le planning de vos congés annuels sur un calendrier. Ce petit classeur Excel met en œuvre quelques-unes des nombreuses possibilités du langage VBA, en particulier les boucles, l'appel de fonctions Excel dans une macro, et l'adressage relatif. Bien entendu, libre à vous d'améliorer la macro et de l'adapter à vos données personnelles.
+DOWNLOAD LINK : http://soft.telecharger.com/OI/Planning_2010.zip
+Mon Jan  7 17:45:43 2013 : 
+Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/31472.html
+Mon Jan  7 17:45:43 2013 : scan_app_link started(Rainlendar Lite , /telecharger/windows/Bureautique/agenda/fiches/31472.html)
+Mon Jan  7 17:45:45 2013 : 
+     Not found in DB app_name : Rainlendar Lite
+Mon Jan  7 17:53:39 2013 : EXTRACT PROCESS STARTED
+Mon Jan  7 17:53:41 2013 : 
+Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/105776.html
+Mon Jan  7 17:53:41 2013 : scan_app_link started(Microsoft Office Outlook 2007 avec Gestionnaire de Contacts Professionnels , /telecharger/windows/Bureautique/agenda/fiches/105776.html)
+Mon Jan  7 17:53:43 2013 : 
+     Not found in DB app_name : Microsoft Office Outlook 2007 avec Gestionnaire de Contacts Professionnels
+Mon Jan  7 17:53:51 2013 : category found = 1
+Mon Jan  7 17:53:51 2013 : section found app_name = Microsoft Office Outlook 2007 avec Gestionnaire de Contacts Professionnels
+Mon Jan  7 17:53:51 2013 : before app saving
+Mon Jan  7 17:53:51 2013 : 
+
+
+APPLICATION ADDED TO DB : 
+
+								NAME : Microsoft Office Outlook 2007 avec Gestionnaire de Contacts Professionnels
+
+								IMAGE_LINK : /images/logiciel/105776b.jpg
+DESCRIPTION : Ce produit n'est plus disponible en tÃ©lÃ©chargement, 
+DOWNLOAD LINK : http://emea.microsoftstore.com/fr/fr-FR/Microsoft/Office-Outlook-2007
+Mon Jan  7 17:53:51 2013 : 
 Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/telecharger-50789.html
-Mon Jan  7 00:44:28 2013 : scan_app_link started(eoCalendrier , /telecharger/windows/Bureautique/agenda/fiches/telecharger-50789.html)
-Mon Jan  7 00:44:35 2013 : 
+Mon Jan  7 17:53:51 2013 : scan_app_link started(eoCalendrier , /telecharger/windows/Bureautique/agenda/fiches/telecharger-50789.html)
+Mon Jan  7 17:53:54 2013 : 
      Not found in DB app_name : eoCalendrier
-Mon Jan  7 00:44:41 2013 : category found = 1
-Mon Jan  7 00:44:41 2013 : section found app_name = eoCalendrier
-Mon Jan  7 00:44:41 2013 : before app saving
-Mon Jan  7 00:44:41 2013 : 
+Mon Jan  7 17:54:14 2013 : category found = 1
+Mon Jan  7 17:54:14 2013 : section found app_name = eoCalendrier
+Mon Jan  7 17:54:14 2013 : before app saving
+Mon Jan  7 17:54:15 2013 : 
 
 
 APPLICATION ADDED TO DB : 
@@ -36,35 +68,35 @@ APPLICATION ADDED TO DB :
 								NAME : eoCalendrier
 
 								IMAGE_LINK : /images/logiciel/50789b.jpg
-DESCRIPTION : eoCalendrier affiche un petit calendrier sur votre bureau, proposant différents affichages en fonction des saisons et des réglages disponibles (transparence et niveau d'apparition). 
+DESCRIPTION : eoCalendrier affiche un petit calendrier sur votre bureau, proposant diffÃ©rents affichages en fonction des saisons et des rÃ©glages disponibles (transparence et niveau d'apparition). 
 DOWNLOAD LINK : http://dfr.eorezo.com/download/setup_eocalendrier_eo.exe
-Mon Jan  7 00:44:41 2013 : 
+Mon Jan  7 17:54:15 2013 : 
 Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/105633.html
-Mon Jan  7 00:44:41 2013 : scan_app_link started(Planning de vos congés annuels - macro Excel , /telecharger/windows/Bureautique/agenda/fiches/105633.html)
-Mon Jan  7 00:44:44 2013 : 
-     Not found in DB app_name : Planning de vos congés annuels - macro Excel
-Mon Jan  7 00:44:52 2013 : category found = 1
-Mon Jan  7 00:44:52 2013 : section found app_name = Planning de vos congés annuels - macro Excel
-Mon Jan  7 00:44:52 2013 : before app saving
-Mon Jan  7 00:44:52 2013 : 
+Mon Jan  7 17:54:15 2013 : scan_app_link started(Planning de vos congÃ©s annuels - macro Excel , /telecharger/windows/Bureautique/agenda/fiches/105633.html)
+Mon Jan  7 17:54:19 2013 : 
+     Not found in DB app_name : Planning de vos congÃ©s annuels - macro Excel
+Mon Jan  7 17:54:24 2013 : category found = 1
+Mon Jan  7 17:54:24 2013 : section found app_name = Planning de vos congÃ©s annuels - macro Excel
+Mon Jan  7 17:54:24 2013 : before app saving
+Mon Jan  7 17:54:24 2013 : 
 
 
 APPLICATION ADDED TO DB : 
 
-								NAME : Planning de vos congés annuels - macro Excel
+								NAME : Planning de vos congÃ©s annuels - macro Excel
 
 								IMAGE_LINK : /images/logiciel/105633b.jpg
-DESCRIPTION : Dessinez automatiquement le planning de vos congés annuels sur un calendrier. Ce petit classeur Excel met en œuvre quelques-unes des nombreuses possibilités du langage VBA, en particulier les boucles, l'appel de fonctions Excel dans une macro, et l'adressage relatif. Bien entendu, libre à vous d'améliorer la macro et de l'adapter à vos données personnelles.
+DESCRIPTION : Dessinez automatiquement le planning de vos congÃ©s annuels sur un calendrier. Ce petit classeur Excel met en Âœuvre quelques-unes des nombreuses possibilitÃ©s du langage VBA, en particulier les boucles, l'appel de fonctions Excel dans une macro, et l'adressage relatif. Bien entendu, libre Ã  vous d'amÃ©liorer la macro et de l'adapter Ã  vos donnÃ©es personnelles.
 DOWNLOAD LINK : http://soft.telecharger.com/OI/Planning_2010.zip
-Mon Jan  7 00:44:52 2013 : 
+Mon Jan  7 17:54:24 2013 : 
 Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/31472.html
-Mon Jan  7 00:44:52 2013 : scan_app_link started(Rainlendar Lite , /telecharger/windows/Bureautique/agenda/fiches/31472.html)
-Mon Jan  7 00:44:58 2013 : 
+Mon Jan  7 17:54:24 2013 : scan_app_link started(Rainlendar Lite , /telecharger/windows/Bureautique/agenda/fiches/31472.html)
+Mon Jan  7 17:54:26 2013 : 
      Not found in DB app_name : Rainlendar Lite
-Mon Jan  7 00:45:02 2013 : category found = 1
-Mon Jan  7 00:45:02 2013 : section found app_name = Rainlendar Lite
-Mon Jan  7 00:45:02 2013 : before app saving
-Mon Jan  7 00:45:02 2013 : 
+Mon Jan  7 17:54:32 2013 : category found = 1
+Mon Jan  7 17:54:32 2013 : section found app_name = Rainlendar Lite
+Mon Jan  7 17:54:32 2013 : before app saving
+Mon Jan  7 17:54:32 2013 : 
 
 
 APPLICATION ADDED TO DB : 
@@ -74,15 +106,15 @@ APPLICATION ADDED TO DB :
 								IMAGE_LINK : /images/logiciel/31472b.jpg
 DESCRIPTION : Rainlendar est un calendrier particuli&egrave;rement discret. L'aspect de l'interface peut enti&egrave;rement &ecirc;tre modifi&eacute; &agrave; l'aide de skins. L'application comporte un calendrier mensuel indiquant la date ainsi que le num&eacute;ro de la semaine en cours. Une liste de t&acirc;ches &agrave; accomplir peut &eacute;galement &ecirc;tre tenue afin de ne pas oublier la moindre de vos activit&eacute;s. Enfin, Rainlendar comporte un agenda dans lequel vous pouvez enregistrer vos rendez-vous ou anniversaire, par exemple. Le logiciel vous alertera quelques minutes avant l'heure pr&eacute;vue.
 DOWNLOAD LINK : http://www.rainlendar.net/download/Rainlendar-Lite-2.10-32bit.exe
-Mon Jan  7 00:45:02 2013 : 
+Mon Jan  7 17:54:32 2013 : 
 Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/25657.html
-Mon Jan  7 00:45:02 2013 : scan_app_link started(Calendrier Xtra 2007 , /telecharger/windows/Bureautique/agenda/fiches/25657.html)
-Mon Jan  7 00:45:09 2013 : 
+Mon Jan  7 17:54:32 2013 : scan_app_link started(Calendrier Xtra 2007 , /telecharger/windows/Bureautique/agenda/fiches/25657.html)
+Mon Jan  7 17:54:34 2013 : 
      Not found in DB app_name : Calendrier Xtra 2007
-Mon Jan  7 00:45:13 2013 : category found = 1
-Mon Jan  7 00:45:13 2013 : section found app_name = Calendrier Xtra 2007
-Mon Jan  7 00:45:13 2013 : before app saving
-Mon Jan  7 00:45:13 2013 : 
+Mon Jan  7 17:54:44 2013 : category found = 1
+Mon Jan  7 17:54:44 2013 : section found app_name = Calendrier Xtra 2007
+Mon Jan  7 17:54:44 2013 : before app saving
+Mon Jan  7 17:54:44 2013 : 
 
 
 APPLICATION ADDED TO DB : 
@@ -90,17 +122,17 @@ APPLICATION ADDED TO DB :
 								NAME : Calendrier Xtra 2007
 
 								IMAGE_LINK : /images/logiciel/25657b.jpg
-DESCRIPTION : Agenda de bureau pour lister des taches, programmer des rendez-vous, des alarmes, et avoir en permanence un calendrier sous la main. Les couleurs et la photo d'arrière-plan sont totalement personnalisables et s'adaptent à tous les écrans. Vous pouvez également imprimer de superbes calendriers mensuels.
+DESCRIPTION : Agenda de bureau pour lister des taches, programmer des rendez-vous, des alarmes, et avoir en permanence un calendrier sous la main. Les couleurs et la photo d'arriÃ¨re-plan sont totalement personnalisables et s'adaptent Ã  tous les Ã©crans. Vous pouvez Ã©galement imprimer de superbes calendriers mensuels.
 DOWNLOAD LINK : http://www.xtralog.com/data/cldxtra2.exe
-Mon Jan  7 00:45:13 2013 : 
+Mon Jan  7 17:54:44 2013 : 
 Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/telecharger-682.html
-Mon Jan  7 00:45:13 2013 : scan_app_link started(Wintim'In , /telecharger/windows/Bureautique/agenda/fiches/telecharger-682.html)
-Mon Jan  7 00:45:17 2013 : 
+Mon Jan  7 17:54:44 2013 : scan_app_link started(Wintim'In , /telecharger/windows/Bureautique/agenda/fiches/telecharger-682.html)
+Mon Jan  7 17:54:46 2013 : 
      Not found in DB app_name : Wintim'In
-Mon Jan  7 00:45:28 2013 : category found = 1
-Mon Jan  7 00:45:28 2013 : section found app_name = Wintim'In
-Mon Jan  7 00:45:28 2013 : before app saving
-Mon Jan  7 00:45:28 2013 : 
+Mon Jan  7 17:54:51 2013 : category found = 1
+Mon Jan  7 17:54:51 2013 : section found app_name = Wintim'In
+Mon Jan  7 17:54:51 2013 : before app saving
+Mon Jan  7 17:54:52 2013 : 
 
 
 APPLICATION ADDED TO DB : 
@@ -108,19 +140,19 @@ APPLICATION ADDED TO DB :
 								NAME : Wintim'In
 
 								IMAGE_LINK : /images/logiciel/682b.jpg
-DESCRIPTION : Wintim'In est un agenda aux nombreuses fonctionnalités.Il permet de tenir son emploi du temps, de configurer des alarmes pour ne pas rater des évènements importants ou encore de rédiger une note quotidienne sur la journée qui s'est écoulée. Wintim'In comporte également un répertoire permettant d'enregistrer les coordonnées de vos proches et collègues de travail.Les informations que Wintim'In traite, peuvent être automatiquement sauvegardées dans un dossier local ou sur une machine distante. En cas de problème il est possible de récupérer l'intégralité des données.La couleur des différents éléments de l'interface peut également être personnalisée selon vos envies.
+DESCRIPTION : Wintim'In est un agenda aux nombreuses fonctionnalitÃ©s.Il permet de tenir son emploi du temps, de configurer des alarmes pour ne pas rater des Ã©vÃ¨nements importants ou encore de rÃ©diger une note quotidienne sur la journÃ©e qui s'est Ã©coulÃ©e. Wintim'In comporte Ã©galement un rÃ©pertoire permettant d'enregistrer les coordonnÃ©es de vos proches et collÃ¨gues de travail.Les informations que Wintim'In traite, peuvent Ãªtre automatiquement sauvegardÃ©es dans un dossier local ou sur une machine distante. En cas de problÃ¨me il est possible de rÃ©cupÃ©rer l'intÃ©gralitÃ© des donnÃ©es.La couleur des diffÃ©rents Ã©lÃ©ments de l'interface peut Ã©galement Ãªtre personnalisÃ©e selon vos envies.
 DOWNLOAD LINK : ftp://ftp2.aarsofts.fr/aarsofts/PackWintimin.exe
-Mon Jan  7 00:45:28 2013 : 
+Mon Jan  7 17:54:52 2013 : 
 Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/705.html
-Mon Jan  7 00:45:28 2013 : scan_app_link started(Memo , /telecharger/windows/Bureautique/agenda/fiches/705.html)
-Mon Jan  7 00:45:30 2013 : 
+Mon Jan  7 17:54:52 2013 : scan_app_link started(Memo , /telecharger/windows/Bureautique/agenda/fiches/705.html)
+Mon Jan  7 17:54:57 2013 : 
      Not found in DB app_name : Memo
-Mon Jan  7 00:45:30 2013 : 
+Mon Jan  7 17:54:57 2013 : 
 Memo : NO IMAGES for this application, x = 0
-Mon Jan  7 00:45:33 2013 : category found = 1
-Mon Jan  7 00:45:33 2013 : section found app_name = Memo
-Mon Jan  7 00:45:33 2013 : before app saving
-Mon Jan  7 00:45:33 2013 : 
+Mon Jan  7 17:55:01 2013 : category found = 1
+Mon Jan  7 17:55:01 2013 : section found app_name = Memo
+Mon Jan  7 17:55:01 2013 : before app saving
+Mon Jan  7 17:55:01 2013 : 
 
 
 APPLICATION ADDED TO DB : 
@@ -128,19 +160,19 @@ APPLICATION ADDED TO DB :
 								NAME : Memo
 
 								IMAGE_LINK : 
-DESCRIPTION : Cet utilitaire de bureau très complet vous propose, malgré sa petite taille, un tas de fonctions utiles : 3 mini notepad plus une grande page pour noter tout ce qui vous passe par la tête, un carnet de contacts (noms, téléphones et e-mails), envoi de messages sur d'autres ordinateurs équipés de Memo par Internet/Intranet, envoi d'e-mails, post-it accrochables sur votre écran, calendrier, alarme et écran de veille sur commande. L'activation de ces outils s'effectue via une icône dans le system tray de la barre des tâches afin d'économiser de la place sur le bureau.
+DESCRIPTION : Cet utilitaire de bureau trÃ¨s complet vous propose, malgrÃ© sa petite taille, un tas de fonctions utiles : 3 mini notepad plus une grande page pour noter tout ce qui vous passe par la tÃªte, un carnet de contacts (noms, tÃ©lÃ©phones et e-mails), envoi de messages sur d'autres ordinateurs Ã©quipÃ©s de Memo par Internet/Intranet, envoi d'e-mails, post-it accrochables sur votre Ã©cran, calendrier, alarme et Ã©cran de veille sur commande. L'activation de ces outils s'effectue via une icÃ´ne dans le system tray de la barre des tÃ¢ches afin d'Ã©conomiser de la place sur le bureau.
 DOWNLOAD LINK : http://kinkodev.free.fr/zip/Memo.zip
-Mon Jan  7 00:45:33 2013 : 
+Mon Jan  7 17:55:01 2013 : 
 Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/9135.html
-Mon Jan  7 00:45:33 2013 : scan_app_link started(Atnotes , /telecharger/windows/Bureautique/agenda/fiches/9135.html)
-Mon Jan  7 00:45:35 2013 : 
+Mon Jan  7 17:55:01 2013 : scan_app_link started(Atnotes , /telecharger/windows/Bureautique/agenda/fiches/9135.html)
+Mon Jan  7 17:55:04 2013 : 
      Not found in DB app_name : Atnotes
-Mon Jan  7 00:45:35 2013 : 
+Mon Jan  7 17:55:04 2013 : 
 Atnotes : NO IMAGES for this application, x = 0
-Mon Jan  7 00:45:38 2013 : category found = 1
-Mon Jan  7 00:45:38 2013 : section found app_name = Atnotes
-Mon Jan  7 00:45:38 2013 : before app saving
-Mon Jan  7 00:45:38 2013 : 
+Mon Jan  7 17:55:06 2013 : category found = 1
+Mon Jan  7 17:55:06 2013 : section found app_name = Atnotes
+Mon Jan  7 17:55:06 2013 : before app saving
+Mon Jan  7 17:55:06 2013 : 
 
 
 APPLICATION ADDED TO DB : 
@@ -148,19 +180,19 @@ APPLICATION ADDED TO DB :
 								NAME : Atnotes
 
 								IMAGE_LINK : 
-DESCRIPTION : Atnotes est un programme qui crée des notes Post-It sur le bureau de Windows. Ses fonctions sont les suivantes : des notes que l'on peut faire glisser et changer de taille, n'importe où sur le bureau. Les notes changent automatiquement de taille lorsqu'un texte est entré. Une police personnelle, une couleur d'arrière-plan et une couleur de limite pour chaque note Des alarmes uniques ou répétées pour chaque note avec un signal d'alarme audio et visuel.  Il cache des notes jusqu'à ce qu'elles soient activées manuellement ou jusqu'à une heure/un jour précis. Téléchargez le patch français ici (2,5 ko).
+DESCRIPTION : Atnotes est un programme qui crÃ©e des notes Post-It sur le bureau de Windows. Ses fonctions sont les suivantes : des notes que l'on peut faire glisser et changer de taille, n'importe oÃ¹ sur le bureau. Les notes changent automatiquement de taille lorsqu'un texte est entrÃ©. Une police personnelle, une couleur d'arriÃ¨re-plan et une couleur de limite pour chaque note Des alarmes uniques ou rÃ©pÃ©tÃ©es pour chaque note avec un signal d'alarme audio et visuel.  Il cache des notes jusqu'Ã  ce qu'elles soient activÃ©es manuellement ou jusqu'Ã  une heure/un jour prÃ©cis. TÃ©lÃ©chargez le patch franÃ§ais ici (2,5 ko).
 DOWNLOAD LINK : http://atnotes.free.fr/dl/atnsetup.exe
-Mon Jan  7 00:45:38 2013 : 
+Mon Jan  7 17:55:06 2013 : 
 Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/28615.html
-Mon Jan  7 00:45:38 2013 : scan_app_link started(Planning Manager , /telecharger/windows/Bureautique/agenda/fiches/28615.html)
-Mon Jan  7 00:45:42 2013 : 
+Mon Jan  7 17:55:06 2013 : scan_app_link started(Planning Manager , /telecharger/windows/Bureautique/agenda/fiches/28615.html)
+Mon Jan  7 17:55:10 2013 : 
      Not found in DB app_name : Planning Manager
-Mon Jan  7 00:45:42 2013 : 
+Mon Jan  7 17:55:10 2013 : 
 Planning Manager : NO IMAGES for this application, x = 0
-Mon Jan  7 00:45:47 2013 : category found = 1
-Mon Jan  7 00:45:47 2013 : section found app_name = Planning Manager
-Mon Jan  7 00:45:47 2013 : before app saving
-Mon Jan  7 00:45:47 2013 : 
+Mon Jan  7 17:55:14 2013 : category found = 1
+Mon Jan  7 17:55:14 2013 : section found app_name = Planning Manager
+Mon Jan  7 17:55:14 2013 : before app saving
+Mon Jan  7 17:55:14 2013 : 
 
 
 APPLICATION ADDED TO DB : 
@@ -168,71 +200,40 @@ APPLICATION ADDED TO DB :
 								NAME : Planning Manager
 
 								IMAGE_LINK : 
-DESCRIPTION : Ce produit permet de gérer des plannings de travail.Comme pour tout agenda classique, il permet de saisir des rendez-vous et des activités. Mais en plus des gestionnaires d'agendas classiques, il permet d'exporter les données vers un tableur pour obtenir des statistiques sur la répartition de l'activité de l'entreprise en fonction des tâches, des services, des agences, ou de chaque collaborateur. En ce sens, il dépasse un simple agenda multi-utilisateurs et est particulièrement utile au responsable pour savoir pour quelles activités est utilisé le temps de travail.
+DESCRIPTION : Ce produit permet de gÃ©rer des plannings de travail.Comme pour tout agenda classique, il permet de saisir des rendez-vous et des activitÃ©s. Mais en plus des gestionnaires d'agendas classiques, il permet d'exporter les donnÃ©es vers un tableur pour obtenir des statistiques sur la rÃ©partition de l'activitÃ© de l'entreprise en fonction des tÃ¢ches, des services, des agences, ou de chaque collaborateur. En ce sens, il dÃ©passe un simple agenda multi-utilisateurs et est particuliÃ¨rement utile au responsable pour savoir pour quelles activitÃ©s est utilisÃ© le temps de travail.
 DOWNLOAD LINK : http://thierry.bertrand.pagesperso-orange.fr/planmgr/planmgr.zip
-Mon Jan  7 00:45:47 2013 : 
-Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/105577.html
-Mon Jan  7 00:45:47 2013 : scan_app_link started(Mémo , /telecharger/windows/Bureautique/agenda/fiches/105577.html)
-Mon Jan  7 00:45:49 2013 : 
-     Not found in DB app_name : Mémo
-Mon Jan  7 00:45:54 2013 : category found = 1
-Mon Jan  7 00:45:54 2013 : section found app_name = Mémo
-Mon Jan  7 00:45:54 2013 : before app saving
-Mon Jan  7 00:45:54 2013 : 
-
-
-APPLICATION ADDED TO DB : 
-
-								NAME : Mémo
-
-								IMAGE_LINK : /images/logiciel/105577b.jpg
-DESCRIPTION : Mémo propose de gérer facilement et rapidement vos tâches et d'afficher des notes sur votre écran ou sur un autre écran en réseau. Vous pouvez également envoyer vos notes par e-mail. Un système de rappel (journalier, hebdomadaire, mensuel ou annuel) est mis à votre disposition. Mémo liste l'ensemble des tâches enregistrées et vous permet de les modifier facilement.
-DOWNLOAD LINK : http://www.iadeo.com/download/memosetup.exe
-Mon Jan  7 00:45:59 2013 : 
+Mon Jan  7 17:55:14 2013 : 
 Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/telecharger-50904.html
-Mon Jan  7 00:45:59 2013 : scan_app_link started(Calendrier Mémo , /telecharger/windows/Bureautique/agenda/fiches/telecharger-50904.html)
-Mon Jan  7 00:46:01 2013 : 
-     Not found in DB app_name : Calendrier Mémo
-Mon Jan  7 00:46:06 2013 : category found = 1
-Mon Jan  7 00:46:06 2013 : section found app_name = Calendrier Mémo
-Mon Jan  7 00:46:06 2013 : before app saving
-Mon Jan  7 00:46:07 2013 : 
+Mon Jan  7 17:55:14 2013 : scan_app_link started(Calendrier MÃ©mo , /telecharger/windows/Bureautique/agenda/fiches/telecharger-50904.html)
+Mon Jan  7 17:55:17 2013 : 
+     Not found in DB app_name : Calendrier MÃ©mo
+Mon Jan  7 17:55:28 2013 : category found = 1
+Mon Jan  7 17:55:28 2013 : section found app_name = Calendrier MÃ©mo
+Mon Jan  7 17:55:28 2013 : before app saving
+Mon Jan  7 17:55:28 2013 : 
 
 
 APPLICATION ADDED TO DB : 
 
-								NAME : Calendrier Mémo
+								NAME : Calendrier MÃ©mo
 
 								IMAGE_LINK : /images/logiciel/50904b.jpg
-DESCRIPTION : Notez tous les évènements de l'année sur ce calendrier virtuel. Calendrier Mémo se présente comme un calendrier mural classique et il indique, à l'instar de ce dernier, les jours fériés et les numéros de semaine. Il permet à l'utilisateur de saisir tous ses rendez-vous, les anniversaires, les jours de congés, etc. et de les visualiser en un clin d'oeil. Enfin, il est possible d'effectuer des recherches rapides en saisissant les premières lettres d'un évènement.
+DESCRIPTION : Notez tous les Ã©vÃ¨nements de l'annÃ©e sur ce calendrier virtuel. Calendrier MÃ©mo se prÃ©sente comme un calendrier mural classique et il indique, Ã  l'instar de ce dernier, les jours fÃ©riÃ©s et les numÃ©ros de semaine. Il permet Ã  l'utilisateur de saisir tous ses rendez-vous, les anniversaires, les jours de congÃ©s, etc. et de les visualiser en un clin d'oeil. Enfin, il est possible d'effectuer des recherches rapides en saisissant les premiÃ¨res lettres d'un Ã©vÃ¨nement.
 DOWNLOAD LINK : http://mdev.pagesperso-orange.fr/fichiers_zip/Calendrier_Memo_Installation.EXE
-Mon Jan  7 00:46:07 2013 : 
-Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/47593.html
-Mon Jan  7 00:46:07 2013 : scan_app_link started(Desktop Calendar , /telecharger/windows/Bureautique/agenda/fiches/47593.html)
-Mon Jan  7 00:46:10 2013 : 
-     Not found in DB app_name : Desktop Calendar
-Mon Jan  7 00:46:13 2013 : category found = 1
-Mon Jan  7 00:46:13 2013 : section found app_name = Desktop Calendar
-Mon Jan  7 00:46:13 2013 : before app saving
-Mon Jan  7 00:46:13 2013 : 
-
-
-APPLICATION ADDED TO DB : 
-
-								NAME : Desktop Calendar
-
-								IMAGE_LINK : /images/logiciel/47593b.jpg
-DESCRIPTION : Desktop Calendar vous propose de conserver en permanence un calendrier sur votre bureau, consultable à tous moments et personnalisable. Votre calendrier se place où vous le souhaiter, affiche les couleurs et les formes que vous aimez, et vous permet évidemment, de saisir facilement et rapidement les événements importants à ne pas oublier. Dans les paramètres du programme, vous pourrez importer des fichiers CSV et exporter vos dates au format TXT ou CSV.
-DOWNLOAD LINK : http://web.onetel.com/~tinnes/desktopcalendar.exe
-Mon Jan  7 00:46:13 2013 : 
+Mon Jan  7 17:55:30 2013 : 
+Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/105577.html
+Mon Jan  7 17:55:30 2013 : scan_app_link started(MÃ©mo , /telecharger/windows/Bureautique/agenda/fiches/105577.html)
+Mon Jan  7 17:55:34 2013 : 
+Application FOUND IN DB app_name = MÃ©mo
+Mon Jan  7 17:55:35 2013 : 
 Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/42554.html
-Mon Jan  7 00:46:14 2013 : scan_app_link started(Exstora Free , /telecharger/windows/Bureautique/agenda/fiches/42554.html)
-Mon Jan  7 00:46:16 2013 : 
+Mon Jan  7 17:55:35 2013 : scan_app_link started(Exstora Free , /telecharger/windows/Bureautique/agenda/fiches/42554.html)
+Mon Jan  7 17:55:40 2013 : 
      Not found in DB app_name : Exstora Free
-Mon Jan  7 00:46:21 2013 : category found = 1
-Mon Jan  7 00:46:21 2013 : section found app_name = Exstora Free
-Mon Jan  7 00:46:21 2013 : before app saving
-Mon Jan  7 00:46:21 2013 : 
+Mon Jan  7 17:55:53 2013 : category found = 1
+Mon Jan  7 17:55:53 2013 : section found app_name = Exstora Free
+Mon Jan  7 17:55:53 2013 : before app saving
+Mon Jan  7 17:55:53 2013 : 
 
 
 APPLICATION ADDED TO DB : 
@@ -240,37 +241,17 @@ APPLICATION ADDED TO DB :
 								NAME : Exstora Free
 
 								IMAGE_LINK : /images/logiciel/42554b.jpg
-DESCRIPTION : Exstora vous propose d'afficher sur votre bureau, un calendrier et un gestionnaire de notes. En quelques clics, vous pourrez consulter votre agenda, ajouter des événements, saisir des notes et les classer dans différentes catégories. Très simple d'utilisation, cette application est également paramétrable et personnalisable. Par exemple, vous pourrez changer l'interface de présentation, programmer des alertes sonores pour ne pas oublier vos rendez-vous, rechercher une note ou un événement, cacher votre planning dans la barre des tâches, etc.
+DESCRIPTION : Exstora vous propose d'afficher sur votre bureau, un calendrier et un gestionnaire de notes. En quelques clics, vous pourrez consulter votre agenda, ajouter des Ã©vÃ©nements, saisir des notes et les classer dans diffÃ©rentes catÃ©gories. TrÃ¨s simple d'utilisation, cette application est Ã©galement paramÃ©trable et personnalisable. Par exemple, vous pourrez changer l'interface de prÃ©sentation, programmer des alertes sonores pour ne pas oublier vos rendez-vous, rechercher une note ou un Ã©vÃ©nement, cacher votre planning dans la barre des tÃ¢ches, etc.
 DOWNLOAD LINK : http://www.exstora.com/files/2.8/Exstora_v_2.8_fr.exe
-Mon Jan  7 00:46:21 2013 : 
-Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/30183.html
-Mon Jan  7 00:46:21 2013 : scan_app_link started(Calendrier Automatique , /telecharger/windows/Bureautique/agenda/fiches/30183.html)
-Mon Jan  7 00:46:23 2013 : 
-     Not found in DB app_name : Calendrier Automatique
-Mon Jan  7 00:46:23 2013 : 
-Calendrier Automatique : NO IMAGES for this application, x = 0
-Mon Jan  7 00:46:26 2013 : category found = 1
-Mon Jan  7 00:46:26 2013 : section found app_name = Calendrier Automatique
-Mon Jan  7 00:46:26 2013 : before app saving
-Mon Jan  7 00:46:26 2013 : 
-
-
-APPLICATION ADDED TO DB : 
-
-								NAME : Calendrier Automatique
-
-								IMAGE_LINK : 
-DESCRIPTION : Calendrier Automatique est un logiciel qui simplifiera le suivi de vos horaires de travail et qui vous permettra de faire des prévisions sur les mois et années à venir. Pour cela, choisissez votre entreprise, votre équipe, l'année de votre choix et imprimez votre calendrier ou visualisez-le. Vous pouvez aussi travailler sous Excel grâce à une fonctionnalité d'export.
-DOWNLOAD LINK : ftp://ftp2.mpicaud.net/mpicaud/logiciels/calendrier.exe
-Mon Jan  7 00:46:26 2013 : 
+Mon Jan  7 17:55:53 2013 : 
 Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/43903.html
-Mon Jan  7 00:46:27 2013 : scan_app_link started(AlarmClockEvent , /telecharger/windows/Bureautique/agenda/fiches/43903.html)
-Mon Jan  7 00:46:29 2013 : 
+Mon Jan  7 17:55:53 2013 : scan_app_link started(AlarmClockEvent , /telecharger/windows/Bureautique/agenda/fiches/43903.html)
+Mon Jan  7 17:55:55 2013 : 
      Not found in DB app_name : AlarmClockEvent
-Mon Jan  7 00:46:36 2013 : category found = 1
-Mon Jan  7 00:46:36 2013 : section found app_name = AlarmClockEvent
-Mon Jan  7 00:46:36 2013 : before app saving
-Mon Jan  7 00:46:37 2013 : 
+Mon Jan  7 17:56:07 2013 : category found = 1
+Mon Jan  7 17:56:07 2013 : section found app_name = AlarmClockEvent
+Mon Jan  7 17:56:07 2013 : before app saving
+Mon Jan  7 17:56:07 2013 : 
 
 
 APPLICATION ADDED TO DB : 
@@ -280,33 +261,53 @@ APPLICATION ADDED TO DB :
 								IMAGE_LINK : /images/logiciel/43903b.jpg
 DESCRIPTION : AlarmClockEvent vous permet d'enregistrer des &eacute;v&eacute;nements importants et de programmer une alerte facilement. Simple d'utilisation et accessible depuis le systray, cette application vous propose de r&eacute;f&eacute;rencer tous les anniversaires, f&ecirc;tes, r&eacute;unions et autres &eacute;v&eacute;nements importants &agrave; ne pas oublier, et de programmer une alerte personnalis&eacute;e. Vous pourrez configurer l'apparition d'un message, jouer un son, lancer une application, &eacute;teindre l'ordinateur ou envoyer un e-mail.
 DOWNLOAD LINK : http://www.europesoftwares2.net/downloads/alarmclockevent_win32_setup.exe
-Mon Jan  7 00:46:37 2013 : 
-Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/32291.html
-Mon Jan  7 00:46:37 2013 : scan_app_link started(WXPlanning , /telecharger/windows/Bureautique/agenda/fiches/32291.html)
-Mon Jan  7 00:46:39 2013 : 
-     Not found in DB app_name : WXPlanning
-Mon Jan  7 00:46:45 2013 : category found = 1
-Mon Jan  7 00:46:45 2013 : section found app_name = WXPlanning
-Mon Jan  7 00:46:45 2013 : before app saving
-Mon Jan  7 00:46:45 2013 : 
+Mon Jan  7 17:56:07 2013 : 
+Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/47593.html
+Mon Jan  7 17:56:08 2013 : scan_app_link started(Desktop Calendar , /telecharger/windows/Bureautique/agenda/fiches/47593.html)
+Mon Jan  7 17:56:11 2013 : 
+     Not found in DB app_name : Desktop Calendar
+Mon Jan  7 17:56:20 2013 : category found = 1
+Mon Jan  7 17:56:20 2013 : section found app_name = Desktop Calendar
+Mon Jan  7 17:56:20 2013 : before app saving
+Mon Jan  7 17:56:20 2013 : 
 
 
 APPLICATION ADDED TO DB : 
 
-								NAME : WXPlanning
+								NAME : Desktop Calendar
 
-								IMAGE_LINK : /images/logiciel/32291b.jpg
-DESCRIPTION : WXPlaning est un logiciel de gestion d'emploi du temps destiné aux métiers de garde ou d'aide à domicile. Il permettra à tout chef de secteur de gérer efficacement ses ressources humaines, les horaires ainsi que les règlementations. Le programme est doté d'un calendrier perpétuel et d'un système de règles pour les tâches répétitives. De plus, des modules permettent une réorganisation rapide en cas de congés ou d'absence d'un salarié.
-DOWNLOAD LINK : http://www.logisud.fr/download/install.exe
-Mon Jan  7 00:46:46 2013 : 
+								IMAGE_LINK : /images/logiciel/47593b.jpg
+DESCRIPTION : Desktop Calendar vous propose de conserver en permanence un calendrier sur votre bureau, consultable Ã  tous moments et personnalisable. Votre calendrier se place oÃ¹ vous le souhaiter, affiche les couleurs et les formes que vous aimez, et vous permet Ã©videmment, de saisir facilement et rapidement les Ã©vÃ©nements importants Ã  ne pas oublier. Dans les paramÃ¨tres du programme, vous pourrez importer des fichiers CSV et exporter vos dates au format TXT ou CSV.
+DOWNLOAD LINK : http://web.onetel.com/~tinnes/desktopcalendar.exe
+Mon Jan  7 17:56:21 2013 : 
+Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/30183.html
+Mon Jan  7 17:56:21 2013 : scan_app_link started(Calendrier Automatique , /telecharger/windows/Bureautique/agenda/fiches/30183.html)
+Mon Jan  7 17:56:31 2013 : 
+     Not found in DB app_name : Calendrier Automatique
+Mon Jan  7 17:56:31 2013 : 
+Calendrier Automatique : NO IMAGES for this application, x = 0
+Mon Jan  7 17:56:34 2013 : category found = 1
+Mon Jan  7 17:56:34 2013 : section found app_name = Calendrier Automatique
+Mon Jan  7 17:56:34 2013 : before app saving
+Mon Jan  7 17:56:34 2013 : 
+
+
+APPLICATION ADDED TO DB : 
+
+								NAME : Calendrier Automatique
+
+								IMAGE_LINK : 
+DESCRIPTION : Calendrier Automatique est un logiciel qui simplifiera le suivi de vos horaires de travail et qui vous permettra de faire des prÃ©visions sur les mois et annÃ©es Ã  venir. Pour cela, choisissez votre entreprise, votre Ã©quipe, l'annÃ©e de votre choix et imprimez votre calendrier ou visualisez-le. Vous pouvez aussi travailler sous Excel grÃ¢ce Ã  une fonctionnalitÃ© d'export.
+DOWNLOAD LINK : ftp://ftp2.mpicaud.net/mpicaud/logiciels/calendrier.exe
+Mon Jan  7 17:56:34 2013 : 
 Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/30655.html
-Mon Jan  7 00:46:46 2013 : scan_app_link started(PrestoNotes , /telecharger/windows/Bureautique/agenda/fiches/30655.html)
-Mon Jan  7 00:46:48 2013 : 
+Mon Jan  7 17:56:34 2013 : scan_app_link started(PrestoNotes , /telecharger/windows/Bureautique/agenda/fiches/30655.html)
+Mon Jan  7 17:56:37 2013 : 
      Not found in DB app_name : PrestoNotes
-Mon Jan  7 00:46:54 2013 : category found = 1
-Mon Jan  7 00:46:54 2013 : section found app_name = PrestoNotes
-Mon Jan  7 00:46:54 2013 : before app saving
-Mon Jan  7 00:46:54 2013 : 
+Mon Jan  7 17:56:47 2013 : category found = 1
+Mon Jan  7 17:56:47 2013 : section found app_name = PrestoNotes
+Mon Jan  7 17:56:47 2013 : before app saving
+Mon Jan  7 17:56:47 2013 : 
 
 
 APPLICATION ADDED TO DB : 
@@ -314,17 +315,17 @@ APPLICATION ADDED TO DB :
 								NAME : PrestoNotes
 
 								IMAGE_LINK : /images/logiciel/30655b.jpg
-DESCRIPTION : PrestoNotes est un programme de création de post-its virtuels entièrement personnalisables (image, couleur, transparence, police de caractères, taille et position, barre de titre, etc...). Chaque post-it dispose d'une alarme évoluée pour des événements uniques ou répétitifs (annuels, mensuels, hebdomadaires, journaliers ou horaires). De plus vous avez la possibilité de cacher ou d'afficher les post-its selon vos besoins via une petite icône dans la zone système de la barre de tâches de Windows. Une fonction de prévention est également disponible pour déclencher l'alarme avant que l'événement ne survienne (idéal pour prévenir un anniversaire par exemple). Lorsque l'alarme se déclenche, une ou plusieurs actions peuvent être exécutées : afficher la note, jouer un son WAV, exécuter un programme ou un document, changer aléatoirement le papier-peint ou l'écran de veille de Windows ou arrêter l'ordinateur. Le programme propose encore un tas d'autres fonctionnalités notamment pour surveiller l'arrivée d'un nouveau mail, envoyer et recevoir des notes via un réseau local ou via Internet, réaliser des impressions WYSIWYG (telle que la note apparaît à l'écran), plus d'autres fonctions comme l'auto-save, l'auto-refresh, l'auto-roll, l'auto-dim ou la possibilité d'obtenir des post-its de couleur aléatoire.
+DESCRIPTION : PrestoNotes est un programme de crÃ©ation de post-its virtuels entiÃ¨rement personnalisables (image, couleur, transparence, police de caractÃ¨res, taille et position, barre de titre, etc...). Chaque post-it dispose d'une alarme Ã©voluÃ©e pour des Ã©vÃ©nements uniques ou rÃ©pÃ©titifs (annuels, mensuels, hebdomadaires, journaliers ou horaires). De plus vous avez la possibilitÃ© de cacher ou d'afficher les post-its selon vos besoins via une petite icÃ´ne dans la zone systÃ¨me de la barre de tÃ¢ches de Windows. Une fonction de prÃ©vention est Ã©galement disponible pour dÃ©clencher l'alarme avant que l'Ã©vÃ©nement ne survienne (idÃ©al pour prÃ©venir un anniversaire par exemple). Lorsque l'alarme se dÃ©clenche, une ou plusieurs actions peuvent Ãªtre exÃ©cutÃ©es : afficher la note, jouer un son WAV, exÃ©cuter un programme ou un document, changer alÃ©atoirement le papier-peint ou l'Ã©cran de veille de Windows ou arrÃªter l'ordinateur. Le programme propose encore un tas d'autres fonctionnalitÃ©s notamment pour surveiller l'arrivÃ©e d'un nouveau mail, envoyer et recevoir des notes via un rÃ©seau local ou via Internet, rÃ©aliser des impressions WYSIWYG (telle que la note apparaÃ®t Ã  l'Ã©cran), plus d'autres fonctions comme l'auto-save, l'auto-refresh, l'auto-roll, l'auto-dim ou la possibilitÃ© d'obtenir des post-its de couleur alÃ©atoire.
 DOWNLOAD LINK : http://users.telenet.be/cr41007/PrestoNotesSetup.exe
-Mon Jan  7 00:46:54 2013 : 
+Mon Jan  7 17:56:47 2013 : 
 Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/5197.html
-Mon Jan  7 00:46:54 2013 : scan_app_link started(Ephy 2003 , /telecharger/windows/Bureautique/agenda/fiches/5197.html)
-Mon Jan  7 00:46:56 2013 : 
+Mon Jan  7 17:56:47 2013 : scan_app_link started(Ephy 2003 , /telecharger/windows/Bureautique/agenda/fiches/5197.html)
+Mon Jan  7 17:56:50 2013 : 
      Not found in DB app_name : Ephy 2003
-Mon Jan  7 00:47:00 2013 : category found = 1
-Mon Jan  7 00:47:00 2013 : section found app_name = Ephy 2003
-Mon Jan  7 00:47:00 2013 : before app saving
-Mon Jan  7 00:47:01 2013 : 
+Mon Jan  7 17:56:55 2013 : category found = 1
+Mon Jan  7 17:56:55 2013 : section found app_name = Ephy 2003
+Mon Jan  7 17:56:55 2013 : before app saving
+Mon Jan  7 17:56:55 2013 : 
 
 
 APPLICATION ADDED TO DB : 
@@ -332,37 +333,35 @@ APPLICATION ADDED TO DB :
 								NAME : Ephy 2003
 
 								IMAGE_LINK : /images/logiciel/5197b.jpg
-DESCRIPTION : Ce logiciel est un petit éphéméride entièrement réalisé en images de synthèse.
+DESCRIPTION : Ce logiciel est un petit Ã©phÃ©mÃ©ride entiÃ¨rement rÃ©alisÃ© en images de synthÃ¨se.
 DOWNLOAD LINK : http://eurosoft.free.fr/ephy.exe
-Mon Jan  7 00:47:01 2013 : 
-Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/7795.html
-Mon Jan  7 00:47:01 2013 : scan_app_link started(Congés , /telecharger/windows/Bureautique/agenda/fiches/7795.html)
-Mon Jan  7 00:47:03 2013 : 
-     Not found in DB app_name : Congés
-Mon Jan  7 00:47:03 2013 : 
-Congés : NO IMAGES for this application, x = 0
-Mon Jan  7 00:47:05 2013 : category found = 1
-Mon Jan  7 00:47:05 2013 : section found app_name = Congés
-Mon Jan  7 00:47:05 2013 : before app saving
-Mon Jan  7 00:47:05 2013 : 
+Mon Jan  7 17:56:55 2013 : 
+Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/32291.html
+Mon Jan  7 17:56:56 2013 : scan_app_link started(WXPlanning , /telecharger/windows/Bureautique/agenda/fiches/32291.html)
+Mon Jan  7 17:56:58 2013 : 
+     Not found in DB app_name : WXPlanning
+Mon Jan  7 17:57:06 2013 : category found = 1
+Mon Jan  7 17:57:06 2013 : section found app_name = WXPlanning
+Mon Jan  7 17:57:06 2013 : before app saving
+Mon Jan  7 17:57:07 2013 : 
 
 
 APPLICATION ADDED TO DB : 
 
-								NAME : Congés
+								NAME : WXPlanning
 
-								IMAGE_LINK : 
-DESCRIPTION : Congés est destiné à la gestion des absences du personnel. De deux clic sur le calendrier, vous définissez la date du début  et celle de la fin de l'absence. Puis vous avez la possibilité de définir le nombre de jours décomptés ( par journée ou demi-journée ) et la raison  de  l'absence. Ces motifs d'absence  sont paramétrables, dans leur intitulé et dans leur couleur. Possibilité de visualiser les statistiques;  sous formes;  de graphes;  et l'historique de chaque personne. Fonctionne;  en deux modes : administrateur ( mot de passe à l'installation : a) et mode visualisateur (sans mot de passe).
-DOWNLOAD LINK : http://www.pbclub.fr/tempo/vacances.EXE
-Mon Jan  7 00:47:05 2013 : 
+								IMAGE_LINK : /images/logiciel/32291b.jpg
+DESCRIPTION : WXPlaning est un logiciel de gestion d'emploi du temps destinÃ© aux mÃ©tiers de garde ou d'aide Ã  domicile. Il permettra Ã  tout chef de secteur de gÃ©rer efficacement ses ressources humaines, les horaires ainsi que les rÃ¨glementations. Le programme est dotÃ© d'un calendrier perpÃ©tuel et d'un systÃ¨me de rÃ¨gles pour les tÃ¢ches rÃ©pÃ©titives. De plus, des modules permettent une rÃ©organisation rapide en cas de congÃ©s ou d'absence d'un salariÃ©.
+DOWNLOAD LINK : http://www.logisud.fr/download/install.exe
+Mon Jan  7 17:57:07 2013 : 
 Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/telecharger-50654.html
-Mon Jan  7 00:47:05 2013 : scan_app_link started(Cont@ct Manager Freeware , /telecharger/windows/Bureautique/agenda/fiches/telecharger-50654.html)
-Mon Jan  7 00:47:07 2013 : 
+Mon Jan  7 17:57:07 2013 : scan_app_link started(Cont@ct Manager Freeware , /telecharger/windows/Bureautique/agenda/fiches/telecharger-50654.html)
+Mon Jan  7 17:57:09 2013 : 
      Not found in DB app_name : Cont@ct Manager Freeware
-Mon Jan  7 00:47:12 2013 : category found = 1
-Mon Jan  7 00:47:12 2013 : section found app_name = Cont@ct Manager Freeware
-Mon Jan  7 00:47:12 2013 : before app saving
-Mon Jan  7 00:47:12 2013 : 
+Mon Jan  7 17:57:14 2013 : category found = 1
+Mon Jan  7 17:57:14 2013 : section found app_name = Cont@ct Manager Freeware
+Mon Jan  7 17:57:14 2013 : before app saving
+Mon Jan  7 17:57:14 2013 : 
 
 
 APPLICATION ADDED TO DB : 
@@ -370,17 +369,17 @@ APPLICATION ADDED TO DB :
 								NAME : Cont@ct Manager Freeware
 
 								IMAGE_LINK : /images/logiciel/50654b.jpg
-DESCRIPTION : Cont@ct Manager Freeware facilite la gestion de tout type de contacts personnels ou professionnels. Via une fiche individuelle détaillée vous pourrez répertorier toutes les informations utiles et communiquer rapidement avec vos correspondants. Des liens directs vous permettront d'envoyer des e-mails, de téléphoner par Skype ou logiciel assimilé. La fonction de géolocalisation intégrée affiche directement l'adresse du contact sur Google Maps, Via Michelin, Yahoo, Map24 et MapQuest. L'application propose également un calendrier doté d'une fonction d'alerte pour vous rappeler vos rendez-vous et autres évènements.
+DESCRIPTION : Cont@ct Manager Freeware facilite la gestion de tout type de contacts personnels ou professionnels. Via une fiche individuelle dÃ©taillÃ©e vous pourrez rÃ©pertorier toutes les informations utiles et communiquer rapidement avec vos correspondants. Des liens directs vous permettront d'envoyer des e-mails, de tÃ©lÃ©phoner par Skype ou logiciel assimilÃ©. La fonction de gÃ©olocalisation intÃ©grÃ©e affiche directement l'adresse du contact sur Google Maps, Via Michelin, Yahoo, Map24 et MapQuest. L'application propose Ã©galement un calendrier dotÃ© d'une fonction d'alerte pour vous rappeler vos rendez-vous et autres Ã©vÃ¨nements.
 DOWNLOAD LINK : http://residencemgr.free.fr/Contact/C@MfreeInstall.exe
-Mon Jan  7 00:47:15 2013 : 
+Mon Jan  7 17:57:14 2013 : 
 Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/telecharger-50629.html
-Mon Jan  7 00:47:15 2013 : scan_app_link started(Horloge Parlante 3000 , /telecharger/windows/Bureautique/agenda/fiches/telecharger-50629.html)
-Mon Jan  7 00:47:20 2013 : 
+Mon Jan  7 17:57:14 2013 : scan_app_link started(Horloge Parlante 3000 , /telecharger/windows/Bureautique/agenda/fiches/telecharger-50629.html)
+Mon Jan  7 17:57:23 2013 : 
      Not found in DB app_name : Horloge Parlante 3000
-Mon Jan  7 00:47:24 2013 : category found = 1
-Mon Jan  7 00:47:24 2013 : section found app_name = Horloge Parlante 3000
-Mon Jan  7 00:47:24 2013 : before app saving
-Mon Jan  7 00:47:24 2013 : 
+Mon Jan  7 17:57:32 2013 : category found = 1
+Mon Jan  7 17:57:32 2013 : section found app_name = Horloge Parlante 3000
+Mon Jan  7 17:57:32 2013 : before app saving
+Mon Jan  7 17:57:32 2013 : 
 
 
 APPLICATION ADDED TO DB : 
@@ -388,37 +387,39 @@ APPLICATION ADDED TO DB :
 								NAME : Horloge Parlante 3000
 
 								IMAGE_LINK : /images/logiciel/50629b.jpg
-DESCRIPTION : Horloge Parlante 3000 affiche en temps réel l'heure et la date du jour. Comme son nom l'indique, vous aurez le choix entre trois types de voix qui vous donnent l'heure à des intervalles réguliers (5, 15, 30 ou 60 minutes). La fonction Agenda permet quant à elle d'établir son emploi du temps et de programmer des alarmes pour se rappeler les événements importants de la journée.
+DESCRIPTION : Horloge Parlante 3000 affiche en temps rÃ©el l'heure et la date du jour. Comme son nom l'indique, vous aurez le choix entre trois types de voix qui vous donnent l'heure Ã  des intervalles rÃ©guliers (5, 15, 30 ou 60 minutes). La fonction Agenda permet quant Ã  elle d'Ã©tablir son emploi du temps et de programmer des alarmes pour se rappeler les Ã©vÃ©nements importants de la journÃ©e.
 DOWNLOAD LINK : http://horloge-parlante-fr.com/telecharger/setup.exe
-Mon Jan  7 00:47:24 2013 : 
-Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/31584.html
-Mon Jan  7 00:47:25 2013 : scan_app_link started(A Note , /telecharger/windows/Bureautique/agenda/fiches/31584.html)
-Mon Jan  7 00:47:28 2013 : 
-     Not found in DB app_name : A Note
-Mon Jan  7 00:47:33 2013 : category found = 1
-Mon Jan  7 00:47:33 2013 : section found app_name = A Note
-Mon Jan  7 00:47:33 2013 : before app saving
-Mon Jan  7 00:47:33 2013 : 
+Mon Jan  7 17:57:35 2013 : 
+Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/7795.html
+Mon Jan  7 17:57:35 2013 : scan_app_link started(CongÃ©s , /telecharger/windows/Bureautique/agenda/fiches/7795.html)
+Mon Jan  7 17:57:37 2013 : 
+     Not found in DB app_name : CongÃ©s
+Mon Jan  7 17:57:37 2013 : 
+CongÃ©s : NO IMAGES for this application, x = 0
+Mon Jan  7 17:57:40 2013 : category found = 1
+Mon Jan  7 17:57:40 2013 : section found app_name = CongÃ©s
+Mon Jan  7 17:57:40 2013 : before app saving
+Mon Jan  7 17:57:40 2013 : 
 
 
 APPLICATION ADDED TO DB : 
 
-								NAME : A Note
+								NAME : CongÃ©s
 
-								IMAGE_LINK : /images/logiciel/31584b.jpg
-DESCRIPTION : A Note est un programme permettant de créer des post-it virtuels sur l'écran de votre ordinateur !Le programme se situe dans la barre de tâches, près de l'horloge. Un simple clic sur l'icône permet de rapidement créer une nouvelle note.Les messages peuvent comporter une alarme, être imprimé, envoyés par e-mail, personnalisés, etc.Note : il est nécessaire de décompresser  ce fichier dans le dossier Language où a été installé A Note afin de pouvoir l'utiliser en français.
-DOWNLOAD LINK : http://sunet.dl.sourceforge.net/sourceforge/a-note/A_Note_4_2_1_With_Help.zip
-Mon Jan  7 00:47:33 2013 : 
+								IMAGE_LINK : 
+DESCRIPTION : CongÃ©s est destinÃ© Ã  la gestion des absences du personnel. De deux clic sur le calendrier, vous dÃ©finissez la date du dÃ©but  et celle de la fin de l'absence. Puis vous avez la possibilitÃ© de dÃ©finir le nombre de jours dÃ©comptÃ©s ( par journÃ©e ou demi-journÃ©e ) et la raison  de  l'absence. Ces motifs d'absence  sont paramÃ©trables, dans leur intitulÃ© et dans leur couleur. PossibilitÃ© de visualiser les statistiques;  sous formes;  de graphes;  et l'historique de chaque personne. Fonctionne;  en deux modes : administrateur ( mot de passe Ã  l'installation : a) et mode visualisateur (sans mot de passe).
+DOWNLOAD LINK : http://www.pbclub.fr/tempo/vacances.EXE
+Mon Jan  7 17:57:40 2013 : 
 Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/41535.html
-Mon Jan  7 00:47:34 2013 : scan_app_link started(Journal de classe , /telecharger/windows/Bureautique/agenda/fiches/41535.html)
-Mon Jan  7 00:47:36 2013 : 
+Mon Jan  7 17:57:40 2013 : scan_app_link started(Journal de classe , /telecharger/windows/Bureautique/agenda/fiches/41535.html)
+Mon Jan  7 17:57:45 2013 : 
      Not found in DB app_name : Journal de classe
-Mon Jan  7 00:47:36 2013 : 
+Mon Jan  7 17:57:45 2013 : 
 Journal de classe : NO IMAGES for this application, x = 0
-Mon Jan  7 00:47:38 2013 : category found = 1
-Mon Jan  7 00:47:38 2013 : section found app_name = Journal de classe
-Mon Jan  7 00:47:38 2013 : before app saving
-Mon Jan  7 00:47:38 2013 : 
+Mon Jan  7 17:57:48 2013 : category found = 1
+Mon Jan  7 17:57:48 2013 : section found app_name = Journal de classe
+Mon Jan  7 17:57:48 2013 : before app saving
+Mon Jan  7 17:57:48 2013 : 
 
 
 APPLICATION ADDED TO DB : 
@@ -426,17 +427,111 @@ APPLICATION ADDED TO DB :
 								NAME : Journal de classe
 
 								IMAGE_LINK : 
-DESCRIPTION : Comme un journal de classe, ce programme vous permet d'entrer et de classifier l'ensemble de vos activités scolaires de manière hebdomadaire. Chaque heure du jour peut être nommée et renvoie à une tâche bien précise. Journal de classe vous propose aussi de faire des commentaires en rapport avec votre emploi du temps pour une personnalisation plus poussée.
+DESCRIPTION : Comme un journal de classe, ce programme vous permet d'entrer et de classifier l'ensemble de vos activitÃ©s scolaires de maniÃ¨re hebdomadaire. Chaque heure du jour peut Ãªtre nommÃ©e et renvoie Ã  une tÃ¢che bien prÃ©cise. Journal de classe vous propose aussi de faire des commentaires en rapport avec votre emploi du temps pour une personnalisation plus poussÃ©e.
 DOWNLOAD LINK : http://phdm.webay.be/download/jdc_fr.zip
-Mon Jan  7 00:47:38 2013 : 
+Mon Jan  7 17:57:48 2013 : 
+Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/42708.html
+Mon Jan  7 17:57:48 2013 : scan_app_link started(Planning Trimestriel , /telecharger/windows/Bureautique/agenda/fiches/42708.html)
+Mon Jan  7 17:57:50 2013 : 
+     Not found in DB app_name : Planning Trimestriel
+Mon Jan  7 17:57:50 2013 : 
+Planning Trimestriel : NO IMAGES for this application, x = 0
+Mon Jan  7 17:57:52 2013 : category found = 1
+Mon Jan  7 17:57:52 2013 : section found app_name = Planning Trimestriel
+Mon Jan  7 17:57:52 2013 : before app saving
+Mon Jan  7 17:57:52 2013 : 
+
+
+APPLICATION ADDED TO DB : 
+
+								NAME : Planning Trimestriel
+
+								IMAGE_LINK : 
+DESCRIPTION : Ce logiciel vous permet d'Ã©diter facilement des plannings trimestriels. Via une interface de type tableur, vous pourrez saisir vos activitÃ©s et rendez-vous, et appliquer des motifs, couleurs et bordures pour chaque plage horaire. Il est Ã©galement possible de personnaliser la hauteur des lignes, la largeur des colonnes et d'utiliser des macros afin d'optimiser la saisie des Ã©vÃ©nements rÃ©pÃ©titifs.
+DOWNLOAD LINK : http://www.chambily.com/softs/planning.zip
+Mon Jan  7 17:57:52 2013 : 
+Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/31584.html
+Mon Jan  7 17:57:52 2013 : scan_app_link started(A Note , /telecharger/windows/Bureautique/agenda/fiches/31584.html)
+Mon Jan  7 17:57:56 2013 : 
+     Not found in DB app_name : A Note
+Mon Jan  7 17:58:20 2013 : category found = 1
+Mon Jan  7 17:58:20 2013 : section found app_name = A Note
+Mon Jan  7 17:58:20 2013 : before app saving
+Mon Jan  7 17:58:20 2013 : 
+
+
+APPLICATION ADDED TO DB : 
+
+								NAME : A Note
+
+								IMAGE_LINK : /images/logiciel/31584b.jpg
+DESCRIPTION : A Note est un programme permettant de crÃ©er des post-it virtuels sur l'Ã©cran de votre ordinateur !Le programme se situe dans la barre de tÃ¢ches, prÃ¨s de l'horloge. Un simple clic sur l'icÃ´ne permet de rapidement crÃ©er une nouvelle note.Les messages peuvent comporter une alarme, Ãªtre imprimÃ©, envoyÃ©s par e-mail, personnalisÃ©s, etc.Note : il est nÃ©cessaire de dÃ©compresser  ce fichier dans le dossier Language oÃ¹ a Ã©tÃ© installÃ© A Note afin de pouvoir l'utiliser en franÃ§ais.
+DOWNLOAD LINK : http://sunet.dl.sourceforge.net/sourceforge/a-note/A_Note_4_2_1_With_Help.zip
+Mon Jan  7 17:58:20 2013 : 
+Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/30013.html
+Mon Jan  7 17:58:20 2013 : scan_app_link started(Calendrier Mural , /telecharger/windows/Bureautique/agenda/fiches/30013.html)
+Mon Jan  7 17:58:22 2013 : 
+     Not found in DB app_name : Calendrier Mural
+Mon Jan  7 17:58:28 2013 : category found = 1
+Mon Jan  7 17:58:28 2013 : section found app_name = Calendrier Mural
+Mon Jan  7 17:58:28 2013 : before app saving
+Mon Jan  7 17:58:28 2013 : 
+
+
+APPLICATION ADDED TO DB : 
+
+								NAME : Calendrier Mural
+
+								IMAGE_LINK : /images/logiciel/30013b.jpg
+DESCRIPTION : Ce programme nÂ’est autre que la reprÃ©sentation sur Ã©cran du traditionnel calendrier mural en papier. Vous pouvez consulter nÂ’importe quel mois et y inscrire vos propres annotations, consultables elles aussi. Vous pouvez imprimer les pages calendaires, vierges ou annotÃ©es, et les exporter vers un programme externe (traitement de texte, graphisme...) pour des mises en forme avancÃ©es.
+DOWNLOAD LINK : http://www.logicium.fr/CalendrierMural.exe
+Mon Jan  7 17:58:28 2013 : 
+Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/739.html
+Mon Jan  7 17:58:28 2013 : scan_app_link started(TF AGENDA III , /telecharger/windows/Bureautique/agenda/fiches/739.html)
+Mon Jan  7 17:58:31 2013 : 
+     Not found in DB app_name : TF AGENDA III
+Mon Jan  7 17:58:31 2013 : 
+TF AGENDA III : NO IMAGES for this application, x = 0
+Mon Jan  7 17:58:33 2013 : category found = 1
+Mon Jan  7 17:58:33 2013 : section found app_name = TF AGENDA III
+Mon Jan  7 17:58:33 2013 : before app saving
+Mon Jan  7 17:58:33 2013 : 
+
+
+APPLICATION ADDED TO DB : 
+
+								NAME : TF AGENDA III
+
+								IMAGE_LINK : 
+DESCRIPTION : TF AGENDA III regroupe toutes les fonctionnalitÃ©s nÃ©cessaires Ã  la gestion de votre temps: Carnet d'adresses, budget personnel, planning quotidien, beeper de rendez-vous, planning de travail, calculatrice euros (billets et piÃ¨ces), gestion des frais, entretien vÃ©hicules, mÃ©mos personnels, carnet de notes avec Ã©volutions, biorythmes personnalisÃ©s, dÃ©compte an 2000 ou date particuliÃ¨re, emploi du temps. Son utilisation est intuitive : vous l'utiliserez comme un agenda papier avec tous les avantages de l'informatique.
+DOWNLOAD LINK : http://www.tfinformatique.com/agenda/demagend.zip
+Mon Jan  7 17:58:34 2013 : 
+Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/108094.html
+Mon Jan  7 17:58:34 2013 : scan_app_link started(Calendridier , /telecharger/windows/Bureautique/agenda/fiches/108094.html)
+Mon Jan  7 17:58:45 2013 : 
+     Not found in DB app_name : Calendridier
+Mon Jan  7 17:58:50 2013 : category found = 1
+Mon Jan  7 17:58:50 2013 : section found app_name = Calendridier
+Mon Jan  7 17:58:50 2013 : before app saving
+Mon Jan  7 17:58:50 2013 : 
+
+
+APPLICATION ADDED TO DB : 
+
+								NAME : Calendridier
+
+								IMAGE_LINK : /images/logiciel/108094b.jpg
+DESCRIPTION : Calendridier vous rappelle les anniversaires ou autres Ã©vÃ©nements rÃ©currents, quelques jours avant la date. Une fois lancÃ©e, l'application s'exÃ©cute en tÃ¢che de fond sans vous gÃªner. MÃªme si votre ordinateur est en veille, le logiciel continue de surveiller vos Ã©vÃ¨nements. Il vous suffit d'ajouter une date et de prÃ©ciser combien de jours avant l'alerte doit Ãªtre lancÃ©e. Vous pouvez demander Ã  Calendridier de rÃ©pÃ©ter l'alarme toutes les heures pour Ãªtre sÃ»r de ne rien rater !
+DOWNLOAD LINK : http://www.psycholive.com/Telechargements/Setup%20Calendridier.exe
+Mon Jan  7 17:58:50 2013 : 
 Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/43773.html
-Mon Jan  7 00:47:38 2013 : scan_app_link started(Lightning , /telecharger/windows/Bureautique/agenda/fiches/43773.html)
-Mon Jan  7 00:47:41 2013 : 
+Mon Jan  7 17:58:50 2013 : scan_app_link started(Lightning , /telecharger/windows/Bureautique/agenda/fiches/43773.html)
+Mon Jan  7 17:58:53 2013 : 
      Not found in DB app_name : Lightning
-Mon Jan  7 00:47:48 2013 : category found = 1
-Mon Jan  7 00:47:48 2013 : section found app_name = Lightning
-Mon Jan  7 00:47:48 2013 : before app saving
-Mon Jan  7 00:47:48 2013 : 
+Mon Jan  7 17:59:01 2013 : category found = 1
+Mon Jan  7 17:59:01 2013 : section found app_name = Lightning
+Mon Jan  7 17:59:01 2013 : before app saving
+Mon Jan  7 17:59:01 2013 : 
 
 
 APPLICATION ADDED TO DB : 
@@ -446,131 +541,15 @@ APPLICATION ADDED TO DB :
 								IMAGE_LINK : /images/logiciel/43773b.jpg
 DESCRIPTION : Lightning est le portage de Sunbird pour Thunderbird. Cette application tr&egrave;s pratique fait office d'agenda et permet de r&eacute;pertorier l'ensemble de vos prochaines activit&eacute;s ou travaux en cours. Simple d'utilisation, vous pourrez notamment ajouter de nombreuses informations &agrave; chaque futur &eacute;v&eacute;nement (une note, une URL &agrave; visiter, une alarme, une adresse e-mail &agrave; alerter, une cat&eacute;gorie, une r&eacute;currence, etc.)."Sunbird, l'agenda de Mozilla, se met &agrave; jour".
 DOWNLOAD LINK : ftp://ftp.mozilla.org/pub/calendar/lightning/releases/1.8/win32/lightning.xpi
-Mon Jan  7 00:47:48 2013 : 
-Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/42708.html
-Mon Jan  7 00:47:48 2013 : scan_app_link started(Planning Trimestriel , /telecharger/windows/Bureautique/agenda/fiches/42708.html)
-Mon Jan  7 00:47:52 2013 : 
-     Not found in DB app_name : Planning Trimestriel
-Mon Jan  7 00:47:52 2013 : 
-Planning Trimestriel : NO IMAGES for this application, x = 0
-Mon Jan  7 00:47:59 2013 : category found = 1
-Mon Jan  7 00:47:59 2013 : section found app_name = Planning Trimestriel
-Mon Jan  7 00:47:59 2013 : before app saving
-Mon Jan  7 00:47:59 2013 : 
-
-
-APPLICATION ADDED TO DB : 
-
-								NAME : Planning Trimestriel
-
-								IMAGE_LINK : 
-DESCRIPTION : Ce logiciel vous permet d'éditer facilement des plannings trimestriels. Via une interface de type tableur, vous pourrez saisir vos activités et rendez-vous, et appliquer des motifs, couleurs et bordures pour chaque plage horaire. Il est également possible de personnaliser la hauteur des lignes, la largeur des colonnes et d'utiliser des macros afin d'optimiser la saisie des événements répétitifs.
-DOWNLOAD LINK : http://www.chambily.com/softs/planning.zip
-Mon Jan  7 00:47:59 2013 : 
-Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/25254.html
-Mon Jan  7 00:47:59 2013 : scan_app_link started(Contact , /telecharger/windows/Bureautique/agenda/fiches/25254.html)
-Mon Jan  7 00:48:03 2013 : 
-     Not found in DB app_name : Contact
-Mon Jan  7 00:48:03 2013 : 
-Contact : NO IMAGES for this application, x = 0
-Mon Jan  7 00:48:05 2013 : category found = 1
-Mon Jan  7 00:48:05 2013 : section found app_name = Contact
-Mon Jan  7 00:48:05 2013 : before app saving
-Mon Jan  7 00:48:06 2013 : 
-
-
-APPLICATION ADDED TO DB : 
-
-								NAME : Contact
-
-								IMAGE_LINK : 
-DESCRIPTION : Contact permet de gérer les carnets d'adresses du particulier ou les fichiers clients du professionnel. Livré avec tous les codes postaux de FRANCE/DOM/TOM avec saisie assistée lors de la création d'un contact. Classement en rubriques et sous rubriques, un même nom pouvant être classé dans des rubriques différentes. Recherches possibles sur un nom, une ville, un code postal, un pays, une rubrique, une sous rubrique, une adresse e-mail, une date de création ou de modification.Programmation d'un rappel pour une date.Export/Import au format texte et Excel. Mailing pour les contacts sélectionnés (avec Word) ou directement par internet en utilisant l'adresse e-mail. Possibilité de garder l'historique des envois par e-mail. Création et utilisation d'un e-mail type. Impression d'étiquettes des contacts sélectionnés.Impression listing de la base entière ou que des contacts sélectionnés. Sauvegarde normale ou journalisée de la base de données (disquette, disque dur, ZIP).
-DOWNLOAD LINK : ftp://anonymous.ftp.ovh.net/gonetsoft/prog/contact_1.exe
-Mon Jan  7 00:48:06 2013 : 
-Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/739.html
-Mon Jan  7 00:48:06 2013 : scan_app_link started(TF AGENDA III , /telecharger/windows/Bureautique/agenda/fiches/739.html)
-Mon Jan  7 00:48:08 2013 : 
-     Not found in DB app_name : TF AGENDA III
-Mon Jan  7 00:48:08 2013 : 
-TF AGENDA III : NO IMAGES for this application, x = 0
-Mon Jan  7 00:48:10 2013 : category found = 1
-Mon Jan  7 00:48:10 2013 : section found app_name = TF AGENDA III
-Mon Jan  7 00:48:10 2013 : before app saving
-Mon Jan  7 00:48:10 2013 : 
-
-
-APPLICATION ADDED TO DB : 
-
-								NAME : TF AGENDA III
-
-								IMAGE_LINK : 
-DESCRIPTION : TF AGENDA III regroupe toutes les fonctionnalités nécessaires à la gestion de votre temps: Carnet d'adresses, budget personnel, planning quotidien, beeper de rendez-vous, planning de travail, calculatrice euros (billets et pièces), gestion des frais, entretien véhicules, mémos personnels, carnet de notes avec évolutions, biorythmes personnalisés, décompte an 2000 ou date particulière, emploi du temps. Son utilisation est intuitive : vous l'utiliserez comme un agenda papier avec tous les avantages de l'informatique.
-DOWNLOAD LINK : http://www.tfinformatique.com/agenda/demagend.zip
-Mon Jan  7 00:48:10 2013 : 
-Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/35106.html
-Mon Jan  7 00:48:10 2013 : scan_app_link started(Sunbird Portable , /telecharger/windows/Bureautique/agenda/fiches/35106.html)
-Mon Jan  7 00:48:14 2013 : 
-     Not found in DB app_name : Sunbird Portable
-Mon Jan  7 00:48:14 2013 : 
-Sunbird Portable : NO IMAGES for this application, x = 0
-Mon Jan  7 00:48:18 2013 : category found = 1
-Mon Jan  7 00:48:18 2013 : section found app_name = Sunbird Portable
-Mon Jan  7 00:48:18 2013 : before app saving
-Mon Jan  7 00:48:18 2013 : 
-
-
-APPLICATION ADDED TO DB : 
-
-								NAME : Sunbird Portable
-
-								IMAGE_LINK : 
-DESCRIPTION : Sunbird Portable est une version autonome de Mozilla Sunbird. Le logiciel peut ainsi être utilisé depuis une clé USB sur n’importe quel poste rencontré. Les fonctionnalités sont identiques au programme original, il s’agit d’un agenda capable de répertorier vos différents rendez-vous et travaux en cours. L'enregistrement d'événements et d'activités à effectuer est très rapide. L'application permet d'ajouter de nombreuses informations sur chacun d'entre eux, comme une note, une URL à visiter, une alarme, une adresse e-mail à alerter, une catégorie, une récurrence, etc.  La vue du calendrier peut être étendue sur le mois en cours ou réduite par heure sur une journée choisie. Une liste de toutes les tâches à accomplir est disponible, il est cependant possible de les filtrer suivant divers critères. Plusieurs calendriers peuvent être tenus au sein de l'application permettant de gérer l'emploi du temps de plusieurs personnes. Sunbird permet également de publier votre agenda sur un serveur pour un accès à distance.
-DOWNLOAD LINK : http://sunet.dl.sourceforge.net/project/portableapps/Mozilla%20Sunbird%2C%20Portable%20Ed./Mozilla%20Sunbird%2C%20Portable%20Edition%200.9%20Rev%202/SunbirdPortable_0.9_Rev_2_English.paf.exe
-Mon Jan  7 00:48:18 2013 : 
-Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/30013.html
-Mon Jan  7 00:48:19 2013 : scan_app_link started(Calendrier Mural , /telecharger/windows/Bureautique/agenda/fiches/30013.html)
-Mon Jan  7 00:48:24 2013 : 
-     Not found in DB app_name : Calendrier Mural
-Mon Jan  7 00:48:29 2013 : category found = 1
-Mon Jan  7 00:48:29 2013 : section found app_name = Calendrier Mural
-Mon Jan  7 00:48:29 2013 : before app saving
-Mon Jan  7 00:48:29 2013 : 
-
-
-APPLICATION ADDED TO DB : 
-
-								NAME : Calendrier Mural
-
-								IMAGE_LINK : /images/logiciel/30013b.jpg
-DESCRIPTION : Ce programme n’est autre que la représentation sur écran du traditionnel calendrier mural en papier. Vous pouvez consulter n’importe quel mois et y inscrire vos propres annotations, consultables elles aussi. Vous pouvez imprimer les pages calendaires, vierges ou annotées, et les exporter vers un programme externe (traitement de texte, graphisme...) pour des mises en forme avancées.
-DOWNLOAD LINK : http://www.logicium.fr/CalendrierMural.exe
-Mon Jan  7 00:48:34 2013 : 
-Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/108094.html
-Mon Jan  7 00:48:34 2013 : scan_app_link started(Calendridier , /telecharger/windows/Bureautique/agenda/fiches/108094.html)
-Mon Jan  7 00:48:36 2013 : 
-     Not found in DB app_name : Calendridier
-Mon Jan  7 00:48:40 2013 : category found = 1
-Mon Jan  7 00:48:40 2013 : section found app_name = Calendridier
-Mon Jan  7 00:48:40 2013 : before app saving
-Mon Jan  7 00:48:40 2013 : 
-
-
-APPLICATION ADDED TO DB : 
-
-								NAME : Calendridier
-
-								IMAGE_LINK : /images/logiciel/108094b.jpg
-DESCRIPTION : Calendridier vous rappelle les anniversaires ou autres événements récurrents, quelques jours avant la date. Une fois lancée, l'application s'exécute en tâche de fond sans vous gêner. Même si votre ordinateur est en veille, le logiciel continue de surveiller vos évènements. Il vous suffit d'ajouter une date et de préciser combien de jours avant l'alerte doit être lancée. Vous pouvez demander à Calendridier de répéter l'alarme toutes les heures pour être sûr de ne rien rater !
-DOWNLOAD LINK : http://www.psycholive.com/Telechargements/Setup%20Calendridier.exe
-Mon Jan  7 00:48:41 2013 : 
+Mon Jan  7 17:59:01 2013 : 
 Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/29837.html
-Mon Jan  7 00:48:41 2013 : scan_app_link started(Gazel , /telecharger/windows/Bureautique/agenda/fiches/29837.html)
-Mon Jan  7 00:48:43 2013 : 
+Mon Jan  7 17:59:01 2013 : scan_app_link started(Gazel , /telecharger/windows/Bureautique/agenda/fiches/29837.html)
+Mon Jan  7 17:59:07 2013 : 
      Not found in DB app_name : Gazel
-Mon Jan  7 00:48:48 2013 : category found = 1
-Mon Jan  7 00:48:48 2013 : section found app_name = Gazel
-Mon Jan  7 00:48:48 2013 : before app saving
-Mon Jan  7 00:48:48 2013 : 
+Mon Jan  7 17:59:12 2013 : category found = 1
+Mon Jan  7 17:59:12 2013 : section found app_name = Gazel
+Mon Jan  7 17:59:12 2013 : before app saving
+Mon Jan  7 17:59:12 2013 : 
 
 
 APPLICATION ADDED TO DB : 
@@ -578,19 +557,59 @@ APPLICATION ADDED TO DB :
 								NAME : Gazel
 
 								IMAGE_LINK : /images/logiciel/29837b.jpg
-DESCRIPTION : Gazel est un outil de gestion de prise de rendez-vous et de gestion des horaires. La souplesse des critères de paramétrage de ce système permettent de définir des règles précises et adaptées à chaque type de clientèle afin d'optimiser la gestion des activités de toute organisation. Le logiciel est simple et convivial. Différents modes d'affichage permettent de visualiser l'emploi du temps de plusieurs spécialistes dans une même journée ou bien l'emploi du temps d'un seul spécialiste pour plusieurs journées. Le logiciel peut éventuellement rappeler à l'utilisateur un rendez-vous avec un client ou une activité à réaliser. De plus, plusieurs usagers peuvent saisir en même temps des rendez-vous. Il est également possible de partager l'information et de déterminer de façon sécuritaire qui a accès à quelles informations.
+DESCRIPTION : Gazel est un outil de gestion de prise de rendez-vous et de gestion des horaires. La souplesse des critÃ¨res de paramÃ©trage de ce systÃ¨me permettent de dÃ©finir des rÃ¨gles prÃ©cises et adaptÃ©es Ã  chaque type de clientÃ¨le afin d'optimiser la gestion des activitÃ©s de toute organisation. Le logiciel est simple et convivial. DiffÃ©rents modes d'affichage permettent de visualiser l'emploi du temps de plusieurs spÃ©cialistes dans une mÃªme journÃ©e ou bien l'emploi du temps d'un seul spÃ©cialiste pour plusieurs journÃ©es. Le logiciel peut Ã©ventuellement rappeler Ã  l'utilisateur un rendez-vous avec un client ou une activitÃ© Ã  rÃ©aliser. De plus, plusieurs usagers peuvent saisir en mÃªme temps des rendez-vous. Il est Ã©galement possible de partager l'information et de dÃ©terminer de faÃ§on sÃ©curitaire qui a accÃ¨s Ã  quelles informations.
 DOWNLOAD LINK : http://www.progestion.net/pgi/documents/progiciels/gazel/gazel20freval.exe
-Mon Jan  7 00:48:48 2013 : 
+Mon Jan  7 17:59:16 2013 : 
+Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/25254.html
+Mon Jan  7 17:59:16 2013 : scan_app_link started(Contact , /telecharger/windows/Bureautique/agenda/fiches/25254.html)
+Mon Jan  7 17:59:25 2013 : 
+     Not found in DB app_name : Contact
+Mon Jan  7 17:59:25 2013 : 
+Contact : NO IMAGES for this application, x = 0
+Mon Jan  7 17:59:29 2013 : category found = 1
+Mon Jan  7 17:59:29 2013 : section found app_name = Contact
+Mon Jan  7 17:59:29 2013 : before app saving
+Mon Jan  7 17:59:29 2013 : 
+
+
+APPLICATION ADDED TO DB : 
+
+								NAME : Contact
+
+								IMAGE_LINK : 
+DESCRIPTION : Contact permet de g&eacute;rer les carnets d'adresses du particulier ou les fichiers clients du professionnel. Sauvegarde normale ou journalis&eacute;e de la base de donn&eacute;es (disquette, disque dur, ZIP).
+DOWNLOAD LINK : ftp://anonymous.ftp.ovh.net/gonetsoft/prog/contact_1.exe
+Mon Jan  7 17:59:29 2013 : 
+Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/35106.html
+Mon Jan  7 17:59:29 2013 : scan_app_link started(Sunbird Portable , /telecharger/windows/Bureautique/agenda/fiches/35106.html)
+Mon Jan  7 17:59:31 2013 : 
+     Not found in DB app_name : Sunbird Portable
+Mon Jan  7 17:59:31 2013 : 
+Sunbird Portable : NO IMAGES for this application, x = 0
+Mon Jan  7 17:59:58 2013 : category found = 1
+Mon Jan  7 17:59:58 2013 : section found app_name = Sunbird Portable
+Mon Jan  7 17:59:58 2013 : before app saving
+Mon Jan  7 17:59:58 2013 : 
+
+
+APPLICATION ADDED TO DB : 
+
+								NAME : Sunbird Portable
+
+								IMAGE_LINK : 
+DESCRIPTION : Sunbird Portable est une version autonome de Mozilla Sunbird. Le logiciel peut ainsi Ãªtre utilisÃ© depuis une clÃ© USB sur nÂ’importe quel poste rencontrÃ©. Les fonctionnalitÃ©s sont identiques au programme original, il sÂ’agit dÂ’un agenda capable de rÃ©pertorier vos diffÃ©rents rendez-vous et travaux en cours. L'enregistrement d'Ã©vÃ©nements et d'activitÃ©s Ã  effectuer est trÃ¨s rapide. L'application permet d'ajouter de nombreuses informations sur chacun d'entre eux, comme une note, une URL Ã  visiter, une alarme, une adresse e-mail Ã  alerter, une catÃ©gorie, une rÃ©currence, etc.  La vue du calendrier peut Ãªtre Ã©tendue sur le mois en cours ou rÃ©duite par heure sur une journÃ©e choisie. Une liste de toutes les tÃ¢ches Ã  accomplir est disponible, il est cependant possible de les filtrer suivant divers critÃ¨res. Plusieurs calendriers peuvent Ãªtre tenus au sein de l'application permettant de gÃ©rer l'emploi du temps de plusieurs personnes. Sunbird permet Ã©galement de publier votre agenda sur un serveur pour un accÃ¨s Ã  distance.
+DOWNLOAD LINK : http://sunet.dl.sourceforge.net/project/portableapps/Mozilla%20Sunbird%2C%20Portable%20Ed./Mozilla%20Sunbird%2C%20Portable%20Edition%200.9%20Rev%202/SunbirdPortable_0.9_Rev_2_English.paf.exe
+Mon Jan  7 17:59:58 2013 : 
 Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/36658.html
-Mon Jan  7 00:48:48 2013 : scan_app_link started(MonoCalendar , /telecharger/windows/Bureautique/agenda/fiches/36658.html)
-Mon Jan  7 00:48:51 2013 : 
+Mon Jan  7 17:59:58 2013 : scan_app_link started(MonoCalendar , /telecharger/windows/Bureautique/agenda/fiches/36658.html)
+Mon Jan  7 18:00:01 2013 : 
      Not found in DB app_name : MonoCalendar
-Mon Jan  7 00:48:51 2013 : 
+Mon Jan  7 18:00:01 2013 : 
 MonoCalendar : NO IMAGES for this application, x = 0
-Mon Jan  7 00:48:53 2013 : category found = 1
-Mon Jan  7 00:48:53 2013 : section found app_name = MonoCalendar
-Mon Jan  7 00:48:53 2013 : before app saving
-Mon Jan  7 00:48:53 2013 : 
+Mon Jan  7 18:00:03 2013 : category found = 1
+Mon Jan  7 18:00:03 2013 : section found app_name = MonoCalendar
+Mon Jan  7 18:00:03 2013 : before app saving
+Mon Jan  7 18:00:03 2013 : 
 
 
 APPLICATION ADDED TO DB : 
@@ -598,17 +617,17 @@ APPLICATION ADDED TO DB :
 								NAME : MonoCalendar
 
 								IMAGE_LINK : 
-DESCRIPTION : MonoCalendar est un petit agenda ultra simple et très convivial inspiré par iCal, le calendrier intégré à Mac OS X. Il permet d'utiliser plusieurs agendas de couleurs différentes et dispose de trois modes de vue (par jour, semaine ou mois). Notez que le programme prend en charge l'importation et l'exportation de vos calendriers au format ICS.
+DESCRIPTION : MonoCalendar est un petit agenda ultra simple et trÃ¨s convivial inspirÃ© par iCal, le calendrier intÃ©grÃ© Ã  Mac OS X. Il permet d'utiliser plusieurs agendas de couleurs diffÃ©rentes et dispose de trois modes de vue (par jour, semaine ou mois). Notez que le programme prend en charge l'importation et l'exportation de vos calendriers au format ICS.
 DOWNLOAD LINK : http://sunet.dl.sourceforge.net/sourceforge/monocalendar/monocalendar-0.7.1.win32.installer.exe
-Mon Jan  7 00:48:53 2013 : 
+Mon Jan  7 18:00:03 2013 : 
 Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/104399.html
-Mon Jan  7 00:48:54 2013 : scan_app_link started(Desktop iCalendar , /telecharger/windows/Bureautique/agenda/fiches/104399.html)
-Mon Jan  7 00:48:57 2013 : 
+Mon Jan  7 18:00:03 2013 : scan_app_link started(Desktop iCalendar , /telecharger/windows/Bureautique/agenda/fiches/104399.html)
+Mon Jan  7 18:00:06 2013 : 
      Not found in DB app_name : Desktop iCalendar
-Mon Jan  7 00:49:10 2013 : category found = 1
-Mon Jan  7 00:49:10 2013 : section found app_name = Desktop iCalendar
-Mon Jan  7 00:49:10 2013 : before app saving
-Mon Jan  7 00:49:10 2013 : 
+Mon Jan  7 18:00:20 2013 : category found = 1
+Mon Jan  7 18:00:20 2013 : section found app_name = Desktop iCalendar
+Mon Jan  7 18:00:20 2013 : before app saving
+Mon Jan  7 18:00:20 2013 : 
 
 
 APPLICATION ADDED TO DB : 
@@ -618,26 +637,6 @@ APPLICATION ADDED TO DB :
 								IMAGE_LINK : /images/logiciel/104399b.jpg
 DESCRIPTION : Desktop iCalendar propose un calendrier esth&eacute;tique qui peut se synchroniser avec Google Calendar. Les trois &eacute;l&eacute;ments -calendrier, &eacute;v&egrave;nements et notes- peuvent &ecirc;tre plac&eacute;s ind&eacute;pendamment sur le bureau. Un agenda est int&eacute;gr&eacute; pour noter les t&acirc;ches, les rendez-vous, ou encore les anniversaires &agrave; ne pas oublier. Bien entendu, les couleurs de l'interface, ainsi que l'organisation des informations (affichage jour, semaine, mois, ann&eacute;e) sont enti&egrave;rement personnalisables. Enfin, d'un simple clic, toutes les donn&eacute;es se synchronisent &agrave; votre Google Calendar.
 DOWNLOAD LINK : http://www.desksware.com/files/desktop-icalendar-setup.exe
-Mon Jan  7 00:49:10 2013 : 
+Mon Jan  7 18:00:20 2013 : 
 Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/100630.html
-Mon Jan  7 00:49:10 2013 : scan_app_link started(Agenda, alarme, planificateur , /telecharger/windows/Bureautique/agenda/fiches/100630.html)
-Mon Jan  7 00:49:12 2013 : 
-     Not found in DB app_name : Agenda, alarme, planificateur
-Mon Jan  7 00:49:16 2013 : category found = 1
-Mon Jan  7 00:49:16 2013 : section found app_name = Agenda, alarme, planificateur
-Mon Jan  7 00:49:16 2013 : before app saving
-Mon Jan  7 00:49:17 2013 : 
-
-
-APPLICATION ADDED TO DB : 
-
-								NAME : Agenda, alarme, planificateur
-
-								IMAGE_LINK : /images/logiciel/100630b.jpg
-DESCRIPTION : Cet agenda, doublé d'un calendrier et d'une alarme, facilitera l'organisation et la gestion de votre emploi du temps. Vous pourrez consulter la météo et l'éphéméride du jour, mais également noter les dates d'anniversaires et fêtes à souhaiter, saisir des commentaires, etc.
-DOWNLOAD LINK : http://irolog.free.fr/charge_demo/agenda_eval.exe
-Mon Jan  7 00:49:17 2013 : 
-Link to application page  : /telecharger/windows/Bureautique/agenda/fiches/48503.html
-Mon Jan  7 00:49:17 2013 : scan_app_link started(Efficient Diary , /telecharger/windows/Bureautique/agenda/fiches/48503.html)
-Mon Jan  7 00:49:20 2013 : 
-     Not found in DB app_name : Efficient Diary
+Mon Jan  7 18:00:20 2013 : scan_app_link started(Agenda, alarme, planificateur , /telecharger/windows/Bureautique/agenda/fiches/100630.html)
