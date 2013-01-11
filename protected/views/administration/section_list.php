@@ -237,7 +237,7 @@ $(document).ready(function(){
 		autoOpen: false, 
 		title: "section edit form", 
 		modal: true, 
-		width: "640",
+		width: "640"
 	});
 	$("#delete_section_div").dialog({//prepare delete dialog
 		autoOpen: false, 

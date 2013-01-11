@@ -40,7 +40,7 @@ table.da-table thead tr
 
 table.da-table tr th
 {
-	padding:11px 20px;
+	padding:1%;
 	border-bottom:1px solid #cacaca;
 	border-right:1px solid #cacaca;
 	
@@ -67,7 +67,7 @@ table.da-table tr td
 {
 	border-bottom:1px solid #dcdcdc;
 	border-right:1px solid #e0e0e0;
-	padding:7px 20px;
+	padding:1%;
 }
 
 table.da-table tr td:last-child
@@ -83,7 +83,8 @@ table.da-table tr:last-child td
 table.da-table tr td.da-icon-column
 {
 	text-align: center;
-	width:80px;
+                 
+	/*width:80px;*/
 }
 
 table.da-table tr td.da-icon-column img
@@ -314,7 +315,7 @@ table.da-table.da-detail-view .null
 	background-position:right center;
 	background-repeat:no-repeat;
 	cursor:pointer;
-	padding-right:19px;
+	padding-right:2px;
 }
 
 .dataTables_wrapper table thead th.sorting

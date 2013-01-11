@@ -72,7 +72,7 @@ $(document).ready(function(){
 		autoOpen: false, 
 		title: "Application edit form", 
 		modal: true, 
-		width: "640",
+		width: "640"
 	});
 	$(".update_application").click(function(){
 		var update_id_application = $(".edit_id_application").val();

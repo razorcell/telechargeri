@@ -84,8 +84,6 @@ return array(
 					'info'=>'administration/get_scan_info',
 					'start'=>'administration/start',
 					
-					
-					
 					//'home'=>'/site/index',	
 			),
 				'showScriptName'=>false,

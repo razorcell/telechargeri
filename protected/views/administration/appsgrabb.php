@@ -11,37 +11,43 @@ $(document).ready(function(){
 	$("#progression").progressbar({
 		value: 3 + Math.floor(Math.random() * 50)
 	});
-	
+	setInterval(function(){
+		$.ajax({
+			type : "POST",
+			url : "/info",
+			success : function(data) {
+				var json = $.parseJSON(data);
+				if(json.finished == "finished"){
+					$(".appsgrabb_success").show();
+					//alert("YES");
+						}else{
+							//alert("NO");
+							$(".appsgrabb_success").hide();
+							$(".elapsed_time").html(json.elapsed_time);
+							$(".total_proxies").html(json.total_proxies);
+							$(".current_proxy").val(json.current_proxy);
+							$(".website").val(json.website);
+							$(".os").val(json.os);
+							$(".category").val(json.category);
+							$(".section").val(json.section);
+							$(".application_link").val(json.application_link);
+							$(".application_name").val(json.application_name);
+							$(".downloaded_pages").html(json.downloaded_pages);
+							$(".scanned_apps").html(json.scanned_apps);
+							$(".progression_section").html(json.progression_section);
+							$(".progression_category").html(json.progression_category);
+							var rnd_val = 5 + Math.floor(Math.random() * 50);
+							$( "#progression" ).progressbar( "option", "value", rnd_val );
+						}
+			}
+		});//end of ajax
+		}
+			,500);
 	$(".start").click(function(){
 		$.ajax({ 
 			type : "POST",
 			url : "/start",
 			});//end of ajax
-		setInterval(function(){
-			$.ajax({ 
-				type : "POST",
-				url : "/info",
-				success : function(data) {
-					var json = $.parseJSON(data);
-						$(".elapsed_time").html(json.elapsed_time);
-						$(".total_proxies").html(json.total_proxies);
-						$(".current_proxy").val(json.current_proxy);
-						$(".website").val(json.website);
-						$(".os").val(json.os);
-						$(".category").val(json.category);
-						$(".section").val(json.section);
-						$(".application_link").val(json.application_link);
-						$(".application_name").val(json.application_name);
-						$(".downloaded_pages").html(json.downloaded_pages);
-						$(".scanned_apps").html(json.scanned_apps);
-						$(".progression_section").html(json.progression_section);
-						$(".progression_category").html(json.progression_category);
-						var rnd_val = 5 + Math.floor(Math.random() * 50);
-						$( "#progression" ).progressbar( "option", "value", rnd_val );
-							}
-			});//end of ajax
-			}
-				,500);
 	});
 });
 </script>
@@ -112,6 +118,7 @@ $(document).ready(function(){
 								name="req1" class="application_name" />
 						</div>
 					</div>
+					<div class="da-message success appsgrabb_success" hidden="true">Finished</div>
 					<div class="da-button-row">
 						<span class="da-button green start"> <img
 							src="<?php echo $this->baseurl; ?>/images/icons/color/bomb.png">&nbsp;&nbsp;START
