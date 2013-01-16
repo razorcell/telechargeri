@@ -4,6 +4,7 @@ class Tools {
 
     public function time_elapsed($nowtime, $oldtime) {
         $secs = $nowtime - $oldtime;
+        //$this->log_text("time_elapsed : secs = ".$secs);
         $bit = array(
             ' year' => $secs / 31556926 % 12,
             ' week' => $secs / 604800 % 52,
@@ -40,11 +41,13 @@ class Tools {
     }
 
     public function log_text($text) {
-        $filename = dirname(__FILE__) . '/../runtime/logfile';
+        $filename = dirname(__FILE__) . '/../../logfile';
         if (!$handler = fopen($filename, 'a')) {
             fclose($handler);
             exit;
         } else {
+            //setlocale(LC_TIME, "C");
+            date_default_timezone_set('Europe/Paris');
             fwrite($handler, strftime('%c') . " : " . $text . "\n");
         }
     }
@@ -56,22 +59,22 @@ class Tools {
     }
 
     public function tor_get_web_page($url) {
-         $ch = curl_init($url);
+        $ch = curl_init($url);
         //Set proxy
         curl_setopt($ch, CURLOPT_PROXY, "127.0.0.1:9050");
-
 //Set proxy type
         curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_SOCKS5);
 
 //The URL to which to POST the data
         curl_setopt($ch, CURLOPT_URL, $url);
-
-//Follow any "Location: " header that the server sends
-        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 15);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 15);
+        curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Linux; U; Android 2.1-update1; fr-fr; GTI9000 Build/ECLAIR) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17");
 
 //Return the contentof the call
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        $content = curl_exec($ch);
+        //$content = curl_exec($ch);
+        $content = $this->curl_exec_follow($ch);
         $err = curl_errno($ch);
         $errmsg = curl_error($ch);
         $header = curl_getinfo($ch);
@@ -87,18 +90,19 @@ class Tools {
         $options = array(
             CURLOPT_RETURNTRANSFER => true, // return web page
             CURLOPT_HEADER => false, // don't return headers
-            CURLOPT_FOLLOWLOCATION => true, // follow redirects
             CURLOPT_ENCODING => "", // handle all encodings
-            CURLOPT_USERAGENT => "user", // who am i
+            CURLOPT_USERAGENT => "Mozilla/5.0 (Linux; U; Android 2.1-update1; fr-fr; GTI9000 Build/ECLAIR) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17", // who am i
             CURLOPT_AUTOREFERER => true, // set referer on redirect
             CURLOPT_CONNECTTIMEOUT => 6, // timeout on connect
-            CURLOPT_TIMEOUT => 6, // timeout on response
+            CURLOPT_TIMEOUT => 10, // timeout on response
             CURLOPT_MAXREDIRS => 10, // stop after 10 redirects
             CURLOPT_PROXY => $proxy,
         );
         $ch = curl_init($url);
         curl_setopt_array($ch, $options);
-        $content = curl_exec($ch);
+        $content = $this->curl_exec_follow($ch);
+
+        //$content = curl_exec($ch);
         $err = curl_errno($ch);
         $errmsg = curl_error($ch);
         $header = curl_getinfo($ch);
@@ -110,8 +114,51 @@ class Tools {
         return $header;
     }
 
-    /// http://proxy-ip-list.com/free-usa-proxy-ip.html
-    //http://proxy-ip-list.com/free-usa-proxy-ip.html
+    public function curl_exec_follow(/* resource */ $ch, /* int */ &$maxredirect = null) {
+        $mr = $maxredirect === null ? 5 : intval($maxredirect);
+        if (ini_get('open_basedir') == '' && ini_get('safe_mode' == 'Off')) {
+            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, $mr > 0);
+            curl_setopt($ch, CURLOPT_MAXREDIRS, $mr);
+        } else {
+            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, false);
+            if ($mr > 0) {
+                $newurl = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL);
+
+                $rch = curl_copy_handle($ch);
+                curl_setopt($rch, CURLOPT_HEADER, true);
+                curl_setopt($rch, CURLOPT_NOBODY, true);
+                curl_setopt($rch, CURLOPT_FORBID_REUSE, false);
+                curl_setopt($rch, CURLOPT_RETURNTRANSFER, true);
+                do {
+                    curl_setopt($rch, CURLOPT_URL, $newurl);
+                    $header = curl_exec($rch);
+                    if (curl_errno($rch)) {
+                        $code = 0;
+                    } else {
+                        $code = curl_getinfo($rch, CURLINFO_HTTP_CODE);
+                        if ($code == 301 || $code == 302) {
+                            preg_match('/Location:(.*?)\n/', $header, $matches);
+                            $newurl = trim(array_pop($matches));
+                        } else {
+                            $code = 0;
+                        }
+                    }
+                } while ($code && --$mr);
+                curl_close($rch);
+                if (!$mr) {
+                    if ($maxredirect === null) {
+                        trigger_error('Too many redirects. When following redirects, libcurl hit the maximum amount.', E_USER_WARNING);
+                    } else {
+                        $maxredirect = 0;
+                    }
+                    return false;
+                }
+                curl_setopt($ch, CURLOPT_URL, $newurl);
+            }
+        }
+        return curl_exec($ch);
+    }
+
     //http://www.slyhold.com/proxy_any_any.txt
     //http://www.freeproxy.ch/proxy.txt
 
@@ -121,13 +168,15 @@ class Tools {
      */
     //TO USE : 
     public function get_proxy3() {
+        $loops = 0;
         $proxies_sources = array("proxynova" => "http://www.proxynova.com/proxy_list.txt",
             "multiproxy" => "http://multiproxy.org/txt_anon/proxy.txt",
             "proxies" => "http://www.pr0xies.org/");
-        $proxy_source = array("multiproxy" => "http://www.ip-adress.com/proxy_list/");
+        $proxy_source = array("multiproxy" => "http://www.freeproxy.ch/proxy.txt");
 
         $data = NULL;
         do {
+            $loops++;
             $random_proxy_source_index = array_rand($proxy_source, 1);
             $random_proxy_source = $proxy_source[$random_proxy_source_index];
             $data = $this->get_web_page($random_proxy_source);
@@ -169,42 +218,56 @@ class Tools {
     }
 
     public function get_proxy() {
+        $loops = 0;
+        $this->log_text("get_proxy");
         do {//proxies list 1
             $data = $this->get_web_page("http://www.aliveproxy.com/fastest-proxies/");
+            $loops++;
             if ($data["errno"] != 0 || $data["http_code"] != 200) {
-                Yii::log("aliveproxy : can't get proxies list page - Curl error : " . $data["errno"] . "    -  HTTP CODE : " . $data["http_code"], CLogger::LEVEL_ERROR);
+                $this->log_text("LOOP : " . $loops . " aliveproxy : can't get proxies list page - Curl error : " . $data["errno"] . "    -  HTTP CODE : " . $data["http_code"], CLogger::LEVEL_ERROR);
             }
-        } while ($data["errno"] != 0 || $data["http_code"] != 200);
-        //we got proxies list
-        $data = preg_replace('/\s+/', '', $data["content"]);
-        $data = htmlentities($data, ENT_IGNORE);
-        preg_match_all("#[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\:[0-9]{2,4}#", $data, $proxys);
+        } while ($data["errno"] != 0 || $data["http_code"] != 200 && $loops < 50);
+        if ($loops >= 50) {
+            $this->log_text("loops >= 50, we couldn't get a proxy");
+            return null; //we couldn't get the proxies list
+        } else {
+            //we got proxies list
+            preg_match_all("#([0-9]{1,3}\.){3}[0-9]{1,3}:[0-9]{2,6}#", $data["content"], $proxys);
 
-        $random_index = array_rand($proxys[0], 1);
-        $random_proxy = $proxys[0][$random_index];
-        Status::model()->updateByPk(1, array("total_proxies" => count($proxys[0])));
-        return $random_proxy; //array  [0] array IP:PORT
+            $random_index = array_rand($proxys[0], 1);
+            $random_proxy = $proxys[0][$random_index];
+            Status::model()->updateByPk(1, array("total_proxies" => count($proxys[0])));
+            return $random_proxy; //array  [0] array IP:PORT
+        }
     }
 
     public function get_page($url) {
-        Yii::log('-----------get_page()', CLogger::LEVEL_WARNING);
+        //sleep(0.5);
+        $loops = 0;
+        $this->log_text('----->get_page() : ' . $url);
         $page = NULL;
-        do {//while we did not get the page
+        do {//while we did not get the page or loop exceeds 50
+            $loops++;
             $got_page = true; //if false last time, we need to initialize it again to true
-            //$proxy = $this->get_proxy();
-            //$page = $this->get_web_page($url, $proxy);
             $proxy = "TOR";
-            $page = $this->tor_get_web_page($url);
-            if ($page["errno"] != 0 || $page["http_code"] != 200) {//ERROR OCCURED
-                Yii::log("Page : " . $url . "   Proxy : " . $proxy . "Message : " . $page["errmsg"] . "   -   HTTP CODE : " . $page["http_code"], CLogger::LEVEL_ERROR);
-                $got_page = false;
+            if (is_null($proxy)) {
+                return null; //we couldn't get a proxy just get out
             } else {
-                Yii::log("SUCCESS : " . $url, CLogger::LEVEL_WARNING);
-                Status::model()->updateAll(array("current_proxy" => $proxy), "id=1");
-                Yii::log("--------------->Using proxy : " . $proxy, CLogger::LEVEL_WARNING);
+                $page = $this->tor_get_web_page($url, $proxy);
+                //$proxy = "TOR";
+                //$page = $this->tor_get_web_page($url);
+                if ($page["errno"] != 0 || $page["http_code"] != 200) {//ERROR OCCURED
+                    $this->log_text("LOOPS = " . $loops . " Page : " . $url . "   Proxy : " . $proxy . "Message : " . $page["errmsg"] . "   -   HTTP CODE : " . $page["http_code"], CLogger::LEVEL_ERROR);
+                    $got_page = false;
+                } else {//we got the page using a good proxy
+                    $this->log_text("---------->SUCCESS : " . $url, CLogger::LEVEL_WARNING);
+                    Status::model()->updateAll(array("current_proxy" => $proxy), "id=1");
+                    $this->log_text("------------->Using proxy : " . $proxy, CLogger::LEVEL_WARNING);
+                    return $page; //if everything is good the function should exit here
+                }
             }
-        } while ($got_page == false);
-        return $page;
+        } while ($got_page == false && $loops < 50);
+        return null; //we have a proxy but couldn't get the page we want in 49 tries, $loops >= 50 the function will exit here
     }
 
     public function get_from_array($arr, $start, $length) {
@@ -255,20 +318,20 @@ class Tools {
       $proxys_page = get_web_page("www.activeproxies.org/random-proxies.php",null);
       preg_match_all("/(<td>)(.*?)(<\/td>)/", $proxys_page["content"], $proxy1);//$proxy1[0] is the one containing proxys
       preg_match("#[A-Z]*\.[A-Z]{1,3}#", $proxy1[0][0], $proxy2);//$proxys_table[0] is the one containing proxys
-      Yii::log("possible proxy : ".strtolower($proxy2[0]),CLogger::LEVEL_WARNING);
+      $this->log_text("possible proxy : ".strtolower($proxy2[0]),CLogger::LEVEL_WARNING);
       $proxy = strtolower($proxy2[0]);
 
       }while(strlen($proxy) < 5);//we assume that a good domaine name xx.fr
-      Yii::log("Final proxy proxy : ".$proxy,CLogger::LEVEL_WARNING);
+      $this->log_text("Final proxy proxy : ".$proxy,CLogger::LEVEL_WARNING);
       return $proxy;//return the proxy in lowercase
 
       }
-      Yii::log("message", CLogger::LEVEL_WARNING, "category");
+      $this->log_text("message", CLogger::LEVEL_WARNING, "category");
       function get_proxy(){
       do{
       $data = get_web_page("http://www.aliveproxy.com/fastest-proxies/");
       if($data["errno"] != 0 || $data["http_code"] != 200){
-      Yii::log("can't get proxies list page - Curl error : ".$data["errno"]."    -  HTTP CODE : ".$data["http_code"],CLogger::LEVEL_ERROR);
+      $this->log_text("can't get proxies list page - Curl error : ".$data["errno"]."    -  HTTP CODE : ".$data["http_code"],CLogger::LEVEL_ERROR);
       }
       }while($data["errno"] != 0 || $data["http_code"] != 200);
       //we got proxies list
@@ -286,15 +349,15 @@ class Tools {
       $got_current_apps_list = true;
       do {//get the current page
       $got_current_apps_list = true;//if false last time, we need to initialize it again to true
-      Yii::log('get page not found',CLogger::LEVEL_WARNING);
-      //Yii::log('',CLogger::LEVEL_WARNING,"Proxy : ".$proxy."         - Index : ".$index);
+      $this->log_text('get page not found',CLogger::LEVEL_WARNING);
+      //$this->log_text('',CLogger::LEVEL_WARNING,"Proxy : ".$proxy."         - Index : ".$index);
       $current_proxy = get_proxy();
       $current_apps_list = get_web_page("www.01net.com/telecharger/windows/Bureautique/agenda/index101.html",$current_proxy);
       if($current_apps_list["errno"] != 0 || $current_apps_list["http_code"] != 200) {//ERROR OCCURED
-      Yii::log("   Proxy : ".$current_proxy."Message : ".$current_apps_list["errmsg"]."   -   HTTP CODE : ".$current_apps_list["http_code"],CLogger::LEVEL_ERROR);
+      $this->log_text("   Proxy : ".$current_proxy."Message : ".$current_apps_list["errmsg"]."   -   HTTP CODE : ".$current_apps_list["http_code"],CLogger::LEVEL_ERROR);
       $got_current_apps_list = false;
       }else{
-      Yii::log("SUCCESS",CLogger::LEVEL_WARNING);
+      $this->log_text("SUCCESS",CLogger::LEVEL_WARNING);
       Yii::log("--------------->Using proxy : ".$current_proxy,CLogger::LEVEL_WARNING);
       //$current_apps_list_withoutspaces = preg_replace('/\s+/', '', $current_apps_list["content"]);
       //if(strpos($current_apps_list_withoutspaces, "Pagenontrouve") != FALSE){

@@ -12,11 +12,17 @@ class AdministrationController extends Controller {
         $this->tools = new Tools();
         $this->baseurl = Yii::app()->request->baseUrl;
     }
+    public function actionLogin(){
+        $this->render("login");
+    }
 
     public function actionGet_scan_info() {
         $status = Status::model()->find("id=1");
         $elapsed_time = $this->tools->time_elapsed(time(), $status->start_time);
+        $start_finish_time = $this->tools->time_elapsed(intval($status->finish_time), intval($status->start_time));
+        $start_finish_time = str_replace("ago", "", $start_finish_time);
         $info = array("elapsed_time" => $elapsed_time,
+            "start_finish_time" => $start_finish_time,
             "total_proxies" => $status->total_proxies,
             "current_proxy" => $status->current_proxy,
             "website" => $status->website,
@@ -31,11 +37,9 @@ class AdministrationController extends Controller {
             "applications_added" => $status->applications_added,
             "applications_updated" => $status->applications_updated,
             "progression_section" => $status->progression_section,
-            "total_section" => $status->total_section,
             "progression_category" => $status->progression_category,
-            "prograssion_os" => $status->progression_os,
-            "finished" => $status->finished,
-            "total_os" => $status->total_os);
+            "progression_os" => $status->progression_os,
+            "scan_stat" => $status->scan_stat);
         echo CJSON::encode($info);
     }
 
@@ -579,54 +583,59 @@ class AdministrationController extends Controller {
         $global_apps_list = "";
         $index = 2; // using to alter index (x).html for apps lists, it starts from 2 because we have some issues on index1.html, the apps there are not all from the equivalent section
         $pagenotfound = false; // if true than PAGE NOT FOUND REACHED
-        $this->tools->log_text("EXTRACT PROCESS STARTED");
+        $this->tools->log_text("\n||||||||||||||||||||||||||||||||  APPS LIST : " . $link_before_index);
         do {//do while we did not reach NOT FOUND PAGE
             $current_apps_list_link_string = $link_before_index . "index" . $index . ".html";
             $current_apps_list = $this->tools->get_page($current_apps_list_link_string);
-            Status::model()->updateAll(array("downloaded_pages" => $this->downloaded_pages++,
-                "list_link" => $current_apps_list_link_string), "id=1");
-            if (strpos($current_apps_list["content"], "Page non trouv") === FALSE) {
-                $regex_app_link = NULL;
-                $regex_app_name = NULL;
-                if (is_null($section)) {
-                    $regex_app_link = "/(\/telecharger\/" . $os . "\/" . $category . "\/fiches\/)((\w|\-){1,19})(\.html\" class=\"resrechlog_nomlogi\">)(.{100})/";
-                    $regex_app_name = "#(\/telecharger\/" . $os . "\/" . $category . "\/fiches\/)((\w|\-){1,19}\.html)|(\"\>.*\<\/a\>)#";
-                } else {
-                    $regex_app_link = "/(\/telecharger\/" . $os . "\/" . $category . "\/" . $section . "\/fiches\/)((\w|\-){1,19})(\.html\" class=\"resrechlog_nomlogi\">)(.{100})/";
-                    $regex_app_name = "#(\/telecharger\/" . $os . "\/" . $category . "\/" . $section . "\/fiches\/)((\w|\-){1,19}\.html)|(\"\>.*\<\/a\>)#";
-                }
-                //GREAT !! , get the lines we need
-                preg_match_all($regex_app_link, $current_apps_list["content"], $apps_links_names); //extract link and name part 1
-                foreach ($apps_links_names[0] as $app) {//$apps_links_names[0] contains occurences of our search
-                    preg_match_all($regex_app_name, $app, $link_name);
-                    //$x = 0;
-                    foreach ($link_name[0] as $key => $element) {//element is either app link or app name 0 : link 1 : name / 2 : link  3 : name
-                        if ($key % 2 == 0) {//this is a link
-                            $current_app_name = $link_name[0][$key + 1]; //this is a name
-                            $current_app_link = $element;
-                            $this->tools->log_text("\nLink to application page  : " . $current_app_link);
-                            Status::model()->updateAll(array("application_link" => $current_app_link), "id=1");
-                            $current_app_name = $this->tools->clean_name($current_app_name);
-                            $current_app_name = utf8_encode($current_app_name);
-                            Status::model()->updateAll(array("application_name" => $current_app_name), "id=1");
-
-                            $this->scan_app_link($current_app_link, $current_app_name, $category, $section); //get all apps in the page
-                            //this part must be at the end
-                            $query = "UPDATE Status SET scanned_apps = scanned_apps + 1 WHERE id=1";
-                            Yii::app()->db->createCommand($query)->execute();
-                            $global_apps_list .= "\n" . $element . "\n"; //ADD the new apps_names list to the global list
+            if (!is_null($current_apps_list)) {//if we have a good page, extracted from a good proxy
+                Status::model()->updateAll(array("downloaded_pages" => $this->downloaded_pages++,
+                    "list_link" => $current_apps_list_link_string), "id=1");
+                if (strpos($current_apps_list["content"], "Page non trouv") === FALSE) {
+                    $regex_app_link = NULL;
+                    $regex_app_name = NULL;
+                    if (is_null($section)) {
+                        $regex_app_link = "/(\/telecharger\/" . $os . "\/" . $category . "\/fiches\/)((\w|\-){1,19})(\.html\" class=\"resrechlog_nomlogi\">)(.{100})/";
+                        $regex_app_name = "#(\/telecharger\/" . $os . "\/" . $category . "\/fiches\/)((\w|\-){1,19}\.html)|(\"\>.*\<\/a\>)#";
+                    } else {
+                        $regex_app_link = "/(\/telecharger\/" . $os . "\/" . $category . "\/" . $section . "\/fiches\/)((\w|\-){1,19})(\.html\" class=\"resrechlog_nomlogi\">)(.{100})/";
+                        $regex_app_name = "#(\/telecharger\/" . $os . "\/" . $category . "\/" . $section . "\/fiches\/)((\w|\-){1,19}\.html)|(\"\>.*\<\/a\>)#";
+                    }
+                    //GREAT !! , get the lines we need
+                    preg_match_all($regex_app_link, $current_apps_list["content"], $apps_links_names); //extract link and name part 1
+                    foreach ($apps_links_names[0] as $app) {//$apps_links_names[0] contains occurences of our search
+                        preg_match_all($regex_app_name, $app, $link_name);
+                        //$x = 0;
+                        foreach ($link_name[0] as $key => $element) {//element is either app link or app name 0 : link 1 : name / 2 : link  3 : name
+                            if ($key % 2 == 0) {//this is a link
+                                $current_app_name = $link_name[0][$key + 1]; //this is a name
+                                $current_app_link = $element;
+                                $this->tools->log_text("\nLink to application page  : " . $current_app_link);
+                                Status::model()->updateAll(array("application_link" => $current_app_link), "id=1");
+                                $current_app_name = $this->tools->clean_name($current_app_name);
+                                $current_app_name = utf8_encode($current_app_name);
+                                Status::model()->updateAll(array("application_name" => $current_app_name), "id=1");
+                                $this->tools->log_text("[[[[[[[[[[SCAN APPLICATION STARTED: ".$current_app_name);
+                                $this->scan_app_link($current_app_link, $current_app_name, $category, $section); //get all apps in the page
+                                $this->tools->log_text("SCAN APPLICATION FINISHED: ".$current_app_name."]]]]]]]]]]");
+                                //this part must be at the end
+                                $query = "UPDATE Status SET scanned_apps = scanned_apps + 1 WHERE id=1";
+                                Yii::app()->db->createCommand($query)->execute();
+                                //$global_apps_list .= "\n" . $element . "\n"; //ADD the new apps_names list to the global list
+                            }
                         }
                     }
+                    $index++; //go to next page
+                } else {
+                    //404 PAGE NOT FOUND REACHED
+                    $pagenotfound = true;
+                    $this->tools->log_text("------------------------------> PAGE NOT FOUND");
                 }
-                $index++; //go to next page
-            } else {
-                //404 PAGE NOT FOUND REACHED
-                $pagenotfound = true;
-                $this->tools->logit("------------------------------> PAGE NOT FOUND");
-                $pagenotfound = true; //GET OUT and SHOW APPS LIST
+            } else {//we are not going to do any scan, we end the application and log a message
+                $this->tools->log_text("we had more than 50 loops");
+                Yii::app()->end();
             }
         } while ($pagenotfound != true);
-        return $global_apps_list;
+        //return $global_apps_list;
     }
 
     public function scan_app_link($app_link, $app_name, $category, $section = NULL) {
@@ -639,79 +648,84 @@ class AdministrationController extends Controller {
         $this->tools->log_text("scan_app_link started(" . $app_name . " , " . $app_link . ")");
         $url = "www.01net.com" . $app_link;
         $app_page = $this->tools->get_page($url); //current application page
-        Status::model()->updateAll(array("downloaded_pages" => $this->downloaded_pages++));
-        //$this->tools->log_text("got the page");
-        //if app exists in DB
-        $res = Application::model()->findAll("label_application = :app_name", array(":app_name" => $app_name));
-        if (empty($res)) {//app does not exists
-            $this->tools->log_text("\n     Not found in DB app_name : " . $app_name);
-            //get image links
-            $current_app_info["image_link"] = $this->get_image_link($app_page["content"], $app_name);
-            $current_app_info["description"] = $this->get_description($app_page["content"]);
-            $current_app_info["download_link"] = $this->get_download_link($app_page["content"]);
-            $application = new Application();
-            $app_category = Category::model()->find("label_category = :label_category", array("label_category" => $category));
-            if (!is_null($app_category)) {//category found
-                $this->tools->log_text("category found = " . $app_category->id_category); //----------------------------------------------------------------->
-                $current_app_info["id_category"] = $app_category->id_category;
-                if (is_null($section)) {//this app has no section
-                    $this->tools->log_text("this app has no section app_name = " . $app_name);
-                    $current_app_info["id_section"] = NULL;
-                } else {//this app has section we need to find it
-                    $section = Section::model()->find("label_section = :label_section", array("label_section" => $section));
-                    if (!is_null($section)) {//section found
-                        $this->tools->log_text("section found app_name = " . $app_name);
-                        $current_app_info["id_section"] = $section->id_section;
-                    } else {
-                        $this->tools->log_text("ERROR couldn't find section app_name = " . $app_name);
+        if (!is_null($app_page)) {
+            Status::model()->updateAll(array("downloaded_pages" => $this->downloaded_pages++));
+            //$this->tools->log_text("got the page");
+            //if app exists in DB
+            $res = Application::model()->findAll("label_application = :app_name", array(":app_name" => $app_name));
+            if (empty($res)) {//app does not exists
+                $this->tools->log_text("Not found in DB app_name : " . $app_name);
+                //get image links
+                $current_app_info["image_link"] = $this->get_image_link($app_page["content"], $app_name);
+                $current_app_info["description"] = $this->get_description($app_page["content"]);
+                $current_app_info["download_link"] = $this->get_download_link($app_page["content"]);
+                $application = new Application();
+                $app_category = Category::model()->find("label_category = :label_category", array("label_category" => $category));
+                if (!is_null($app_category)) {//category found
+                    $this->tools->log_text("category found = " . $app_category->id_category); //----------------------------------------------------------------->
+                    $current_app_info["id_category"] = $app_category->id_category;
+                    if (is_null($section)) {//this app has no section
+                        $this->tools->log_text("this app has no section");
+                        $current_app_info["id_section"] = NULL;
+                    } else {//this app has section we need to find it
+                        $section = Section::model()->find("label_section = :label_section", array("label_section" => $section));
+                        if (!is_null($section)) {//section found
+                            $this->tools->log_text("section found");
+                            $current_app_info["id_section"] = $section->id_section;
+                        } else {
+                            $this->tools->log_text("ERROR couldn't find section app_name = " . $app_name);
+                        }
                     }
-                }
-                $this->tools->log_text("before app saving");
+                    $this->tools->log_text("saving application");
 
-                $application->setAttributes(array("label_application" => $app_name,
-                    "description" => $current_app_info["description"],
-                    "insert_date" => date("D.M.Y"),
-                    "id_section" => $current_app_info["id_section"],
-                    "id_category" => $current_app_info["id_category"]));
-                if (!is_null($current_app_info["image_link"])) {//if image exists we add it
-                    $application->setAttributes(array("image_link" => $current_app_info["image_link"]));
-                }
-                if ($application->save()) {//save download link
-                    $last_inserted_app_id = Yii::app()->db->lastInsertID;
-                    $download_link = new DownloadLink();
-                    $download_link->setAttributes(array("label_download_link" => $current_app_info["download_link"],
-                        "id_application" => $last_inserted_app_id));
-                    if ($download_link->save()) {
-                        $this->tools->log_text("\n\n\nAPPLICATION ADDED TO DB : \n
-								NAME : " . $app_name . "\n
-								IMAGE_LINK : " . $current_app_info["image_link"] . "\n" .
-                                "DESCRIPTION : " . $current_app_info["description"] . "\n"
-                                . "DOWNLOAD LINK : " . $current_app_info["download_link"]);
+                    $application->setAttributes(array("label_application" => $app_name,
+                        "description" => $current_app_info["description"],
+                        "insert_date" => date("D.M.Y"),
+                        "id_section" => $current_app_info["id_section"],
+                        "id_category" => $current_app_info["id_category"]));
+                    if (!is_null($current_app_info["image_link"])) {//if image exists we add it
+                        $application->setAttributes(array("image_link" => $current_app_info["image_link"]));
+                    }
+                    if ($application->save()) {//save download link
+                        $last_inserted_app_id = Yii::app()->db->lastInsertID;
+                        $download_link = new DownloadLink();
+                        $download_link->setAttributes(array("label_download_link" => $current_app_info["download_link"],
+                            "id_application" => $last_inserted_app_id));
+                        if ($download_link->save()) {
+                            $this->tools->log_text("application added to DB : \n
+								name : " . $app_name . "\n
+								image link : " . $current_app_info["image_link"] . "\n" .
+                                    "description : " . $current_app_info["description"] . "\n"
+                                    . "download link : " . $current_app_info["download_link"]);
+                        }
+                    } else {
+                        $this->tools->log_text("ERROR : can't save application REPORT : " . $this->tools->get_errors_summary($application->errors));
                     }
                 } else {
-                    $this->tools->log_text("ERROR : can't save application REPORT : " . $this->tools->get_errors_summary($application->errors));
+                    $this->tools->log_text("ERROR couldn't get the category, app_name = " . $app_name);
                 }
-            } else {
-                $this->tools->log_text("ERROR couldn't get the category, app_name = " . $app_name);
-            }
-        } else {//if application(s) exists in DB
-            $this->tools->log_text("\nApplication FOUND IN DB app_name = " . $app_name);
-            //get the current category id from label BECAUSE IF THE LABEL OF APPLICATION MAY BE REPEATED BUT HAS DIFFERENT CATEGORY AND OS fo EX(will do this later if NEEDED :), so we should get the current app category and test it with the category of app found in database)
-            $current_download_links = DownloadLink::model()->findAll("id_application = :id_application", array(":id_application" => $res[0]->id_application));
-            if (!empty($current_download_links)) {
-                $online_download_link = $this->get_download_link($app_page["content"]);
-                foreach ($current_download_links as $download_link) {
-                    if ($download_link->label_download_link != $online_download_link) {//link changed
-                        DownloadLink::model()->updateAll(array("label_download_link" => $online_download_link), "id_application = " . $res[0]->id_application);
-                        $this->tools->log_text("\n\nDownload link WAS UPDATED : \n OLD : ".$download_link->label_download_link
-                                ."\nNEW : ".$online_download_link);
-                    } else {
-                        $this->tools->log_text("\n\nDownload link UNCHANGED");
+            } else {//if application(s) exists in DB
+                $this->tools->log_text("\nApplication exists !");
+                //get the current category id from label BECAUSE IF THE LABEL OF APPLICATION MAY BE REPEATED BUT HAS DIFFERENT CATEGORY AND OS fo EX(will do this later if NEEDED :), so we should get the current app category and test it with the category of app found in database)
+                $current_download_links = DownloadLink::model()->findAll("id_application = :id_application", array(":id_application" => $res[0]->id_application));
+                if (!empty($current_download_links)) {
+                    $online_download_link = $this->get_download_link($app_page["content"]);
+                    foreach ($current_download_links as $download_link) {
+                        if ($download_link->label_download_link != $online_download_link) {//link changed
+                            DownloadLink::model()->updateAll(array("label_download_link" => $online_download_link), "id_application = " . $res[0]->id_application);
+                            $this->tools->log_text("\n\nDownload link updated : \n OLD : " . $download_link->label_download_link
+                                    . "\nNEW : " . $online_download_link);
+                        } else {
+                            $this->tools->log_text("\n\nDownload link UNCHANGED");
+                        }
                     }
+                } else {
+                    $this->tools->log_text("Couldn't find any Download link for this app : " . $app_name);
                 }
-            } else {
-                $this->tools->log_text("Couldn't find any Download link for this app : " . $app_name);
             }
+        } else {
+            $this->tools->log_text("scan_app_link : we had more than 50 loops");
+            Yii::app()->end();
         }
     }
 
@@ -736,29 +750,39 @@ class AdministrationController extends Controller {
                     $app_download_link = $element; //Ex: /outils/telecharger/linux/Programmation/fiches/tele29223.html
                 }
             } else {
-                $this->tools->log_text("DESCRIPTION REGEX FOUND NOTHING");
+                $this->tools->log_text("download link regex found nothing");
             }
             $app_download_link = "www.01net.com" . $app_download_link;
+            $this->tools->log_text(">>>>>>>>>>get_download_link page");
             $final_download_link_page = $this->tools->get_page($app_download_link);
-            Status::model()->updateAll(array("downloaded_pages" => $this->downloaded_pages++));
-            $regex = "#href=\".*target=\"_blank\">cliquer ici#";
-            $x = preg_match_all($regex, $final_download_link_page["content"], $res);
-            if ($x > 0) {
-                foreach ($res[0] as $element) {
-                    $element = str_replace(array("href=\""), "", $element);
-                    $element = preg_replace("#\".*#", "", $element);
-                    $app_download_link = $element;
+            if (!is_null($final_download_link_page)) {
+                $query = "UPDATE Status SET downloaded_pages = downloaded_pages + 1 WHERE id=1";
+                Yii::app()->db->createCommand($query)->execute();
+                $regex = "#href=\".*target=\"_blank\">cliquer ici#";
+                $x = preg_match_all($regex, $final_download_link_page["content"], $res);
+                if ($x > 0) {
+                    foreach ($res[0] as $element) {
+                        $element = str_replace(array("href=\""), "", $element);
+                        $element = preg_replace("#\".*#", "", $element);
+                        $app_download_link = $element;
+                    }
+                } else {
+                    echo "ERROR couldn't get the final link page x = " . $x;
                 }
             } else {
-                echo "ERROR couldn't get the final link pagex = " . $x;
+                $this->tools->log_text("get_download_link : we had more than 50 loops");
+                return null;
             }
         } else {
             $this->tools->log_text("ERROR Status is NULL");
+            return null;
         }
+        $this->tools->log_text("get_download_link page finished<<<<<<<<<<");
         return $app_download_link;
     }
 
     public function get_description($app_page_content) {
+        $this->tools->log_text("..........get_description");
         $app_description = NULL;
         $regex = "#tc_description_logiciel(.*){0,500}#";
         $x = preg_match_all($regex, $app_page_content, $res);
@@ -770,8 +794,9 @@ class AdministrationController extends Controller {
                 $app_description = $element;
             }
         } else {
-            $this->tools->log_text("DESCRIPTION REGEX FOUND NOTHING");
+            $this->tools->log_text("description regex found nothing");
         }
+        $this->tools->log_text("get_description..........");
         return utf8_encode($app_description);
     }
 
@@ -785,6 +810,7 @@ class AdministrationController extends Controller {
                 $link = str_replace("Captures", "", $link);
                 $link = str_replace("\">", "", $link); //we have now a clean link
                 $link = "www.01net.com" . $link;
+                $this->tools->log_text("***************get image");
                 $image_page = $this->tools->get_page($link); //get the official image link
                 Status::model()->updateAll(array("downloaded_pages" => $this->downloaded_pages++));
                 $regex_official_image_link = "#/images/logiciel/.*\.jpg#";
@@ -792,12 +818,13 @@ class AdministrationController extends Controller {
                 if ($x > 0) {//got official image link
                     $official_image_link = $res[0][0];
                 } else {//regex found nothing
-                    $this->tools->log_text("\n ERREUR REGEX 2 found no IMAGE for app_name : " . $app_name);
+                    $this->tools->log_text("REGEX found no image for app_name : " . $app_name);
                 }
             }
         } else {//no image found
-            $this->tools->log_text("\n" . $app_name . " : NO IMAGES for this application, x = " . $x);
+            $this->tools->log_text("No images page for this application, x = " . $x);
         }
+        $this->tools->log_text("***************get image finished");
         return $official_image_link;
     }
 
@@ -825,47 +852,51 @@ class AdministrationController extends Controller {
             "applications_added" => 0,
             "total_proxies" => 0,
             "current_proxy" => "",
-            "finished" => "",
+            "scan_stat" => "ongoing",
+            "finish_time" => time() + 604800, //current time + 7 days :), if you don't do this we get error in finish-start time in Get_scan_info function
             "start_time" => time()));
-        	Status::model()->updateAll(array("finished"=>""),"id=1");
         $this->downloaded_pages = 0;
-        $progression_os = 0;
-        $progression_category = 0;
-        $progression_section = 0;
         $website_list = Website::model()->findAll();
         foreach ($website_list as $website) {
             $os_list = Os::model()->findAll("id_website=" . $website->id_website);
             foreach ($os_list as $os) {
-                Status::model()->updateAll(array("progression_os" => $progression_os++), "id=1");
                 $category_list = Category::model()->findAll("id_os=" . "'" . $os->id_os . "' && id_website=" . "'" . $website->id_website . "'");
                 foreach ($category_list as $category) {
-                    Status::model()->updateAll(array("progression_category" => $progression_category++), "id=1");
                     $section_list = Section::model()->findAll("id_category=" . "'" . $category->id_category . "'");
                     $apps_list_link = NULL;
                     if (!empty($section_list)) {//if this category has sections
                         foreach ($section_list as $section) {
-                            Status::model()->updateAll(array("progression_section" => $progression_section++), "id=1");
                             $status = Status::model()->updateAll(array("website" => $website->label_website,
                                 "os" => $os->label_os,
                                 "category" => $category->label_category,
                                 "section" => $section->label_section, "id=1"));
-                            $apps_list_link = "www." . $website->label_website . "/" . $os->label_os . "/" . $category->label_category . "/" . $section->label_section . "/";
-                            $global_apps_list = $this->scan_apps_lists($apps_list_link, $os->label_os, $category->label_category, $section->label_section);
-                            $this->tools->log_text("SCANNED : website : " . $website->label_website . " - Os : " . $os->label_os . " - category : " . $category->label_category . " Section : " . $section->label_section . " : \n\n\n");
+                            $apps_list_link = "www." . $website->label_website . "/telecharger/" . $os->label_os . "/" . $category->label_category . "/" . $section->label_section . "/";
+                            //$global_apps_list = $this->scan_apps_lists($apps_list_link, $os->label_os, $category->label_category, $section->label_section);
+                            $this->scan_apps_lists($apps_list_link, $os->label_os, $category->label_category, $section->label_section);
+
+                            $this->tools->log_text(">>>>>>>>>>>>>SCANNED SECTION : website : " . $website->label_website . " - Os : " . $os->label_os . " - category : " . $category->label_category . " Section : " . $section->label_section . " : \n\n\n");
+                            $query = "UPDATE Status SET progression_section = progression_section + 1 WHERE id=1";
+                            Yii::app()->db->createCommand($query)->execute();
                         }
                     } else {//if category has NO sections
                         $status = Status::model()->updateAll(array("website" => $website->label_website,
                             "os" => $os->label_os,
                             "category" => $category->label_category,
                             "section" => "No section in this category", "id=1"));
-                        $apps_list_link = "www." . $website->label_website . "/" . $os->label_os . "/" . $category->label_category . "/";
-                        $global_apps_list = $this->scan_apps_lists($apps_list_link, $os->label_os, $category->label_category);
-                        $this->tools->log_text("SCANNED : website : " . $website->label_website . " - Os : " . $os->label_os . " - category : " . $category->label_category . " : \n\n\n" . $global_apps_list);
+                        $apps_list_link = "www." . $website->label_website . "/telecharger/" . $os->label_os . "/" . $category->label_category . "/";
+                        //$global_apps_list = $this->scan_apps_lists($apps_list_link, $os->label_os, $category->label_category);
+                        $this->scan_apps_lists($apps_list_link, $os->label_os, $category->label_category);
+                        $this->tools->log_text(">>>>>>>>>>>>>SCANNED CATEGORY: website : " . $website->label_website . " - Os : " . $os->label_os . " - category : " . $category->label_category . " : \n\n\n");
                     }
+                    $query = "UPDATE Status SET progression_category = progression_category + 1 WHERE id=1";
+                    Yii::app()->db->createCommand($query)->execute();
                 }
+                $query = "UPDATE Status SET progression_os = progression_os + 1 WHERE id=1";
+                Yii::app()->db->createCommand($query)->execute();
             }
         }
-        Status::model()->updateAll(array("finished" => "finished"), "id=1");
+        Status::model()->updateAll(array("scan_stat" => "finished"), "id=1");
+        Status::model()->updateAll(array("finish_time" => time()), "id=1");
         //}//end runBackground
     }
 

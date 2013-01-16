@@ -49,7 +49,9 @@ return array(
 				// + : ".+" matches "def" "ghi" in abc "def" "ghi" jkl
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',*/
-					'administration'=>'administration/index',
+                                             'login'=>'administration/login',
+					''=>'administration/index',
+                                            'administration'=>'administration/index',
 					'administration/websites'=>'administration/website_list',
 					'administration/operatingsystems'=>'administration/os_list',
 					'administration/applications'=>'administration/appsgrabb',
